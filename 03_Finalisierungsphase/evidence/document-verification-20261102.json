@@ -1,228 +1,70 @@
 {
   "status": "passed",
+  "checked_at": "2026-11-02T13:48:14.623278+00:00",
   "repository_url": "https://github.com/Shahpour0098/bookbridge-sql-portfolio",
+  "scope": "Current four-PDF delivery after user identity corrections; initial Word export proof remains available in Git history.",
   "documents": [
     {
-      "file": "03_Finalisierungsphase/docs/BookBridge_Gesamtdokumentation.pdf",
-      "sha256": "f6239d79c6515e0b1edb8e31d3a14545786755ac5228109984d89efa6dc269cb",
-      "bytes": 7774420,
-      "pages": 50,
-      "clickable_repository_link_pages": [
-        9
-      ],
-      "baseline_pdf_sha256": "5a78ee931455cb986671fcd7261545c444b127de4f74e23ed0afe86df0769f3b",
-      "pixel_identical_to_reviewed_user_pdf_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        10,
-        11,
-        12,
-        13,
-        15,
-        16,
-        17,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46
-      ],
-      "changed_pages_for_visual_review": [
-        9,
-        14,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        47,
-        48,
-        49,
-        50
-      ],
-      "editable_word_source_sha256": "53126d99793fdf9d0208232cf538b434fff809a6a351f96508e0c950f31e0f60",
-      "original_user_word_source_sha256": "e75205e0f679ef5664d91d5b6c75be3f6b967463c5d5d904c694ef45cf035236",
-      "source_styles_preserved": true,
-      "source_section_format_preserved": true,
-      "all_embedded_source_media_preserved": true,
-      "visually_approved_current_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50
-      ]
+      "file": "03_Finalisierungsphase/docs/BookBridge_Abstract.pdf",
+      "pages": 1,
+      "sha256": "01664812d6d155dd6a945fa168ec6bef8b06b296a305c8c82ab3af49ed4cf584",
+      "bytes": 175197,
+      "clickable_repository_link_pages": [],
+      "identity_completed": true,
+      "source_decision": "approved user PDF copied byte for byte"
     },
     {
       "file": "03_Finalisierungsphase/docs/BookBridge_Phase3_Abschlussbericht.pdf",
-      "sha256": "3e1670841e9cc0a3df15f30930d2fc1ae3b3696a776b37d2dc1ec07ba848bf75",
-      "bytes": 183231,
       "pages": 3,
+      "sha256": "22f1e67fe2062a51ffe2e4f333d4eefa8fac0c0c367796d2d7539d25f57399d5",
+      "bytes": 199639,
       "clickable_repository_link_pages": [
         3
       ],
-      "baseline_pdf_sha256": "0cb6ca051b05bb6f6854b7abddba213938e75ae148b6971879cbb3fa73d84f63",
-      "pixel_identical_to_reviewed_user_pdf_pages": [
-        1,
-        2
+      "identity_completed": true,
+      "source_decision": "approved user PDF copied byte for byte"
+    },
+    {
+      "file": "03_Finalisierungsphase/docs/BookBridge_Gesamtdokumentation.pdf",
+      "pages": 50,
+      "sha256": "f6239d79c6515e0b1edb8e31d3a14545786755ac5228109984d89efa6dc269cb",
+      "bytes": 7774420,
+      "clickable_repository_link_pages": [
+        9
       ],
-      "changed_pages_for_visual_review": [
-        3
-      ],
-      "editable_word_source_sha256": "8f8e45927f4223d7ef2ac5ba144588608e721c890c76afae230a6e35c8611082",
-      "original_user_word_source_sha256": "5b3842fec79cfb04aefb10899cee9cd1feecba8f8bfcd72078ff674686fd7094",
-      "source_styles_preserved": true,
-      "source_section_format_preserved": true,
-      "all_embedded_source_media_preserved": true,
-      "visually_approved_current_pages": [
-        1,
-        2,
-        3
-      ]
+      "identity_completed": "No explicit identity form in this document",
+      "source_decision": "correct existing published PDF retained byte for byte"
     },
     {
       "file": "03_Finalisierungsphase/docs/BookBridge_Repository_und_Abgabe.pdf",
+      "pages": 1,
       "sha256": "f78a0d23d79ea56f2df81a89321a2e90bc1aef02b8254b9b660a0114c55767a8",
       "bytes": 142465,
-      "pages": 1,
       "clickable_repository_link_pages": [
         1
       ],
-      "baseline_pdf_sha256": "41b998ce82ccc08c4dd4c54e83e9ce6fea494176b585468fa8a904008091bbc6",
-      "pixel_identical_to_reviewed_user_pdf_pages": [],
-      "changed_pages_for_visual_review": [
-        1
-      ],
-      "editable_word_source_sha256": "4a6b4d8f68c5706d2d5130a42ed8f4e9be480dede4b87d1bcaa9b77065d550d1",
-      "original_user_word_source_sha256": "324127ebb90b3ff350fcd7f5a17447168a722adb093e508615419367f11d4db2",
-      "source_styles_preserved": true,
-      "source_section_format_preserved": true,
-      "all_embedded_source_media_preserved": true,
-      "visually_approved_current_pages": [
-        1
-      ]
+      "identity_completed": "No explicit identity form in this document",
+      "source_decision": "correct existing published PDF retained byte for byte"
     }
   ],
-  "conversion": "Native Microsoft Word read-only PDF export; packaged render_docx rasterize with supplied PDF and bundled Poppler108DPI",
-  "stock_renderer_diagnosis": "soffice.exe missing; entry point attempted before native fallback",
-  "font_and_layout_policy": "Original user fonts, styles and sections preserved; only targeted GitHub/PDF-delivery wording changed.",
-  "checked_at": "2026-11-02T12:48:02.706987+00:00",
-  "scope": "Current published-delivery PDF files, real clickable GitHub URI targets, final file hashes, preserved user styles and complete visual coverage. Remote content verification is recorded separately.",
-  "supersedes": {
-    "historical_record": "03_Finalisierungsphase/evidence/document-verification-20261021.json",
-    "reason": "That record documents the earlier editable Word release; this record covers the current PDF-only GitHub delivery."
-  },
   "visual_review": {
-    "total_current_pages": 54,
-    "pixel_identical_pages_to_previously_reviewed_user_PDFs": 25,
-    "changed_pages_individually_reviewed_at_100_percent": 29,
-    "all_54_pages_covered": true,
-    "changed_text_pages": [
-      "combined9",
-      "report3",
-      "repository1"
-    ],
-    "changed_appendix_pages": [
-      14,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      47,
-      48,
-      49,
-      50
-    ],
-    "clipping_overlap_or_missing_media": false
+    "approved_replacements_pages_reviewed": 4,
+    "abstract_pages": 1,
+    "final_report_pages": 3,
+    "retained_documents_previously_reviewed_and_hash_unchanged": true,
+    "identity_consistent_across_approved_user_PDFs": true
   },
-  "local_word_copies_published": false,
-  "identity_placeholders_preserved": true,
-  "intermediate_render_images_or_PDFs_delivered": false
+  "incoming_documents_not_used": [
+    {
+      "file": "BookBridge_Gesamtdokumentation.pdf",
+      "reason": "Older input still states GitHub not published and has no actual repository URL"
+    },
+    {
+      "file": "BookBridge_Repository_und_Abgabe.pdf",
+      "reason": "Input contains actual URL but still states GitHub not published and no verified repository address"
+    }
+  ],
+  "previous_verification_sha256": "9d0b7b9cb5f5785ed1b93c56100d77fe19249b8bac5f44bee54fad8968f341b9",
+  "no_PDF_content_edited_by_assistant": true,
+  "application_source_changes": false
 }

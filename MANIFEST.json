@@ -7,7 +7,7 @@
   ],
   "manifest_scope": "Every selected source including all delivered PDFs and publication tools. Generated manifest/check records are verified by SHA256SUMS. SHA256SUMS excludes only itself; ZIP checksum is external. Git metadata is excluded.",
   "project": "BookBridge",
-  "refreshed_at": "2026-11-02T12:49:24.679956+00:00",
+  "refreshed_at": "2026-11-02T13:48:49.953606+00:00",
   "source_files": [
     {
       "bytes": 78,
@@ -880,9 +880,9 @@
       "source": "03_Finalisierungsphase/docs/API_CONTRACT.md"
     },
     {
-      "bytes": 185261,
+      "bytes": 175197,
       "path": "03_Finalisierungsphase/docs/BookBridge_Abstract.pdf",
-      "sha256": "885d624d8e6c447ce7fc20eeeb2e84a9c3ae68df0df4ce9afe93c38e6187ba91",
+      "sha256": "01664812d6d155dd6a945fa168ec6bef8b06b296a305c8c82ab3af49ed4cf584",
       "source": "03_Finalisierungsphase/docs/BookBridge_Abstract.pdf"
     },
     {
@@ -892,9 +892,9 @@
       "source": "03_Finalisierungsphase/docs/BookBridge_Gesamtdokumentation.pdf"
     },
     {
-      "bytes": 183231,
+      "bytes": 199639,
       "path": "03_Finalisierungsphase/docs/BookBridge_Phase3_Abschlussbericht.pdf",
-      "sha256": "3e1670841e9cc0a3df15f30930d2fc1ae3b3696a776b37d2dc1ec07ba848bf75",
+      "sha256": "22f1e67fe2062a51ffe2e4f333d4eefa8fac0c0c367796d2d7539d25f57399d5",
       "source": "03_Finalisierungsphase/docs/BookBridge_Phase3_Abschlussbericht.pdf"
     },
     {
@@ -952,9 +952,9 @@
       "source": "03_Finalisierungsphase/evidence/document-verification-20261021.json"
     },
     {
-      "bytes": 5979,
+      "bytes": 2819,
       "path": "03_Finalisierungsphase/evidence/document-verification-20261102.json",
-      "sha256": "9d0b7b9cb5f5785ed1b93c56100d77fe19249b8bac5f44bee54fad8968f341b9",
+      "sha256": "629d4ab74e14403fcf4c55888c73541a2cae4968a895a153833b035feaec28da",
       "source": "03_Finalisierungsphase/evidence/document-verification-20261102.json"
     },
     {
