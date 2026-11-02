@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-20T07:58:40.810715+00:00",
+  "status": "passed",
+  "healthy": true,
+  "own_process_verified": true,
+  "backend_restarted": true,
+  "database_port": 55434,
+  "migration_count": 8,
+  "deferred_trigger_definer_verified": true,
+  "fixed_search_path_verified": true,
+  "repeat_setup_new_migrations": 0,
+  "repeat_setup_unchanged_migrations": 8,
+  "final_restart_checked_at": "2026-10-20T21:25:27.787240+00:00",
+  "final_backend_frontend_loaded": true
+}

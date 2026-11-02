@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-21T17:51:50.531355+00:00",
+  "authoritative_phase3_root": "D:\\IU\\3.Semester\\Projekt Data-Mart-Erstellung in SQL\\Project\\phase3",
+  "database": "bookbridge_phase3",
+  "schema": {
+    "domain_base_tables": 18,
+    "domain_columns": 142,
+    "domain_foreign_keys": 32,
+    "public_views": 1,
+    "view_columns": 15,
+    "technical_tables": 2,
+    "technical_columns": 8,
+    "technical_detail": {
+      "sessions_columns": 5,
+      "migrations_columns": 3
+    },
+    "columns_scope": "BASE TABLE columns; the 15 view columns are separate projections, not new domain attributes"
+  },
+  "fresh_seed": {
+    "domain_rows": 1431,
+    "domain_counts": {
+      "addresses": 24,
+      "authors": 24,
+      "book_authors": 27,
+      "book_copies": 24,
+      "books": 24,
+      "generated_documents": 204,
+      "genres": 12,
+      "languages": 12,
+      "loan_extensions": 32,
+      "loan_proposals": 24,
+      "loans": 48,
+      "notifications": 786,
+      "payments": 24,
+      "pickup_slots": 48,
+      "publishers": 12,
+      "reviews": 48,
+      "shipments": 34,
+      "users": 24
+    },
+    "whole_database_bytes": 10647219
+  },
+  "operational_main": {
+    "domain_rows": 1436,
+    "domain_counts": {
+      "addresses": 25,
+      "authors": 24,
+      "book_authors": 27,
+      "book_copies": 24,
+      "books": 24,
+      "generated_documents": 204,
+      "genres": 12,
+      "languages": 12,
+      "loan_extensions": 32,
+      "loan_proposals": 24,
+      "loans": 49,
+      "notifications": 788,
+      "payments": 24,
+      "pickup_slots": 48,
+      "publishers": 12,
+      "reviews": 48,
+      "shipments": 34,
+      "users": 25
+    },
+    "technical_counts": {
+      "migrations": 8,
+      "sessions": 5
+    },
+    "database_bytes": 10786483,
+    "domain_table_bytes_including_indexes_toast": 1540096,
+    "technical_table_bytes_including_indexes_toast": 98304
+  },
+  "volume_scope": "pg_database_size includes PostgreSQL system catalogs, indexes, TOAST and technical tables; not only seeded business rows. Relation sizes include own indexes/TOAST. Values measured on 2026-10-21.",
+  "tests": {
+    "python": 48,
+    "javascript": 4,
+    "sql": 23,
+    "api_groups": 26,
+    "powershell_scripts_parsed": 7,
+    "native_pdf_with_image": true,
+    "fresh_database_removed": true,
+    "main_rows_and_content_preserved": true
+  },
+  "runtime": {
+    "python_executable": "C:\\Python313\\python.exe",
+    "postgres_bin": "D:\\PostgreSQL\\17\\bin",
+    "database_port": 55434,
+    "web_url": "http://127.0.0.1:8767",
+    "data_directory": "D:\\IU\\3.Semester\\Projekt Data-Mart-Erstellung in SQL\\Project\\phase3\\.runtime\\pgdata",
+    "main_service_running": true,
+    "service_role_superuser": false,
+    "restart_safe": true,
+    "old_original_preserved_stopped": true,
+    "private_backups_preserved": true,
+    "pid_directory_guard": true
+  },
+  "commands": {
+    "working_directory": "D:\\IU\\3.Semester\\Projekt Data-Mart-Erstellung in SQL\\Project\\phase3",
+    "setup": ".\\scripts\\setup.ps1 -PythonPath 'C:\\Python313\\python.exe' -PostgresBin 'D:\\PostgreSQL\\17\\bin'",
+    "existing_installation_migrations": ".\\scripts\\setup.ps1 -SkipDependencies",
+    "start": ".\\scripts\\start.ps1 -OpenBrowser",
+    "stop": ".\\scripts\\stop.ps1",
+    "python_tests": "C:\\Python313\\python.exe -m unittest discover -s tests -v",
+    "javascript_tests": "node .\\frontend\\tests\\test_session_recovery.cjs",
+    "integration_tests": "C:\\Python313\\python.exe .\\tests\\run_integration.py --output .\\evidence\\eigene-pruefung"
+  },
+  "evidence": {
+    "integration": "evidence/release-verification-20261021/integration-report.json",
+    "sql": "evidence/release-verification-20261021/phase2/test-report.json",
+    "unit_summary": "evidence/release-tests-20261021/summary.json",
+    "relocation": "evidence/runtime-relocation-20261021.json",
+    "native": "evidence/native-runtime-verification-20261021.json"
+  }
+}

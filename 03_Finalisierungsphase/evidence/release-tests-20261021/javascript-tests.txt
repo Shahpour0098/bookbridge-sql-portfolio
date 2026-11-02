@@ -1,0 +1,5 @@
+PASS recoversTokenWithoutRepeatingMutation
+PASS failedRecoveryDoesNotRecurse
+PASS staleRecoveryPreservesNewLogin
+PASS staleUnauthorizedResponsePreservesNewLogin
+4 session recovery checks passed.

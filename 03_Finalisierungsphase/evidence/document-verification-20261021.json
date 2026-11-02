@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-21T21:47:27.671354+00:00",
+  "documents": [
+    {
+      "file": "docs/BookBridge_Phase3_Abschlussbericht.docx",
+      "sha256": "56644956494513cb9805d1e103a9f3527c1848f97b13e06cdd3d2097943b9182",
+      "bytes": 43115,
+      "rendered_pages": 3,
+      "native_word_export_current": true,
+      "unresolved_evidence_placeholders": false,
+      "tracked_changes": 0,
+      "comments": false,
+      "external_relationships": [],
+      "embedded_images": 0,
+      "title_black_without_rule_or_underline": true
+    },
+    {
+      "file": "docs/BookBridge_Abstract.docx",
+      "sha256": "e50fda081309cb5b596265e377b2fccc8e81e96f275502ad7f487359a53155ea",
+      "bytes": 39093,
+      "rendered_pages": 1,
+      "native_word_export_current": true,
+      "unresolved_evidence_placeholders": false,
+      "tracked_changes": 0,
+      "comments": false,
+      "external_relationships": [],
+      "embedded_images": 0,
+      "title_black_without_rule_or_underline": true,
+      "abstract_format_checks": {
+        "a4": true,
+        "all_margins_2_cm": true,
+        "body_font_Arial_11": true,
+        "line_spacing_1_5": true,
+        "space_after_6_pt": true,
+        "all_body_paragraphs_justified": true,
+        "automatic_hyphenation": true,
+        "title_12_pt": true
+      }
+    },
+    {
+      "file": "docs/BookBridge_Gesamtdokumentation.docx",
+      "sha256": "115d9825b2609a14770f57947176291ea7a577ba439851d3d691ca221ebcb51d",
+      "bytes": 30054471,
+      "rendered_pages": 55,
+      "native_word_export_current": true,
+      "unresolved_evidence_placeholders": false,
+      "tracked_changes": 0,
+      "comments": false,
+      "external_relationships": [],
+      "embedded_images": 41,
+      "title_black_without_rule_or_underline": true
+    },
+    {
+      "file": "docs/BookBridge_Repository_und_Abgabe.docx",
+      "sha256": "58bd856caf0ed8fa934b72c580dbb2cd467a49763f0e6cb34de40a04181bd4e0",
+      "bytes": 39032,
+      "rendered_pages": 1,
+      "native_word_export_current": true,
+      "unresolved_evidence_placeholders": false,
+      "tracked_changes": 0,
+      "comments": false,
+      "external_relationships": [],
+      "embedded_images": 0,
+      "title_black_without_rule_or_underline": true
+    }
+  ],
+  "total_rendered_pages": 60,
+  "visual_review": {
+    "all_pages_individually_inspected": true,
+    "combined_document_pages": 55,
+    "report_pages": 3,
+    "abstract_pages": 1,
+    "repository_status_pages": 1,
+    "combined_appendix_coverage": {
+      "er_figures": 5,
+      "phase2_slides": 32,
+      "phase3_browser_viewports": 4
+    },
+    "latest_corrections": "JOIN headers widened and translated; numeric cells centred; original viewport captions clarified; inserted hyphens suppressed in three technical-path paragraphs.",
+    "after_last_correction": "Only combined pages10,11,14 changed; all three visually rechecked. Other52 combined pages identical to previously inspected images."
+  },
+  "rendering": {
+    "conversion": "Microsoft Word read-only native PDF export",
+    "rasterization": "Packaged documents/render_docx.py rasterize with supplied native Word PDF and bundled Poppler at108DPI",
+    "stock_converter_unavailable": "LibreOffice soffice.exe absent; original renderer entry point was attempted and diagnosed before native Word fallback",
+    "intermediates_delivered": false
+  },
+  "scope": "Word formatting, actual pagination, final file hashes and visual layout; application tests are recorded separately. Identity fields and future repository URL remain intentionally editable; no GitHub publication was performed."
+}

@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-19T17:01:17.264383+00:00",
+  "python_executable": "C:\\Python313\\python.exe",
+  "postgres_version": "17.11",
+  "database_port": 55434,
+  "checks": [
+    "Repeated setup: unchanged six migration hashes and all table rows/content",
+    "Repeated start retains the same healthy own server PID",
+    "KeepDatabase stops only own web server, preserving database and contents",
+    "Own web server restarts successfully",
+    "Full stop ends own registered cluster and web server",
+    "Full restart preserves all rows and contents and restores healthy app"
+  ],
+  "tables": {
+    "bookbridge.addresses": {
+      "rows": 24,
+      "content_md5": "5cfdf6144883bf524c60989a289c873d"
+    },
+    "bookbridge.authors": {
+      "rows": 24,
+      "content_md5": "bf4d9ff4b7cefa090ac03e74c5d2fdbe"
+    },
+    "bookbridge.book_authors": {
+      "rows": 27,
+      "content_md5": "2f56a6445b195d7fb247eaf94882fb95"
+    },
+    "bookbridge.book_copies": {
+      "rows": 24,
+      "content_md5": "c1bf7becf75175a70b8fb45a7c1c232d"
+    },
+    "bookbridge.books": {
+      "rows": 24,
+      "content_md5": "86b6e2240ba825a99e9d044e7ebd648b"
+    },
+    "bookbridge.generated_documents": {
+      "rows": 204,
+      "content_md5": "6eb2e22f3c8c10c70691cfa377cc83e9"
+    },
+    "bookbridge.genres": {
+      "rows": 12,
+      "content_md5": "929eb94d5a1286a49d64adddafd9a687"
+    },
+    "bookbridge.languages": {
+      "rows": 12,
+      "content_md5": "8958da118a2567bdd60d2827b8ea56f3"
+    },
+    "bookbridge.loan_extensions": {
+      "rows": 32,
+      "content_md5": "ac1c93ca486cdd2c8ac77b934e801432"
+    },
+    "bookbridge.loan_proposals": {
+      "rows": 24,
+      "content_md5": "d5d45081f8d0e8e2aaa6e8e930edc726"
+    },
+    "bookbridge.loans": {
+      "rows": 48,
+      "content_md5": "ef9098be919574d3734fcf533100f497"
+    },
+    "bookbridge.notifications": {
+      "rows": 786,
+      "content_md5": "98b0e2aa418244e507e870db6cf29ac3"
+    },
+    "bookbridge.payments": {
+      "rows": 24,
+      "content_md5": "5271064592586768cd64f5689ec39854"
+    },
+    "bookbridge.pickup_slots": {
+      "rows": 48,
+      "content_md5": "d3ca49b3e059faf830761b723a8fc287"
+    },
+    "bookbridge.publishers": {
+      "rows": 12,
+      "content_md5": "811e1842bf94f1435eab22502c1ddc9d"
+    },
+    "bookbridge.reviews": {
+      "rows": 48,
+      "content_md5": "144a88877bf26e9711935d506cb7516a"
+    },
+    "bookbridge.shipments": {
+      "rows": 34,
+      "content_md5": "a19d57ac0c45a8f6eb7d017b95c09e5e"
+    },
+    "bookbridge.users": {
+      "rows": 24,
+      "content_md5": "bc0a8f48c5887e2aeda191c96abcce5e"
+    },
+    "bookbridge_app.migrations": {
+      "rows": 6,
+      "content_md5": "23e32376d663c897be0b0dfd2690cc00"
+    },
+    "bookbridge_app.sessions": {
+      "rows": 0,
+      "content_md5": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+  }
+}

@@ -1,0 +1,239 @@
+﻿shipment_id,loan_id,direction,status,sender_address_id,recipient_address_id,sender_address_snapshot,recipient_address_snapshot,carrier,tracking_number,prepared_at,sent_at,received_at,receipt_confirmed_by
+1,2,outbound,received,2,3,"Ben Berg
+Beispielweg 12
+50667 Köln
+DE","Clara Conrad
+Beispielweg 13
+45127 Essen
+DE",DHL Demo,BB-DEMO-H-2,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,3
+2,2,return,received,3,2,"Clara Conrad
+Beispielweg 13
+45127 Essen
+DE","Ben Berg
+Beispielweg 12
+50667 Köln
+DE",DHL Demo,BB-DEMO-R-2,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,2
+3,4,outbound,received,4,5,"David Dorn
+Beispielweg 14
+47051 Duisburg
+DE","Emilia Engel
+Beispielweg 15
+44135 Dortmund
+DE",DHL Demo,BB-DEMO-H-4,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,5
+4,4,return,received,5,4,"Emilia Engel
+Beispielweg 15
+44135 Dortmund
+DE","David Dorn
+Beispielweg 14
+47051 Duisburg
+DE",DHL Demo,BB-DEMO-R-4,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,4
+5,6,outbound,received,6,7,"Felix Falk
+Beispielweg 16
+48143 Münster
+DE","Greta Graf
+Beispielweg 17
+42103 Wuppertal
+DE",DHL Demo,BB-DEMO-H-6,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,7
+6,6,return,received,7,6,"Greta Graf
+Beispielweg 17
+42103 Wuppertal
+DE","Felix Falk
+Beispielweg 16
+48143 Münster
+DE",DHL Demo,BB-DEMO-R-6,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,6
+7,8,outbound,received,8,9,"Hannes Heller
+Beispielweg 18
+53111 Bonn
+DE","Ida Imhof
+Beispielweg 19
+52062 Aachen
+DE",DHL Demo,BB-DEMO-H-8,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,9
+8,8,return,received,9,8,"Ida Imhof
+Beispielweg 19
+52062 Aachen
+DE","Hannes Heller
+Beispielweg 18
+53111 Bonn
+DE",DHL Demo,BB-DEMO-R-8,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,8
+9,10,outbound,received,10,11,"Jonas Jansen
+Beispielweg 20
+41061 Mönchengladbach
+DE","Klara Keller
+Beispielweg 21
+58095 Hagen
+DE",DHL Demo,BB-DEMO-H-10,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,11
+10,10,return,received,11,10,"Klara Keller
+Beispielweg 21
+58095 Hagen
+DE","Jonas Jansen
+Beispielweg 20
+41061 Mönchengladbach
+DE",DHL Demo,BB-DEMO-R-10,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,10
+11,12,outbound,received,12,13,"Leon Linde
+Beispielweg 22
+44787 Bochum
+DE","Mila Mertens
+Beispielweg 23
+40213 Düsseldorf
+DE",DHL Demo,BB-DEMO-H-12,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,13
+12,12,return,received,13,12,"Mila Mertens
+Beispielweg 23
+40213 Düsseldorf
+DE","Leon Linde
+Beispielweg 22
+44787 Bochum
+DE",DHL Demo,BB-DEMO-R-12,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,12
+13,14,outbound,received,14,15,"Noah Neumann
+Beispielweg 24
+50667 Köln
+DE","Olivia Ott
+Beispielweg 25
+45127 Essen
+DE",DHL Demo,BB-DEMO-H-14,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,15
+14,14,return,received,15,14,"Olivia Ott
+Beispielweg 25
+45127 Essen
+DE","Noah Neumann
+Beispielweg 24
+50667 Köln
+DE",DHL Demo,BB-DEMO-R-14,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,14
+15,16,outbound,received,16,17,"Paul Pfeiffer
+Beispielweg 26
+47051 Duisburg
+DE","Rosa Reuter
+Beispielweg 27
+44135 Dortmund
+DE",DHL Demo,BB-DEMO-H-16,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,17
+16,16,return,received,17,16,"Rosa Reuter
+Beispielweg 27
+44135 Dortmund
+DE","Paul Pfeiffer
+Beispielweg 26
+47051 Duisburg
+DE",DHL Demo,BB-DEMO-R-16,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,16
+17,18,outbound,received,18,19,"Simon Sommer
+Beispielweg 28
+48143 Münster
+DE","Thea Thiel
+Beispielweg 29
+42103 Wuppertal
+DE",DHL Demo,BB-DEMO-H-18,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,19
+18,18,return,received,19,18,"Thea Thiel
+Beispielweg 29
+42103 Wuppertal
+DE","Simon Sommer
+Beispielweg 28
+48143 Münster
+DE",DHL Demo,BB-DEMO-R-18,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,18
+19,20,outbound,received,20,21,"Vincent Vogel
+Beispielweg 30
+53111 Bonn
+DE","Frida Wagner
+Beispielweg 31
+52062 Aachen
+DE",DHL Demo,BB-DEMO-H-20,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,21
+20,20,return,received,21,20,"Frida Wagner
+Beispielweg 31
+52062 Aachen
+DE","Vincent Vogel
+Beispielweg 30
+53111 Bonn
+DE",DHL Demo,BB-DEMO-R-20,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,20
+21,22,outbound,received,22,23,"Lukas Winter
+Beispielweg 32
+41061 Mönchengladbach
+DE","Nora Wolf
+Beispielweg 33
+58095 Hagen
+DE",DHL Demo,BB-DEMO-H-22,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,23
+22,22,return,received,23,22,"Nora Wolf
+Beispielweg 33
+58095 Hagen
+DE","Lukas Winter
+Beispielweg 32
+41061 Mönchengladbach
+DE",DHL Demo,BB-DEMO-R-22,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,22
+23,24,outbound,received,24,1,"Emil Zimmer
+Beispielweg 34
+44787 Bochum
+DE","Anna Adler
+Beispielweg 11
+40213 Düsseldorf
+DE",DHL Demo,BB-DEMO-H-24,2026-09-02 14:00:00+02:00,2026-09-03 09:00:00+02:00,2026-09-05 15:00:00+02:00,1
+24,24,return,received,1,24,"Anna Adler
+Beispielweg 11
+40213 Düsseldorf
+DE","Emil Zimmer
+Beispielweg 34
+44787 Bochum
+DE",DHL Demo,BB-DEMO-R-24,2026-09-14 10:00:00+02:00,2026-09-15 09:00:00+02:00,2026-09-17 14:00:00+02:00,24
+25,29,outbound,received,5,6,"Emilia Engel
+Beispielweg 15
+44135 Dortmund
+DE","Felix Falk
+Beispielweg 16
+48143 Münster
+DE",DHL Demo,BB-DEMO-H2-5,2026-09-20 14:00:00+02:00,2026-09-21 09:00:00+02:00,2026-09-23 15:00:00+02:00,6
+26,30,outbound,received,6,7,"Felix Falk
+Beispielweg 16
+48143 Münster
+DE","Greta Graf
+Beispielweg 17
+42103 Wuppertal
+DE",DHL Demo,BB-DEMO-H2-6,2026-09-20 14:00:00+02:00,2026-09-21 09:00:00+02:00,2026-09-23 15:00:00+02:00,7
+27,31,outbound,received,7,8,"Greta Graf
+Beispielweg 17
+42103 Wuppertal
+DE","Hannes Heller
+Beispielweg 18
+53111 Bonn
+DE",DHL Demo,BB-DEMO-H2-7,2026-09-20 14:00:00+02:00,2026-09-21 09:00:00+02:00,2026-09-23 15:00:00+02:00,8
+28,32,outbound,received,8,9,"Hannes Heller
+Beispielweg 18
+53111 Bonn
+DE","Ida Imhof
+Beispielweg 19
+52062 Aachen
+DE",DHL Demo,BB-DEMO-H2-8,2026-09-20 14:00:00+02:00,2026-09-21 09:00:00+02:00,2026-09-23 15:00:00+02:00,9
+29,37,outbound,sent,13,14,"Mila Mertens
+Beispielweg 23
+40213 Düsseldorf
+DE","Noah Neumann
+Beispielweg 24
+50667 Köln
+DE",DHL Demo,BB-DEMO-H2-13,2026-09-20 14:00:00+02:00,2026-09-21 09:00:00+02:00,,
+30,38,outbound,sent,14,15,"Noah Neumann
+Beispielweg 24
+50667 Köln
+DE","Olivia Ott
+Beispielweg 25
+45127 Essen
+DE",DHL Demo,BB-DEMO-H2-14,2026-09-20 14:00:00+02:00,2026-09-21 09:00:00+02:00,,
+31,39,outbound,received,15,16,"Olivia Ott
+Beispielweg 25
+45127 Essen
+DE","Paul Pfeiffer
+Beispielweg 26
+47051 Duisburg
+DE",DHL Demo,BB-DEMO-H2-15,2026-09-20 14:00:00+02:00,2026-09-21 09:00:00+02:00,2026-09-23 15:00:00+02:00,16
+32,39,return,sent,16,15,"Paul Pfeiffer
+Beispielweg 26
+47051 Duisburg
+DE","Olivia Ott
+Beispielweg 25
+45127 Essen
+DE",DHL Demo,BB-DEMO-R2-15,2026-09-30 09:00:00+02:00,2026-09-30 12:00:00+02:00,,
+33,40,outbound,received,16,17,"Paul Pfeiffer
+Beispielweg 26
+47051 Duisburg
+DE","Rosa Reuter
+Beispielweg 27
+44135 Dortmund
+DE",DHL Demo,BB-DEMO-H2-16,2026-09-20 14:00:00+02:00,2026-09-21 09:00:00+02:00,2026-09-23 15:00:00+02:00,17
+34,40,return,sent,17,16,"Rosa Reuter
+Beispielweg 27
+44135 Dortmund
+DE","Paul Pfeiffer
+Beispielweg 26
+47051 Duisburg
+DE",DHL Demo,BB-DEMO-R2-16,2026-09-30 09:00:00+02:00,2026-09-30 12:00:00+02:00,,

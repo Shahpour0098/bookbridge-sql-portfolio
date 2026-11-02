@@ -1,0 +1,35 @@
+# Private runtimes and local user data
+**/.runtime/
+**/.git/
+**/owner.json
+**/config.json
+**/pgpass.conf
+**/.env
+.env.*
+**/node_modules/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.cache/
+**/tmp/
+**/temp/
+**/qa/
+**/renders/
+**/previews/
+**/~$*
+*.pyc
+*.pyo
+*.wbk
+*.bak
+*.tmp
+*.log
+*.pem
+*.key
+*.pfx
+*.p12
+# Generated delivery archives stay outside source control
+*.zip
+*.zip.sha256

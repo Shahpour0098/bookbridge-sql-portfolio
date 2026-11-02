@@ -1,0 +1,123 @@
+{
+  "all_phase2_sql_preserved_byte_for_byte": {
+    "01_schema.sql": true,
+    "02_integrity.sql": true,
+    "03_workflows.sql": true,
+    "04_seed.sql": true,
+    "05_queries.sql": true,
+    "06_access.sql": true
+  },
+  "all_readme_relative_links_checked": true,
+  "eight_migration_sources": [
+    "database/phase2/01_schema.sql",
+    "database/phase2/02_integrity.sql",
+    "database/phase2/03_workflows.sql",
+    "database/phase2/04_seed.sql",
+    "database/phase2/06_access.sql",
+    "database/07_application.sql",
+    "database/08_application_editing.sql",
+    "database/09_deferred_validation.sql"
+  ],
+  "excluded": {
+    "directories": [
+      ".cache",
+      ".git",
+      ".mypy_cache",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".runtime",
+      ".venv",
+      "__pycache__",
+      "docx-qa",
+      "node_modules",
+      "preview",
+      "previews",
+      "qa",
+      "rendered",
+      "renders",
+      "scratch",
+      "temp",
+      "tmp",
+      "venv"
+    ],
+    "names": [
+      ".env",
+      "config.json",
+      "owner.json",
+      "pg_hba.conf",
+      "pg_version",
+      "pgpass.conf",
+      "postmaster.pid"
+    ],
+    "obsolete_phase3": [
+      "verification-20261020",
+      "backend-diagnostic-20261020",
+      "backend-fixed-20261020",
+      "final-verification-20261020"
+    ],
+    "suffixes": [
+      ".7z",
+      ".bak",
+      ".bz2",
+      ".env",
+      ".gz",
+      ".key",
+      ".log",
+      ".md5",
+      ".p12",
+      ".pem",
+      ".pfx",
+      ".pyc",
+      ".pyo",
+      ".rar",
+      ".sha256",
+      ".sha512",
+      ".tar",
+      ".temp",
+      ".tmp",
+      ".wbk",
+      ".xz",
+      ".zip"
+    ]
+  },
+  "external_known_password_leaks": [],
+  "external_known_password_values_checked": 2,
+  "failed_evidence_or_selection_checks": [],
+  "file_count_before_generated_manifests": 253,
+  "known_local_secret_leaks": [],
+  "known_password_values_checked": 0,
+  "missing_required_files": [],
+  "mycampus_declaration": "Completed according to project owner on 2026-11-02.",
+  "pdf_delivery": true,
+  "personal_steps_pending": [
+    "Add actual identity and apply assignment filenames if required for the final portal upload."
+  ],
+  "phase2_original_screenshot_count": 21,
+  "phase2_slide_count": 32,
+  "phase_file_counts": {
+    ".gitattributes": 1,
+    ".gitignore": 1,
+    "01_Konzeptionsphase": 17,
+    "02_Erarbeitungs_Reflexionsphase": 107,
+    "03_Finalisierungsphase": 124,
+    "README.md": 1,
+    "tools": 2
+  },
+  "scope": "Source selection, artifact coverage and private-runtime exclusion; not a replacement for application tests.",
+  "secret_check": "Known local password values are scanned when a private local configuration is available; runtime/config files are excluded by path. Publication refresh may additionally scan an explicit private source without copying it.",
+  "staged_root_readme_links": [
+    "03_Finalisierungsphase/README.md",
+    "03_Finalisierungsphase/tests/README.md",
+    "03_Finalisierungsphase/docs/BookBridge_Phase3_Abschlussbericht.pdf",
+    "03_Finalisierungsphase/docs/BookBridge_Abstract.pdf",
+    "03_Finalisierungsphase/docs/BookBridge_Gesamtdokumentation.pdf",
+    "03_Finalisierungsphase/docs/BookBridge_Repository_und_Abgabe.pdf",
+    "02_Erarbeitungs_Reflexionsphase/docs/BookBridge_Phase2_Praesentation.pdf",
+    "02_Erarbeitungs_Reflexionsphase/docs/BookBridge_Phase2_Umsetzung.pdf",
+    "tools/package_delivery.py"
+  ],
+  "status": "passed",
+  "unresolved_readme_links": [],
+  "unresolved_staged_root_readme_links": [],
+  "unsafe_paths": []
+}

@@ -1,0 +1,25 @@
+﻿copy_id,title,owner,condition,max_loan_days
+1,Der kleine Prinz,Anna Adler,new,42
+2,Momo,Ben Berg,very_good,42
+3,Der Vorleser,Clara Conrad,good,42
+4,Abend am Fluss,David Dorn,used,42
+5,Die stille Bibliothek,Emilia Engel,new,42
+6,Ein Garten im Regen,Felix Falk,very_good,42
+7,Lichter über dem Rhein,Greta Graf,good,42
+8,Das letzte Lesezeichen,Hannes Heller,used,42
+9,Briefe aus dem Norden,Ida Imhof,new,42
+10,Unterwegs nach Morgen,Jonas Jansen,very_good,42
+11,Sterne hinter Glas,Klara Keller,good,42
+12,Die Karte der Wege,Leon Linde,used,42
+13,Kleine Schritte,Mila Mertens,new,42
+14,Geschichten am Fenster,Noah Neumann,very_good,42
+15,Im Schatten der Brücke,Olivia Ott,good,42
+16,Ein Jahr im Grünen,Paul Pfeiffer,used,42
+17,Der Klang der Seiten,Rosa Reuter,new,42
+18,Nachrichten aus der Zukunft,Simon Sommer,very_good,42
+19,Die verlorene Stunde,Thea Thiel,good,42
+20,Ein Haus voller Bücher,Vincent Vogel,used,42
+21,Zwischen zwei Städten,Frida Wagner,new,42
+22,Wege durch den Herbst,Lukas Winter,very_good,42
+23,Die offene Tür,Nora Wolf,good,42
+24,Der nächste Sommer,Emil Zimmer,used,42

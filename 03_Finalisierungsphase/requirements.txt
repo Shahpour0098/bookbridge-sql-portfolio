@@ -1,0 +1,6 @@
+Flask==3.1.2
+psycopg[binary]==3.3.3
+reportlab==4.4.9
+Pillow==13.0.0
+waitress==3.0.2
+tzdata==2026.5

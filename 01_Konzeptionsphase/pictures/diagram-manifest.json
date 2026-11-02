@@ -1,0 +1,57 @@
+{
+  "model": "docs/phase-1-v2/design/bookbridge-model-v2.json",
+  "modelSha256": "682fad4afa6050a88cd5b1621f735ea0dabd5fa47501bd761aba8c6edc9a8ff6",
+  "version": "2.0",
+  "diagrams": [
+    {
+      "file": "00_Gesamtuebersicht",
+      "tables": 18,
+      "relationships": 32,
+      "renderedEdges": 29,
+      "attributesInModel": 142,
+      "completeAttributeDisplay": false,
+      "width": 8952,
+      "height": 8800
+    },
+    {
+      "file": "01_Katalog_Benutzer",
+      "tables": 10,
+      "relationships": 10,
+      "renderedEdges": 10,
+      "attributesInModel": 56,
+      "completeAttributeDisplay": true,
+      "width": 6544,
+      "height": 5156
+    },
+    {
+      "file": "02_Ausleihe",
+      "tables": 6,
+      "relationships": 11,
+      "renderedEdges": 9,
+      "attributesInModel": 63,
+      "completeAttributeDisplay": true,
+      "width": 8616,
+      "height": 4576
+    },
+    {
+      "file": "03_Versand_Zahlung",
+      "tables": 6,
+      "relationships": 12,
+      "renderedEdges": 10,
+      "attributesInModel": 71,
+      "completeAttributeDisplay": true,
+      "width": 7500,
+      "height": 6312
+    },
+    {
+      "file": "04_Bewertung_Uebersicht",
+      "tables": 6,
+      "relationships": 11,
+      "renderedEdges": 10,
+      "attributesInModel": 67,
+      "completeAttributeDisplay": true,
+      "width": 7428,
+      "height": 6200
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "application": "pgAdmin 4",
+  "database": "bookbridge_phase2",
+  "server": "127.0.0.1:55432",
+  "capture_method": "Actual UI execution and unaltered full viewport screenshots",
+  "entries": [
+    {
+      "file": "T01_users.png",
+      "query": "-- T01_users\nSELECT user_id, first_name, last_name, role, is_active,\n       count(*) OVER() AS gesamt\nFROM bookbridge.users ORDER BY 1 LIMIT 10;",
+      "table": "users",
+      "bytes": 75845,
+      "captured_at": "2026-10-18T13:05:59.214Z"
+    },
+    {
+      "file": "T02_addresses.png",
+      "query": "-- T02_addresses\nSELECT address_id, user_id, city, postal_code, country_code,\n       count(*) OVER() AS gesamt\nFROM bookbridge.addresses ORDER BY 1 LIMIT 10;",
+      "table": "addresses",
+      "bytes": 75433,
+      "captured_at": "2026-10-18T13:06:06.998Z"
+    },
+    {
+      "file": "T03_publishers.png",
+      "query": "-- T03_publishers\nSELECT publisher_id, name,\n       count(*) OVER() AS gesamt\nFROM bookbridge.publishers ORDER BY 1 LIMIT 10;",
+      "table": "publishers",
+      "bytes": 65505,
+      "captured_at": "2026-10-18T13:06:08.131Z"
+    },
+    {
+      "file": "T04_genres.png",
+      "query": "-- T04_genres\nSELECT genre_id, name,\n       count(*) OVER() AS gesamt\nFROM bookbridge.genres ORDER BY 1 LIMIT 10;",
+      "table": "genres",
+      "bytes": 62119,
+      "captured_at": "2026-10-18T13:06:17.448Z"
+    },
+    {
+      "file": "T05_languages.png",
+      "query": "-- T05_languages\nSELECT language_id, code, name,\n       count(*) OVER() AS gesamt\nFROM bookbridge.languages ORDER BY 1 LIMIT 10;",
+      "table": "languages",
+      "bytes": 67056,
+      "captured_at": "2026-10-18T13:06:18.931Z"
+    },
+    {
+      "file": "T06_authors.png",
+      "query": "-- T06_authors\nSELECT author_id, display_name,\n       count(*) OVER() AS gesamt\nFROM bookbridge.authors ORDER BY 1 LIMIT 10;",
+      "table": "authors",
+      "bytes": 67207,
+      "captured_at": "2026-10-18T13:06:20.465Z"
+    },
+    {
+      "file": "T07_books.png",
+      "query": "-- T07_books\nSELECT book_id, title, isbn, publication_year,\n       count(*) OVER() AS gesamt\nFROM bookbridge.books ORDER BY 1 LIMIT 10;",
+      "table": "books",
+      "bytes": 76344,
+      "captured_at": "2026-10-18T13:06:21.998Z"
+    },
+    {
+      "file": "T08_book_authors.png",
+      "query": "-- T08_book_authors\nSELECT book_id, author_id, author_order,\n       count(*) OVER() AS gesamt\nFROM bookbridge.book_authors ORDER BY 1 LIMIT 10;",
+      "table": "book_authors",
+      "bytes": 62956,
+      "captured_at": "2026-10-18T13:06:23.530Z"
+    },
+    {
+      "file": "T09_book_copies.png",
+      "query": "-- T09_book_copies\nSELECT copy_id, book_id, owner_id, condition, max_loan_days,\n       count(*) OVER() AS gesamt\nFROM bookbridge.book_copies ORDER BY 1 LIMIT 10;",
+      "table": "book_copies",
+      "bytes": 71017,
+      "captured_at": "2026-10-18T13:06:25.066Z"
+    },
+    {
+      "file": "T10_pickup_slots.png",
+      "query": "-- T10_pickup_slots\nSELECT slot_id, copy_id, weekday, start_time, end_time,\n       count(*) OVER() AS gesamt\nFROM bookbridge.pickup_slots ORDER BY 1 LIMIT 10;",
+      "table": "pickup_slots",
+      "bytes": 75070,
+      "captured_at": "2026-10-18T13:06:26.568Z"
+    },
+    {
+      "file": "T11_loans.png",
+      "query": "-- T11_loans\nSELECT loan_id, copy_id, borrower_id, status, due_date,\n       count(*) OVER() AS gesamt\nFROM bookbridge.loans ORDER BY 1 LIMIT 10;",
+      "table": "loans",
+      "bytes": 74451,
+      "captured_at": "2026-10-18T13:06:28.097Z"
+    },
+    {
+      "file": "T12_loan_proposals.png",
+      "query": "-- T12_loan_proposals\nSELECT proposal_id, loan_id, proposed_days, status,\n       count(*) OVER() AS gesamt\nFROM bookbridge.loan_proposals ORDER BY 1 LIMIT 10;",
+      "table": "loan_proposals",
+      "bytes": 70838,
+      "captured_at": "2026-10-18T13:06:41.083Z"
+    },
+    {
+      "file": "T13_loan_extensions.png",
+      "query": "-- T13_loan_extensions\nSELECT extension_id, loan_id, extra_days, status, new_due_date,\n       count(*) OVER() AS gesamt\nFROM bookbridge.loan_extensions ORDER BY 1 LIMIT 10;",
+      "table": "loan_extensions",
+      "bytes": 77135,
+      "captured_at": "2026-10-18T13:06:43.515Z"
+    },
+    {
+      "file": "T14_payments.png",
+      "query": "-- T14_payments\nSELECT payment_id, loan_id, outbound_fee, return_fee, status,\n       count(*) OVER() AS gesamt\nFROM bookbridge.payments ORDER BY 1 LIMIT 10;",
+      "table": "payments",
+      "bytes": 74638,
+      "captured_at": "2026-10-18T13:06:45.997Z"
+    },
+    {
+      "file": "T15_shipments.png",
+      "query": "-- T15_shipments\nSELECT shipment_id, loan_id, direction, status,\n       count(*) OVER() AS gesamt\nFROM bookbridge.shipments ORDER BY 1 LIMIT 10;",
+      "table": "shipments",
+      "bytes": 71663,
+      "captured_at": "2026-10-18T13:06:48.519Z"
+    },
+    {
+      "file": "T16_notifications.png",
+      "query": "-- T16_notifications\nSELECT notification_id, recipient_user_id, loan_id, channel, status,\n       count(*) OVER() AS gesamt\nFROM bookbridge.notifications ORDER BY 1 LIMIT 10;",
+      "table": "notifications",
+      "bytes": 75869,
+      "captured_at": "2026-10-18T13:06:51.015Z"
+    },
+    {
+      "file": "T17_generated_documents.png",
+      "query": "-- T17_generated_documents\nSELECT document_id, loan_id, document_type, status,\n       count(*) OVER() AS gesamt\nFROM bookbridge.generated_documents ORDER BY 1 LIMIT 10;",
+      "table": "generated_documents",
+      "bytes": 77752,
+      "captured_at": "2026-10-18T13:06:53.484Z"
+    },
+    {
+      "file": "T18_reviews.png",
+      "query": "-- T18_reviews\nSELECT review_id, loan_id, reviewer_id, rating,\n       count(*) OVER() AS gesamt\nFROM bookbridge.reviews ORDER BY 1 LIMIT 10;",
+      "table": "reviews",
+      "bytes": 64247,
+      "captured_at": "2026-10-18T13:06:55.931Z"
+    },
+    {
+      "file": "Q01_copy_book_owner.png",
+      "query": "-- Q01 Drei Tabellen\nSELECT c.copy_id, b.title, u.first_name AS owner\nFROM bookbridge.book_copies c\nJOIN bookbridge.books b ON b.book_id=c.book_id\nJOIN bookbridge.users u ON u.user_id=c.owner_id\nORDER BY c.copy_id LIMIT 10;",
+      "table": "book_copies/books/users",
+      "bytes": 74672,
+      "captured_at": "2026-10-18T13:07:04.402Z"
+    },
+    {
+      "file": "Q02_loan_copy_borrower.png",
+      "query": "-- Q02 Drei Tabellen\nSELECT l.loan_id, c.copy_id, u.first_name AS borrower, l.status\nFROM bookbridge.loans l\nJOIN bookbridge.book_copies c ON c.copy_id=l.copy_id\nJOIN bookbridge.users u ON u.user_id=l.borrower_id\nORDER BY l.loan_id LIMIT 10;",
+      "table": "loans/book_copies/users",
+      "bytes": 74862,
+      "captured_at": "2026-10-18T13:07:06.602Z"
+    },
+    {
+      "file": "Q03_payment_loan_confirmer.png",
+      "query": "-- Q03 Drei Tabellen\nSELECT p.payment_id, l.loan_id, p.status, u.first_name AS confirmer\nFROM bookbridge.payments p\nJOIN bookbridge.loans l ON l.loan_id=p.loan_id\nLEFT JOIN bookbridge.users u ON u.user_id=p.confirmed_by_user_id\nORDER BY p.payment_id LIMIT 10;",
+      "table": "payments/loans/users",
+      "bytes": 76873,
+      "captured_at": "2026-10-18T13:07:08.135Z"
+    }
+  ]
+}

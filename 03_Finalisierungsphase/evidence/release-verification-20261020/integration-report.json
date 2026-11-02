@@ -1,0 +1,169 @@
+{
+  "started_at": "2026-10-20T21:24:13.050719+00:00",
+  "database": "bookbridge_phase3_verify_b49f08421d4241ee9adad4de30517a61",
+  "database_created": true,
+  "database_removed": true,
+  "tests": [
+    {
+      "name": "Fresh template0 database installs every application migration",
+      "status": "passed"
+    },
+    {
+      "name": "Retained Phase 2 baseline: 18 tables and 1431 fictitious rows",
+      "status": "passed"
+    },
+    {
+      "name": "All original Phase 2 SQL tests also pass on the integrated schema",
+      "status": "passed"
+    },
+    {
+      "name": "Public catalogue and metadata do not overwrite a fresh browser session",
+      "status": "passed"
+    },
+    {
+      "name": "Application assets, anonymous access and CSRF rejection",
+      "status": "passed"
+    },
+    {
+      "name": "Three isolated real-password accounts and rotated sessions",
+      "status": "passed"
+    },
+    {
+      "name": "Moderation requires an active administrator; signup cannot assign roles",
+      "status": "passed"
+    },
+    {
+      "name": "Password change revokes another browser session",
+      "status": "passed"
+    },
+    {
+      "name": "Foreign Origin and untrusted Host rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Own offer with pickup window; public catalogue and radius preserve privacy",
+      "status": "passed"
+    },
+    {
+      "name": "Administrator can pause and restore an offer without editing its owner",
+      "status": "passed"
+    },
+    {
+      "name": "Other-owner edit, self-borrowing and actor spoofing blocked",
+      "status": "passed"
+    },
+    {
+      "name": "Participant-only loans and concealed address before acceptance",
+      "status": "passed"
+    },
+    {
+      "name": "Counterproposal withdrawal and acceptance with Berlin appointment",
+      "status": "passed"
+    },
+    {
+      "name": "Own address and weekly-plan edits preserve accepted time, address and duration snapshots",
+      "status": "passed"
+    },
+    {
+      "name": "Invalid coordinate removal rolls back while an active offer uses the address",
+      "status": "passed"
+    },
+    {
+      "name": "Actual PDF generated once; stable bytes and recipient-only download",
+      "status": "passed"
+    },
+    {
+      "name": "Inactive member keeps access and can sign in but cannot start new loans",
+      "status": "passed"
+    },
+    {
+      "name": "Pickup receipt, extension withdrawal and approval update due date",
+      "status": "passed"
+    },
+    {
+      "name": "Pickup return, two participant reviews and restored availability",
+      "status": "passed"
+    },
+    {
+      "name": "Administrator reactivates account after existing return is completed",
+      "status": "passed"
+    },
+    {
+      "name": "Shipping acceptance shares necessary addresses; cross-loan child ID blocked",
+      "status": "passed"
+    },
+    {
+      "name": "Postage required, reported and confirmed; outbound dispatch and receipt",
+      "status": "passed"
+    },
+    {
+      "name": "Postal return completes; live addresses hidden and historical snapshots retained",
+      "status": "passed"
+    },
+    {
+      "name": "Notifications delivered and marked read only by recipient",
+      "status": "passed"
+    },
+    {
+      "name": "Logout revokes old session token",
+      "status": "passed"
+    }
+  ],
+  "status": "passed",
+  "baseline": {
+    "table_count": 18,
+    "row_count": 1431,
+    "rows": {
+      "addresses": 24,
+      "authors": 24,
+      "book_authors": 27,
+      "book_copies": 24,
+      "books": 24,
+      "generated_documents": 204,
+      "genres": 12,
+      "languages": 12,
+      "loan_extensions": 32,
+      "loan_proposals": 24,
+      "loans": 48,
+      "notifications": 786,
+      "payments": 24,
+      "pickup_slots": 48,
+      "publishers": 12,
+      "reviews": 48,
+      "shipments": 34,
+      "users": 24
+    },
+    "bytes": 10647219,
+    "columns": 157,
+    "foreign_keys": 32
+  },
+  "phase2_regression": {
+    "executed": 23,
+    "passed": 23,
+    "failed": 0,
+    "rules_exercised_by_passing_tests": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R19",
+      "R20"
+    ]
+  },
+  "sample_pdf_sha256": "69074b9fb0762cf33ad6be4523cfc92a77736396aba1a3c8d5f35e8017d6fea0",
+  "finished_at": "2026-10-20T21:24:32.403791+00:00"
+}

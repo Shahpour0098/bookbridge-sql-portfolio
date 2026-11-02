@@ -1,0 +1,1531 @@
+{
+  "delivery_date": "2026-11-02",
+  "generated_files": [
+    "MANIFEST.json",
+    "PACKAGE_CHECK.json",
+    "SHA256SUMS.txt"
+  ],
+  "manifest_scope": "Every selected source including all delivered PDFs and publication tools. Generated manifest/check records are verified by SHA256SUMS. SHA256SUMS excludes only itself; ZIP checksum is external. Git metadata is excluded.",
+  "project": "BookBridge",
+  "refreshed_at": "2026-11-02T12:49:24.679956+00:00",
+  "source_files": [
+    {
+      "bytes": 78,
+      "path": ".gitattributes",
+      "sha256": "2c9064b846269e96c59e407dc5b00a0e099af446296fd8cdac7e0a748173e5a0",
+      "source": ".gitattributes"
+    },
+    {
+      "bytes": 461,
+      "path": ".gitignore",
+      "sha256": "12347c4a4c02863bed6b1ff92091d6bfd1e4237463d4fac5c766fa4d2737d135",
+      "source": ".gitignore"
+    },
+    {
+      "bytes": 178065,
+      "path": "01_Konzeptionsphase/BookBridge_Anforderungsspezifikation_v2.pdf",
+      "sha256": "a0bd44ba254b0ec1c0fd8a4b72516fd2d3d0964721525fe97bdc03d66814b2d1",
+      "source": "01_Konzeptionsphase/BookBridge_Anforderungsspezifikation_v2.pdf"
+    },
+    {
+      "bytes": 175148,
+      "path": "01_Konzeptionsphase/BookBridge_Beschreibung_Arbeit_Arbeitsschritte_v2.pdf",
+      "sha256": "3257d80750cfe087a25fd2d77bd55c5355219368fef204603dab7b463ae859cf",
+      "source": "01_Konzeptionsphase/BookBridge_Beschreibung_Arbeit_Arbeitsschritte_v2.pdf"
+    },
+    {
+      "bytes": 811748,
+      "path": "01_Konzeptionsphase/BookBridge_Datenwoerterbuch_v2.pdf",
+      "sha256": "0fac188edb948498a1bcd84770e9ef7e9bffdb6d0f0e2a4000624df0b892db1a",
+      "source": "01_Konzeptionsphase/BookBridge_Datenwoerterbuch_v2.pdf"
+    },
+    {
+      "bytes": 1364,
+      "path": "01_Konzeptionsphase/README.md",
+      "sha256": "1df093cacb9024794165837e1cc39ff800e737bb5c9a2d1794d6fd92e5deb641",
+      "source": "01_Konzeptionsphase/README.md"
+    },
+    {
+      "bytes": 32625,
+      "path": "01_Konzeptionsphase/design/Datenbankentwurf_v2.md",
+      "sha256": "4cd4dc4f47be99faa22e54e86fa03dae2941ac445ce8c920148251e5e47ab176",
+      "source": "01_Konzeptionsphase/design/Datenbankentwurf_v2.md"
+    },
+    {
+      "bytes": 76857,
+      "path": "01_Konzeptionsphase/design/bookbridge-model-v2.json",
+      "sha256": "682fad4afa6050a88cd5b1621f735ea0dabd5fa47501bd761aba8c6edc9a8ff6",
+      "source": "01_Konzeptionsphase/design/bookbridge-model-v2.json"
+    },
+    {
+      "bytes": 1368,
+      "path": "01_Konzeptionsphase/pictures/diagram-manifest.json",
+      "sha256": "905e126ffa4c27115c963d8071d2991bc72e72f543d2c190fb8e56a861a90e12",
+      "source": "01_Konzeptionsphase/pictures/diagram-manifest.json"
+    },
+    {
+      "bytes": 2929515,
+      "path": "01_Konzeptionsphase/pictures/png/00_Gesamtuebersicht.png",
+      "sha256": "71e7f39328bf3c315034512c11f3ba3406d406b16e6efeff896e1380d1d001d7",
+      "source": "01_Konzeptionsphase/pictures/png/00_Gesamtuebersicht.png"
+    },
+    {
+      "bytes": 1467836,
+      "path": "01_Konzeptionsphase/pictures/png/01_Katalog_Benutzer.png",
+      "sha256": "7d02902a8f73554f54df48bfc2de9231f54404ceb97674d68441a9423dbe8792",
+      "source": "01_Konzeptionsphase/pictures/png/01_Katalog_Benutzer.png"
+    },
+    {
+      "bytes": 2171968,
+      "path": "01_Konzeptionsphase/pictures/png/02_Ausleihe.png",
+      "sha256": "c339a75aca4b1c8a390bb3c05d2d7c3e1d5dc09bab0f98c6e948bbeebef452ac",
+      "source": "01_Konzeptionsphase/pictures/png/02_Ausleihe.png"
+    },
+    {
+      "bytes": 1811991,
+      "path": "01_Konzeptionsphase/pictures/png/03_Versand_Zahlung.png",
+      "sha256": "1dbc5ff9a8d74baa3a6d141c62f6e7e2778f11b3d3b79bad3935bcb0a68a9de4",
+      "source": "01_Konzeptionsphase/pictures/png/03_Versand_Zahlung.png"
+    },
+    {
+      "bytes": 1774319,
+      "path": "01_Konzeptionsphase/pictures/png/04_Bewertung_Uebersicht.png",
+      "sha256": "7dc514ae2e6d5770623d34f418240ef3e74a95f9d3cef7bd3e46822bd35edaff",
+      "source": "01_Konzeptionsphase/pictures/png/04_Bewertung_Uebersicht.png"
+    },
+    {
+      "bytes": 85719,
+      "path": "01_Konzeptionsphase/pictures/svg/00_Gesamtuebersicht.svg",
+      "sha256": "7f3bc063128275390921e8f138bc860040ebd1feca71f6d0f2681d4334441406",
+      "source": "01_Konzeptionsphase/pictures/svg/00_Gesamtuebersicht.svg"
+    },
+    {
+      "bytes": 83764,
+      "path": "01_Konzeptionsphase/pictures/svg/01_Katalog_Benutzer.svg",
+      "sha256": "2adef107db0df874588ce3e93b4c0c84e63107bef62bbbcba07e6d75e35b3369",
+      "source": "01_Konzeptionsphase/pictures/svg/01_Katalog_Benutzer.svg"
+    },
+    {
+      "bytes": 85876,
+      "path": "01_Konzeptionsphase/pictures/svg/02_Ausleihe.svg",
+      "sha256": "6ceca2b2887dcaf5521e528e32c4106036a11d2af24c971ce27146adc9429e26",
+      "source": "01_Konzeptionsphase/pictures/svg/02_Ausleihe.svg"
+    },
+    {
+      "bytes": 94597,
+      "path": "01_Konzeptionsphase/pictures/svg/03_Versand_Zahlung.svg",
+      "sha256": "b01e519e8bda2bb4de2fc1637b115c88732766d4de2f4bded994a52a99815365",
+      "source": "01_Konzeptionsphase/pictures/svg/03_Versand_Zahlung.svg"
+    },
+    {
+      "bytes": 90763,
+      "path": "01_Konzeptionsphase/pictures/svg/04_Bewertung_Uebersicht.svg",
+      "sha256": "a1055690d2cb9c9755b0dbb88794913d91065648877a4d87fb1b25d7efab9816",
+      "source": "01_Konzeptionsphase/pictures/svg/04_Bewertung_Uebersicht.svg"
+    },
+    {
+      "bytes": 9230,
+      "path": "02_Erarbeitungs_Reflexionsphase/README.md",
+      "sha256": "37cee8d4619b1b23eb8f0fdc92db616804c572d2ab89536e2bcd8bfcb8555d72",
+      "source": "02_Erarbeitungs_Reflexionsphase/README.md"
+    },
+    {
+      "bytes": 2042,
+      "path": "02_Erarbeitungs_Reflexionsphase/database/README.md",
+      "sha256": "83f1640b3bb6b6948effd0f917d8fdb21960b5c18d25bf26ed9bf69027618119",
+      "source": "02_Erarbeitungs_Reflexionsphase/database/README.md"
+    },
+    {
+      "bytes": 247707,
+      "path": "02_Erarbeitungs_Reflexionsphase/database/bookbridge_phase2.dump",
+      "sha256": "d14ade47b41699440d0b97973eb96f39a7b4c57560fd667da55f37e90e1e3df2",
+      "source": "02_Erarbeitungs_Reflexionsphase/database/bookbridge_phase2.dump"
+    },
+    {
+      "bytes": 76857,
+      "path": "02_Erarbeitungs_Reflexionsphase/design/bookbridge-model-v2.json",
+      "sha256": "682fad4afa6050a88cd5b1621f735ea0dabd5fa47501bd761aba8c6edc9a8ff6",
+      "source": "02_Erarbeitungs_Reflexionsphase/design/bookbridge-model-v2.json"
+    },
+    {
+      "bytes": 2468289,
+      "path": "02_Erarbeitungs_Reflexionsphase/docs/BookBridge_Phase2_Praesentation.pdf",
+      "sha256": "f2d24ad07eea4ebc24e664b70c0ba2016bff620bb837aca303a596f41c75dd99",
+      "source": "02_Erarbeitungs_Reflexionsphase/docs/BookBridge_Phase2_Praesentation.pdf"
+    },
+    {
+      "bytes": 1443910,
+      "path": "02_Erarbeitungs_Reflexionsphase/docs/BookBridge_Phase2_Praesentation.pptx",
+      "sha256": "ab94be4198dee646226b6062c209c8b2e4c3ba7a627ffc715c39c292d68afafa",
+      "source": "02_Erarbeitungs_Reflexionsphase/docs/BookBridge_Phase2_Praesentation.pptx"
+    },
+    {
+      "bytes": 196223,
+      "path": "02_Erarbeitungs_Reflexionsphase/docs/BookBridge_Phase2_Umsetzung.pdf",
+      "sha256": "b9c7975a09e5aed836ded149e795c8068951f8d59c649fd19312227aedbf5668",
+      "source": "02_Erarbeitungs_Reflexionsphase/docs/BookBridge_Phase2_Umsetzung.pdf"
+    },
+    {
+      "bytes": 1119,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/Q01_copy_book_owner.csv",
+      "sha256": "96f0958bd7713c565babe36a97fd163d97e40c6c3e02327d12b6d5cd35f30039",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/Q01_copy_book_owner.csv"
+    },
+    {
+      "bytes": 2186,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/Q02_loan_copy_borrower.csv",
+      "sha256": "6ab70c8acde35850c8eda017f97879bb6acd9396d5fed308a79fde53713ed22a",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/Q02_loan_copy_borrower.csv"
+    },
+    {
+      "bytes": 1709,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/Q03_payment_loan_confirmer.csv",
+      "sha256": "8875005a023803de50070431e329aab24454589760dc0dc0d5b29a60dcdd0cf8",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/Q03_payment_loan_confirmer.csv"
+    },
+    {
+      "bytes": 1448,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/artifact_review.json",
+      "sha256": "2e32aa3c1cb8648747b8837d42a1673f786bed3db5e388577486c765e79795a5",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/artifact_review.json"
+    },
+    {
+      "bytes": 4692,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/backup_verification.json",
+      "sha256": "1d5caef7322d8b3ac79316bb0da88b8299755a60d4d4521593b5218ad83c833c",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/backup_verification.json"
+    },
+    {
+      "bytes": 565,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/clean-install-console.txt",
+      "sha256": "22bcee5ba4e787758b1d9050db23950aaf1ae9c9dca39d6788fd934e1c066fba",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/clean-install-console.txt"
+    },
+    {
+      "bytes": 33175,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/delivery_verification.json",
+      "sha256": "3aba51be02956adffb4f9ae5bd6f748c74db336b23a44a041c0ccfac0ac62f1b",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/delivery_verification.json"
+    },
+    {
+      "bytes": 5690,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/installer-console.txt",
+      "sha256": "3c3033d434404448fb78539f5bbea08fadc5464ba0b5eedc6e4f9896a9b6a129",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/installer-console.txt"
+    },
+    {
+      "bytes": 4919,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/installer_verification.json",
+      "sha256": "c84735ee9c0f1364f74152940010516e053fd2037b8c6091c4e19800e983d845",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/installer_verification.json"
+    },
+    {
+      "bytes": 1892,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/integration-test-console.txt",
+      "sha256": "e47df9321d678119490f5fc330be466a6019a34bd95afa4f4d7c950bf58c1d14",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/integration-test-console.txt"
+    },
+    {
+      "bytes": 1119,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/Q01_copy_book_owner.csv",
+      "sha256": "96f0958bd7713c565babe36a97fd163d97e40c6c3e02327d12b6d5cd35f30039",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/Q01_copy_book_owner.csv"
+    },
+    {
+      "bytes": 2186,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/Q02_loan_copy_borrower.csv",
+      "sha256": "6ab70c8acde35850c8eda017f97879bb6acd9396d5fed308a79fde53713ed22a",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/Q02_loan_copy_borrower.csv"
+    },
+    {
+      "bytes": 1709,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/Q03_payment_loan_confirmer.csv",
+      "sha256": "8875005a023803de50070431e329aab24454589760dc0dc0d5b29a60dcdd0cf8",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/Q03_payment_loan_confirmer.csv"
+    },
+    {
+      "bytes": 565,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/clean-install-console.txt",
+      "sha256": "22bcee5ba4e787758b1d9050db23950aaf1ae9c9dca39d6788fd934e1c066fba",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/clean-install-console.txt"
+    },
+    {
+      "bytes": 1892,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/integration-test-console.txt",
+      "sha256": "e47df9321d678119490f5fc330be466a6019a34bd95afa4f4d7c950bf58c1d14",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/integration-test-console.txt"
+    },
+    {
+      "bytes": 4756,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/schema_verification.json",
+      "sha256": "b09a05e913f0f97546622de78b9f90d9e4afb017d75dc33b477e94ec5ec6b14a",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/schema_verification.json"
+    },
+    {
+      "bytes": 2102,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/addresses.csv",
+      "sha256": "2f158d971d7306a9a76378d2d5ffe974f98005d24545228116c29cdfa84ca0ec",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/addresses.csv"
+    },
+    {
+      "bytes": 636,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/authors.csv",
+      "sha256": "987793e682fcb774e48cea0fb7fb9e8950972cf7fac9723b1f10dc61eb5abb7e",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/authors.csv"
+    },
+    {
+      "bytes": 260,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/book_authors.csv",
+      "sha256": "87f00e5ff06fc380497a8bfd757544338c8311453da57eaa3560d8e2db2eedc4",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/book_authors.csv"
+    },
+    {
+      "bytes": 3426,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/book_copies.csv",
+      "sha256": "b3dc443a6c7f30f50d6662e66075bae247db313238ab3d506dbd9fcd7d4c4a9e",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/book_copies.csv"
+    },
+    {
+      "bytes": 3690,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/books.csv",
+      "sha256": "5faab4c941699893b400f4efa36c81dd75920032db1fd872f0a291a03d38a563",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/books.csv"
+    },
+    {
+      "bytes": 13482,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/generated_documents.csv",
+      "sha256": "28e81b864f5fc0845b65d23c822630edb4bce76a50a214c10aec859a1d3bb995",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/generated_documents.csv"
+    },
+    {
+      "bytes": 189,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/genres.csv",
+      "sha256": "320dd8b7754341e0c872dc4053e7d9157c439ff35e1266a75403c11315c13a0c",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/genres.csv"
+    },
+    {
+      "bytes": 230,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/languages.csv",
+      "sha256": "0bba999536d7e4b73ea400fb265e6d6121841f5526de3c0f1113d58df44dc10c",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/languages.csv"
+    },
+    {
+      "bytes": 2849,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/loan_extensions.csv",
+      "sha256": "6847f20cfe1b3e86f98b55bfe4f1382276a8f7d184b4a5b2dca8a3c237d4b06b",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/loan_extensions.csv"
+    },
+    {
+      "bytes": 1919,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/loan_proposals.csv",
+      "sha256": "52df46c8096645e78b305d4c28f65ad1f90dcce6c43caf6893545817f0e302f8",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/loan_proposals.csv"
+    },
+    {
+      "bytes": 9503,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/loans.csv",
+      "sha256": "ea1275cae780350ab66dff8e5099e61af246d6917cc5a9a705517008ddfbd904",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/loans.csv"
+    },
+    {
+      "bytes": 63645,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/notifications.csv",
+      "sha256": "f31fc3cad34882a77d213c40a0780bdefc1efd6156a8c148817c7fe9292c86f1",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/notifications.csv"
+    },
+    {
+      "bytes": 2760,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/payments.csv",
+      "sha256": "59d2bc5b0e8b53fe27da19fc8505c138e598b983a6718ebed46404216c701919",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/payments.csv"
+    },
+    {
+      "bytes": 1567,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/pickup_slots.csv",
+      "sha256": "1f7ca5658267fbbacbabe59b75427b9a14a1baa0f59371717835effa45fad212",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/pickup_slots.csv"
+    },
+    {
+      "bytes": 252,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/publishers.csv",
+      "sha256": "9c748a49d2a2353cda6ae28c70acaf68f04c99338ef0043721bf0319cbb6cc81",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/publishers.csv"
+    },
+    {
+      "bytes": 5055,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/reviews.csv",
+      "sha256": "3363c83e9e082ea72a3b0fb7f8208eda1678b3653db13e20b4a429c167d89342",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/reviews.csv"
+    },
+    {
+      "bytes": 7719,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/shipments.csv",
+      "sha256": "c17827c5fe99a5cd2daacfb4cb6b39c40d5d78ef2af89d515e1ae70e4bf72c9b",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/shipments.csv"
+    },
+    {
+      "bytes": 2000,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/users.csv",
+      "sha256": "b24df225b5c1ec922ff1ba630dd77788c9f50febd93d1a0df4c24e14c5ca1adc",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/tables/users.csv"
+    },
+    {
+      "bytes": 9344,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/test-report.json",
+      "sha256": "6abf91ac1aa8435dd1c3d272559a01910c0dc63b6e9b35f854eec979fec9f8e0",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/recheck-20261019/test-report.json"
+    },
+    {
+      "bytes": 4813,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/schema_verification.json",
+      "sha256": "b6ef580b46c0dc816cc19759ee808a051733ad0ae6d16ed406a0c0c57bdb20bf",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/schema_verification.json"
+    },
+    {
+      "bytes": 2102,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/addresses.csv",
+      "sha256": "2f158d971d7306a9a76378d2d5ffe974f98005d24545228116c29cdfa84ca0ec",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/addresses.csv"
+    },
+    {
+      "bytes": 636,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/authors.csv",
+      "sha256": "987793e682fcb774e48cea0fb7fb9e8950972cf7fac9723b1f10dc61eb5abb7e",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/authors.csv"
+    },
+    {
+      "bytes": 260,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/book_authors.csv",
+      "sha256": "87f00e5ff06fc380497a8bfd757544338c8311453da57eaa3560d8e2db2eedc4",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/book_authors.csv"
+    },
+    {
+      "bytes": 3426,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/book_copies.csv",
+      "sha256": "b3dc443a6c7f30f50d6662e66075bae247db313238ab3d506dbd9fcd7d4c4a9e",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/book_copies.csv"
+    },
+    {
+      "bytes": 3690,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/books.csv",
+      "sha256": "5faab4c941699893b400f4efa36c81dd75920032db1fd872f0a291a03d38a563",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/books.csv"
+    },
+    {
+      "bytes": 13482,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/generated_documents.csv",
+      "sha256": "28e81b864f5fc0845b65d23c822630edb4bce76a50a214c10aec859a1d3bb995",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/generated_documents.csv"
+    },
+    {
+      "bytes": 189,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/genres.csv",
+      "sha256": "320dd8b7754341e0c872dc4053e7d9157c439ff35e1266a75403c11315c13a0c",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/genres.csv"
+    },
+    {
+      "bytes": 230,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/languages.csv",
+      "sha256": "0bba999536d7e4b73ea400fb265e6d6121841f5526de3c0f1113d58df44dc10c",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/languages.csv"
+    },
+    {
+      "bytes": 2849,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/loan_extensions.csv",
+      "sha256": "6847f20cfe1b3e86f98b55bfe4f1382276a8f7d184b4a5b2dca8a3c237d4b06b",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/loan_extensions.csv"
+    },
+    {
+      "bytes": 1919,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/loan_proposals.csv",
+      "sha256": "52df46c8096645e78b305d4c28f65ad1f90dcce6c43caf6893545817f0e302f8",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/loan_proposals.csv"
+    },
+    {
+      "bytes": 9503,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/loans.csv",
+      "sha256": "ea1275cae780350ab66dff8e5099e61af246d6917cc5a9a705517008ddfbd904",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/loans.csv"
+    },
+    {
+      "bytes": 63645,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/notifications.csv",
+      "sha256": "f31fc3cad34882a77d213c40a0780bdefc1efd6156a8c148817c7fe9292c86f1",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/notifications.csv"
+    },
+    {
+      "bytes": 2760,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/payments.csv",
+      "sha256": "59d2bc5b0e8b53fe27da19fc8505c138e598b983a6718ebed46404216c701919",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/payments.csv"
+    },
+    {
+      "bytes": 1567,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/pickup_slots.csv",
+      "sha256": "1f7ca5658267fbbacbabe59b75427b9a14a1baa0f59371717835effa45fad212",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/pickup_slots.csv"
+    },
+    {
+      "bytes": 252,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/publishers.csv",
+      "sha256": "9c748a49d2a2353cda6ae28c70acaf68f04c99338ef0043721bf0319cbb6cc81",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/publishers.csv"
+    },
+    {
+      "bytes": 5055,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/reviews.csv",
+      "sha256": "3363c83e9e082ea72a3b0fb7f8208eda1678b3653db13e20b4a429c167d89342",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/reviews.csv"
+    },
+    {
+      "bytes": 7719,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/shipments.csv",
+      "sha256": "c17827c5fe99a5cd2daacfb4cb6b39c40d5d78ef2af89d515e1ae70e4bf72c9b",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/shipments.csv"
+    },
+    {
+      "bytes": 2000,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/tables/users.csv",
+      "sha256": "b24df225b5c1ec922ff1ba630dd77788c9f50febd93d1a0df4c24e14c5ca1adc",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/tables/users.csv"
+    },
+    {
+      "bytes": 9337,
+      "path": "02_Erarbeitungs_Reflexionsphase/evidence/test-report.json",
+      "sha256": "51094f59ab42e7462a875b03cc4794648ec3cba6c4327397fabbe00c778195d3",
+      "source": "02_Erarbeitungs_Reflexionsphase/evidence/test-report.json"
+    },
+    {
+      "bytes": 1681,
+      "path": "02_Erarbeitungs_Reflexionsphase/pictures/README.md",
+      "sha256": "d666df25f9f13d95b93be707a623e2c36451ba3627f5ee9560886ac614b739f0",
+      "source": "02_Erarbeitungs_Reflexionsphase/pictures/README.md"
+    },
+    {
+      "bytes": 387204,
+      "path": "02_Erarbeitungs_Reflexionsphase/pictures/der-kleine-prinz.jpg",
+      "sha256": "6403dc257c8bfda0a3396c4cb82f5053e3ce72da3f9f118219145e08193b75d5",
+      "source": "02_Erarbeitungs_Reflexionsphase/pictures/der-kleine-prinz.jpg"
+    },
+    {
+      "bytes": 157289,
+      "path": "02_Erarbeitungs_Reflexionsphase/pictures/der-vorleser.jpg",
+      "sha256": "9dfd7dba3efcf9ff52206cfdea158aaa3da4b4394a383958751ebfa2a413e81a",
+      "source": "02_Erarbeitungs_Reflexionsphase/pictures/der-vorleser.jpg"
+    },
+    {
+      "bytes": 1068133,
+      "path": "02_Erarbeitungs_Reflexionsphase/pictures/momo.png",
+      "sha256": "616bb31d275599e59e4b7b7b0b6bce77eed565cac3c4da01fc164a0c174f9510",
+      "source": "02_Erarbeitungs_Reflexionsphase/pictures/momo.png"
+    },
+    {
+      "bytes": 74672,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/Q01_copy_book_owner.png",
+      "sha256": "c41f4bbe8090aac174e9cdf7f22a2cd24f34ceb6573204cca607a36a37dc8ab8",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/Q01_copy_book_owner.png"
+    },
+    {
+      "bytes": 74862,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/Q02_loan_copy_borrower.png",
+      "sha256": "d8ab008a93adfe3f0b2a0d0065d2d57a3794b81c17d1c55c3ef3ae75cc720f99",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/Q02_loan_copy_borrower.png"
+    },
+    {
+      "bytes": 76873,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/Q03_payment_loan_confirmer.png",
+      "sha256": "d110df3c92e829d4bb53b627730a8e0209ee2a9b1c76344d0c46dc3892543684",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/Q03_payment_loan_confirmer.png"
+    },
+    {
+      "bytes": 75845,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T01_users.png",
+      "sha256": "8ca506cb2b5719a610255b00a4bd44a8a153346d301a4bb78d08b46fa981bcb6",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T01_users.png"
+    },
+    {
+      "bytes": 75433,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T02_addresses.png",
+      "sha256": "b5c5f6efda0972dfe1aacda694d7b905f2d5f3b8024f63018e63e2aa9dfb94a5",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T02_addresses.png"
+    },
+    {
+      "bytes": 65505,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T03_publishers.png",
+      "sha256": "4c247d67366c02e4c68c82395a85d23e67508af8335d0f521eae439e71e2ee76",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T03_publishers.png"
+    },
+    {
+      "bytes": 62119,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T04_genres.png",
+      "sha256": "9085694f39b1931782f5c9231336012380207ca77a9235c224a9fc5d20f17bf4",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T04_genres.png"
+    },
+    {
+      "bytes": 67056,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T05_languages.png",
+      "sha256": "05ed955395567ac1df89ae7acea581f102e64f634d93390cbb24ad776c4a5715",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T05_languages.png"
+    },
+    {
+      "bytes": 67207,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T06_authors.png",
+      "sha256": "8b57558cfd59726501bdaa121c7576f25244f11b33ccd63486d6a86a6718fc8a",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T06_authors.png"
+    },
+    {
+      "bytes": 76344,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T07_books.png",
+      "sha256": "4da22e2deeac6db58991ed151dda98cdf3e8bfd3805326b4316b8d6e500f2373",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T07_books.png"
+    },
+    {
+      "bytes": 62956,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T08_book_authors.png",
+      "sha256": "240ed12a0e17eeca27212b234028a9b583e273d5dda450adf8405d10b94a7c9d",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T08_book_authors.png"
+    },
+    {
+      "bytes": 71017,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T09_book_copies.png",
+      "sha256": "772a424877db43e6f7b2b0918e291e70f2cede1629319122444757f62a2c3c3a",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T09_book_copies.png"
+    },
+    {
+      "bytes": 75070,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T10_pickup_slots.png",
+      "sha256": "6702624a0af1b2b61a005c576d159e57e779399a28acbcf466e499d6c6ea637e",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T10_pickup_slots.png"
+    },
+    {
+      "bytes": 74451,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T11_loans.png",
+      "sha256": "d2b5384f0fc1279fd48157124400b080c552a75bc603768a2496c4ca48cc4468",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T11_loans.png"
+    },
+    {
+      "bytes": 70838,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T12_loan_proposals.png",
+      "sha256": "7ca566a6f0393388f36c189a2fbebbe55decdedeb087c6e845faff55b4de0910",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T12_loan_proposals.png"
+    },
+    {
+      "bytes": 77135,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T13_loan_extensions.png",
+      "sha256": "c80dc360a1e0ae0eb2c0fe55987537b17cb940cfea1fbe12b730e175d31e2406",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T13_loan_extensions.png"
+    },
+    {
+      "bytes": 74638,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T14_payments.png",
+      "sha256": "f6d13e35116b8feb0f2b4277b2cf72e12ab77c97a22e411624197fb68a5e026d",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T14_payments.png"
+    },
+    {
+      "bytes": 71663,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T15_shipments.png",
+      "sha256": "02aeaa10f7e41846a4a89b23cbd3e2f4b49f69681d96b0515ea86709197230fa",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T15_shipments.png"
+    },
+    {
+      "bytes": 75869,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T16_notifications.png",
+      "sha256": "970b3cbe72bc8c03c8eaba39b69f4e762c3cbbb9d734104314b5559a35bf7fcf",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T16_notifications.png"
+    },
+    {
+      "bytes": 77752,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T17_generated_documents.png",
+      "sha256": "e9e551d0399e878de57541f9db0307a3e125a3bbb48fe961bc91504910c492a9",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T17_generated_documents.png"
+    },
+    {
+      "bytes": 64247,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/T18_reviews.png",
+      "sha256": "0c2b85756cc15bf216ae713ac2eae74413dc315ecd769bd95dbf5a16192b611e",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/T18_reviews.png"
+    },
+    {
+      "bytes": 7195,
+      "path": "02_Erarbeitungs_Reflexionsphase/screenshots/manifest.json",
+      "sha256": "fa8a0d2b622612e4641daf247a36712c1fe54c26a787f62cb6094b743add4b11",
+      "source": "02_Erarbeitungs_Reflexionsphase/screenshots/manifest.json"
+    },
+    {
+      "bytes": 1373,
+      "path": "02_Erarbeitungs_Reflexionsphase/scripts/install.ps1",
+      "sha256": "da07a06580310ec8edc3cb5d374f578cbd147d614ed185840a3e6c7c2afb1a9a",
+      "source": "02_Erarbeitungs_Reflexionsphase/scripts/install.ps1"
+    },
+    {
+      "bytes": 1479,
+      "path": "02_Erarbeitungs_Reflexionsphase/scripts/install_dependencies.ps1",
+      "sha256": "8ac482fcf329e2e9173c13d38f5da407fb2c75d784d374d748d1bf828c91b4f3",
+      "source": "02_Erarbeitungs_Reflexionsphase/scripts/install_dependencies.ps1"
+    },
+    {
+      "bytes": 23,
+      "path": "02_Erarbeitungs_Reflexionsphase/scripts/requirements.txt",
+      "sha256": "ea9a02d18ce562d9ffe1a43c654cabae98e8759147ff98e92558598dc49247f5",
+      "source": "02_Erarbeitungs_Reflexionsphase/scripts/requirements.txt"
+    },
+    {
+      "bytes": 3272,
+      "path": "02_Erarbeitungs_Reflexionsphase/scripts/run_tests.ps1",
+      "sha256": "bd4cef1cf77602138a52066e94ec638cdc9b3e689abf52d7c990829e0fc2d14c",
+      "source": "02_Erarbeitungs_Reflexionsphase/scripts/run_tests.ps1"
+    },
+    {
+      "bytes": 1581,
+      "path": "02_Erarbeitungs_Reflexionsphase/scripts/start_database.ps1",
+      "sha256": "f26a60cc544d2c862eec0d3e10fd890c5e83ac78bf5bf305f1358fce71184d10",
+      "source": "02_Erarbeitungs_Reflexionsphase/scripts/start_database.ps1"
+    },
+    {
+      "bytes": 894,
+      "path": "02_Erarbeitungs_Reflexionsphase/scripts/start_pgadmin.py",
+      "sha256": "c49686130d7d1c73141bd63b71c493f2e4ea67f503ff4db2af41798411a790bf",
+      "source": "02_Erarbeitungs_Reflexionsphase/scripts/start_pgadmin.py"
+    },
+    {
+      "bytes": 311,
+      "path": "02_Erarbeitungs_Reflexionsphase/scripts/stop_database.ps1",
+      "sha256": "de20875bb107b85b2fe9f2cff709b413b0fb509a153cfdf03d8045673940ca38",
+      "source": "02_Erarbeitungs_Reflexionsphase/scripts/stop_database.ps1"
+    },
+    {
+      "bytes": 44143,
+      "path": "02_Erarbeitungs_Reflexionsphase/sql/01_schema.sql",
+      "sha256": "d833c139649b057b4fb47e7d63a825db627a7f5e54415301cf55d4f9b3ca5954",
+      "source": "02_Erarbeitungs_Reflexionsphase/sql/01_schema.sql"
+    },
+    {
+      "bytes": 30234,
+      "path": "02_Erarbeitungs_Reflexionsphase/sql/02_integrity.sql",
+      "sha256": "1ed7d00fe4bb824330a37ab40746d78401324f11d7a283e5316b68558e11fa93",
+      "source": "02_Erarbeitungs_Reflexionsphase/sql/02_integrity.sql"
+    },
+    {
+      "bytes": 35596,
+      "path": "02_Erarbeitungs_Reflexionsphase/sql/03_workflows.sql",
+      "sha256": "296df42f41d854411a2d801cfc8bc474badc9641e26e70a80ad2f2bf85740607",
+      "source": "02_Erarbeitungs_Reflexionsphase/sql/03_workflows.sql"
+    },
+    {
+      "bytes": 12232,
+      "path": "02_Erarbeitungs_Reflexionsphase/sql/04_seed.sql",
+      "sha256": "e06c823d834d8877540462775faf88f5a71d5afd3529ebecea7d50d9c93e52a9",
+      "source": "02_Erarbeitungs_Reflexionsphase/sql/04_seed.sql"
+    },
+    {
+      "bytes": 3869,
+      "path": "02_Erarbeitungs_Reflexionsphase/sql/05_queries.sql",
+      "sha256": "d0c8d55a45c0c5dd977c5961559f6f032a4852e12f07caae3ff4264cac11fb31",
+      "source": "02_Erarbeitungs_Reflexionsphase/sql/05_queries.sql"
+    },
+    {
+      "bytes": 2797,
+      "path": "02_Erarbeitungs_Reflexionsphase/sql/06_access.sql",
+      "sha256": "7674d2933fcd7ec6a8449fbb7b56d4485164715d415b9d214f91830e33cbc8cc",
+      "source": "02_Erarbeitungs_Reflexionsphase/sql/06_access.sql"
+    },
+    {
+      "bytes": 5030,
+      "path": "02_Erarbeitungs_Reflexionsphase/tests/README.md",
+      "sha256": "b189e1e79aa44bcdc1457b1f8e63b1387e9118b7a2a46734486c458ed1ace872",
+      "source": "02_Erarbeitungs_Reflexionsphase/tests/README.md"
+    },
+    {
+      "bytes": 23,
+      "path": "02_Erarbeitungs_Reflexionsphase/tests/requirements.txt",
+      "sha256": "ea9a02d18ce562d9ffe1a43c654cabae98e8759147ff98e92558598dc49247f5",
+      "source": "02_Erarbeitungs_Reflexionsphase/tests/requirements.txt"
+    },
+    {
+      "bytes": 37238,
+      "path": "02_Erarbeitungs_Reflexionsphase/tests/run_tests.py",
+      "sha256": "a1acc35e7a290e04e7c1c163d4e93b30f832872b50e50dd7ec47e7e95a996bc4",
+      "source": "02_Erarbeitungs_Reflexionsphase/tests/run_tests.py"
+    },
+    {
+      "bytes": 6667,
+      "path": "02_Erarbeitungs_Reflexionsphase/tests/verify_backup.py",
+      "sha256": "fd7d0401918c05043c3b111e8ddf52dde2efc017b460ea97031995acc3354b7d",
+      "source": "02_Erarbeitungs_Reflexionsphase/tests/verify_backup.py"
+    },
+    {
+      "bytes": 6791,
+      "path": "02_Erarbeitungs_Reflexionsphase/tests/verify_install.py",
+      "sha256": "f3275c49de12a41576616b88b2c0f638764402bc40185099edec296fc1224542",
+      "source": "02_Erarbeitungs_Reflexionsphase/tests/verify_install.py"
+    },
+    {
+      "bytes": 6517,
+      "path": "02_Erarbeitungs_Reflexionsphase/tests/verify_powershell_installer.py",
+      "sha256": "59dff071f4b64f34e865637ddaf269c1162aca4bbc4c311df3160dc1cab80b7b",
+      "source": "02_Erarbeitungs_Reflexionsphase/tests/verify_powershell_installer.py"
+    },
+    {
+      "bytes": 59,
+      "path": "03_Finalisierungsphase/.gitignore",
+      "sha256": "9557af1614d1f3b9ec9e8ace3a30a0197c1300a727e3b7de4bd6d54f487adf88",
+      "source": "03_Finalisierungsphase/.gitignore"
+    },
+    {
+      "bytes": 135,
+      "path": "03_Finalisierungsphase/BookBridge starten.cmd",
+      "sha256": "f338b388a29dc319c57718817df0f9ce3903e8a311acdf2c87bf2cab0931f38c",
+      "source": "03_Finalisierungsphase/BookBridge starten.cmd"
+    },
+    {
+      "bytes": 12861,
+      "path": "03_Finalisierungsphase/README.md",
+      "sha256": "5b9bfcfd187f2d254f78f73dd5e04151c9aa3c3f6bf4808f4b14389415a6e3d3",
+      "source": "03_Finalisierungsphase/README.md"
+    },
+    {
+      "bytes": 38,
+      "path": "03_Finalisierungsphase/backend/__init__.py",
+      "sha256": "8186966f96615d15fa999ff35a956d8b2d08170e62db6ac996c8cce10b739157",
+      "source": "03_Finalisierungsphase/backend/__init__.py"
+    },
+    {
+      "bytes": 24140,
+      "path": "03_Finalisierungsphase/backend/app.py",
+      "sha256": "338e5a84a241f5168e37ebadc68c8d28324048aaecba977d96b01fc0b4b4cbfd",
+      "source": "03_Finalisierungsphase/backend/app.py"
+    },
+    {
+      "bytes": 39589,
+      "path": "03_Finalisierungsphase/backend/domain.py",
+      "sha256": "d933f419a30eb3cd7398812174e3e830c21a6cb174faabb4f5993bc2ac7c91a5",
+      "source": "03_Finalisierungsphase/backend/domain.py"
+    },
+    {
+      "bytes": 1292,
+      "path": "03_Finalisierungsphase/backend/security.py",
+      "sha256": "e49ac612410f147b49d1c3ceaef39744a1e1803d8995bf0d3a82dbcdae7c7975",
+      "source": "03_Finalisierungsphase/backend/security.py"
+    },
+    {
+      "bytes": 3220,
+      "path": "03_Finalisierungsphase/database/07_application.sql",
+      "sha256": "81166891d45635a0d1d4ab5fba3493437e4bfe29891d2c6a1296c6a36d20557f",
+      "source": "03_Finalisierungsphase/database/07_application.sql"
+    },
+    {
+      "bytes": 768,
+      "path": "03_Finalisierungsphase/database/08_application_editing.sql",
+      "sha256": "9949657cd409b8cfff32fd013f4465a7cea60afd87cac1730cfcfda9004bb3ee",
+      "source": "03_Finalisierungsphase/database/08_application_editing.sql"
+    },
+    {
+      "bytes": 387,
+      "path": "03_Finalisierungsphase/database/09_deferred_validation.sql",
+      "sha256": "f279c59674edd61a515b57ea531cc41c5a05aa4111c4cecc5f10da1b48f3515a",
+      "source": "03_Finalisierungsphase/database/09_deferred_validation.sql"
+    },
+    {
+      "bytes": 5403,
+      "path": "03_Finalisierungsphase/database/BookBridge_Gesamt.sql",
+      "sha256": "d79015e005ddf48ba620cdb973f0ff1e7d50442d32b86b982c404c92a797ca96",
+      "source": "03_Finalisierungsphase/database/BookBridge_Gesamt.sql"
+    },
+    {
+      "bytes": 76857,
+      "path": "03_Finalisierungsphase/database/bookbridge-model-v2.json",
+      "sha256": "682fad4afa6050a88cd5b1621f735ea0dabd5fa47501bd761aba8c6edc9a8ff6",
+      "source": "03_Finalisierungsphase/database/bookbridge-model-v2.json"
+    },
+    {
+      "bytes": 44143,
+      "path": "03_Finalisierungsphase/database/phase2/01_schema.sql",
+      "sha256": "d833c139649b057b4fb47e7d63a825db627a7f5e54415301cf55d4f9b3ca5954",
+      "source": "03_Finalisierungsphase/database/phase2/01_schema.sql"
+    },
+    {
+      "bytes": 30234,
+      "path": "03_Finalisierungsphase/database/phase2/02_integrity.sql",
+      "sha256": "1ed7d00fe4bb824330a37ab40746d78401324f11d7a283e5316b68558e11fa93",
+      "source": "03_Finalisierungsphase/database/phase2/02_integrity.sql"
+    },
+    {
+      "bytes": 35596,
+      "path": "03_Finalisierungsphase/database/phase2/03_workflows.sql",
+      "sha256": "296df42f41d854411a2d801cfc8bc474badc9641e26e70a80ad2f2bf85740607",
+      "source": "03_Finalisierungsphase/database/phase2/03_workflows.sql"
+    },
+    {
+      "bytes": 12232,
+      "path": "03_Finalisierungsphase/database/phase2/04_seed.sql",
+      "sha256": "e06c823d834d8877540462775faf88f5a71d5afd3529ebecea7d50d9c93e52a9",
+      "source": "03_Finalisierungsphase/database/phase2/04_seed.sql"
+    },
+    {
+      "bytes": 3869,
+      "path": "03_Finalisierungsphase/database/phase2/05_queries.sql",
+      "sha256": "d0c8d55a45c0c5dd977c5961559f6f032a4852e12f07caae3ff4264cac11fb31",
+      "source": "03_Finalisierungsphase/database/phase2/05_queries.sql"
+    },
+    {
+      "bytes": 2797,
+      "path": "03_Finalisierungsphase/database/phase2/06_access.sql",
+      "sha256": "7674d2933fcd7ec6a8449fbb7b56d4485164715d415b9d214f91830e33cbc8cc",
+      "source": "03_Finalisierungsphase/database/phase2/06_access.sql"
+    },
+    {
+      "bytes": 7272,
+      "path": "03_Finalisierungsphase/docs/API_CONTRACT.md",
+      "sha256": "b49d5262bd6809f895ec44c25bf25755b9b8f0248b289b1a9f37c2e056ee3a29",
+      "source": "03_Finalisierungsphase/docs/API_CONTRACT.md"
+    },
+    {
+      "bytes": 185261,
+      "path": "03_Finalisierungsphase/docs/BookBridge_Abstract.pdf",
+      "sha256": "885d624d8e6c447ce7fc20eeeb2e84a9c3ae68df0df4ce9afe93c38e6187ba91",
+      "source": "03_Finalisierungsphase/docs/BookBridge_Abstract.pdf"
+    },
+    {
+      "bytes": 7774420,
+      "path": "03_Finalisierungsphase/docs/BookBridge_Gesamtdokumentation.pdf",
+      "sha256": "f6239d79c6515e0b1edb8e31d3a14545786755ac5228109984d89efa6dc269cb",
+      "source": "03_Finalisierungsphase/docs/BookBridge_Gesamtdokumentation.pdf"
+    },
+    {
+      "bytes": 183231,
+      "path": "03_Finalisierungsphase/docs/BookBridge_Phase3_Abschlussbericht.pdf",
+      "sha256": "3e1670841e9cc0a3df15f30930d2fc1ae3b3696a776b37d2dc1ec07ba848bf75",
+      "source": "03_Finalisierungsphase/docs/BookBridge_Phase3_Abschlussbericht.pdf"
+    },
+    {
+      "bytes": 142465,
+      "path": "03_Finalisierungsphase/docs/BookBridge_Repository_und_Abgabe.pdf",
+      "sha256": "f78a0d23d79ea56f2df81a89321a2e90bc1aef02b8254b9b660a0114c55767a8",
+      "source": "03_Finalisierungsphase/docs/BookBridge_Repository_und_Abgabe.pdf"
+    },
+    {
+      "bytes": 3855,
+      "path": "03_Finalisierungsphase/docs/FRONTEND_QA.md",
+      "sha256": "88d940a908d1fbf91e61c48b6fa6d0011f65fa915449405e58dff65023e59d67",
+      "source": "03_Finalisierungsphase/docs/FRONTEND_QA.md"
+    },
+    {
+      "bytes": 6733,
+      "path": "03_Finalisierungsphase/docs/INTEGRATION_STATUS.md",
+      "sha256": "b50254e6cbde13c8aa8c2d51d276eb60e9afb9d4eb697e23d93b7e7ff18100db",
+      "source": "03_Finalisierungsphase/docs/INTEGRATION_STATUS.md"
+    },
+    {
+      "bytes": 66730,
+      "path": "03_Finalisierungsphase/evidence/browser-20261020/01-home.png",
+      "sha256": "ec3d436962811e246495ee4a5e876bdb287706d1f512cf50f274a2c8cf893883",
+      "source": "03_Finalisierungsphase/evidence/browser-20261020/01-home.png"
+    },
+    {
+      "bytes": 58879,
+      "path": "03_Finalisierungsphase/evidence/browser-20261020/02-edit-offer.png",
+      "sha256": "eef971609f7146bd04dd5e4fa75e023171bbb292a2283e074df6a94a0fa56e8a",
+      "source": "03_Finalisierungsphase/evidence/browser-20261020/02-edit-offer.png"
+    },
+    {
+      "bytes": 49924,
+      "path": "03_Finalisierungsphase/evidence/browser-20261020/03-completed-loan.png",
+      "sha256": "5dd8ca02921a6376705e41feda60c6cee0c2c8b9f1e38f11b30a72c1da0dfe37",
+      "source": "03_Finalisierungsphase/evidence/browser-20261020/03-completed-loan.png"
+    },
+    {
+      "bytes": 46762,
+      "path": "03_Finalisierungsphase/evidence/browser-20261020/04-admin-reactivation.png",
+      "sha256": "ce516cabe64f6efe18823d877a36c5df7455904e585dc0df1c6734ee2682c2e9",
+      "source": "03_Finalisierungsphase/evidence/browser-20261020/04-admin-reactivation.png"
+    },
+    {
+      "bytes": 1124,
+      "path": "03_Finalisierungsphase/evidence/browser-20261020/browser-report.json",
+      "sha256": "425f70f029e1001a7980fa65cf29ca3d695d36facd83f57dd77650f42f8e151c",
+      "source": "03_Finalisierungsphase/evidence/browser-20261020/browser-report.json"
+    },
+    {
+      "bytes": 3707,
+      "path": "03_Finalisierungsphase/evidence/document-verification-20261021.json",
+      "sha256": "8610b97a673e2bbb46f72ebb9f3640abd5bc3b6587ad7f94956ceb13b36bc637",
+      "source": "03_Finalisierungsphase/evidence/document-verification-20261021.json"
+    },
+    {
+      "bytes": 5979,
+      "path": "03_Finalisierungsphase/evidence/document-verification-20261102.json",
+      "sha256": "9d0b7b9cb5f5785ed1b93c56100d77fe19249b8bac5f44bee54fad8968f341b9",
+      "source": "03_Finalisierungsphase/evidence/document-verification-20261102.json"
+    },
+    {
+      "bytes": 318,
+      "path": "03_Finalisierungsphase/evidence/native-dependencies-verification.json",
+      "sha256": "318fc033ffc25a1b2101e6a057d232154cf466630f8b96d2cefa8ca7bcbbbbfe",
+      "source": "03_Finalisierungsphase/evidence/native-dependencies-verification.json"
+    },
+    {
+      "bytes": 285,
+      "path": "03_Finalisierungsphase/evidence/native-runtime-verification-20261021.json",
+      "sha256": "8d9b2908e150d46e1f7a3fed728c1f28133ffabfc7b8adcdfd5a87d197fd3fc8",
+      "source": "03_Finalisierungsphase/evidence/native-runtime-verification-20261021.json"
+    },
+    {
+      "bytes": 1244,
+      "path": "03_Finalisierungsphase/evidence/phase2-source-preservation.json",
+      "sha256": "621ee06eb1b8081bef302a8db1c6472b3a4d930748dd003e2dd50b493b5dcd66",
+      "source": "03_Finalisierungsphase/evidence/phase2-source-preservation.json"
+    },
+    {
+      "bytes": 200,
+      "path": "03_Finalisierungsphase/evidence/release-tests-20261021/javascript-tests.txt",
+      "sha256": "e76079c83567d297e08f8501896973510712622c0894fefb97c26bf0b933a79e",
+      "source": "03_Finalisierungsphase/evidence/release-tests-20261021/javascript-tests.txt"
+    },
+    {
+      "bytes": 7109,
+      "path": "03_Finalisierungsphase/evidence/release-tests-20261021/python-tests.txt",
+      "sha256": "21d062e6808dde88fcc18f881998270a75dfcae4223e6cd59877dbe90045f30c",
+      "source": "03_Finalisierungsphase/evidence/release-tests-20261021/python-tests.txt"
+    },
+    {
+      "bytes": 172,
+      "path": "03_Finalisierungsphase/evidence/release-tests-20261021/summary.json",
+      "sha256": "dd6cb3ee8b018a1c84577fce5c05868ec04923c34d5561d2281de44958de38af",
+      "source": "03_Finalisierungsphase/evidence/release-tests-20261021/summary.json"
+    },
+    {
+      "bytes": 6791,
+      "path": "03_Finalisierungsphase/evidence/release-tests/python-tests.txt",
+      "sha256": "e599da0c4a6b9a86e68916e589b359734ab1fc9f4f65b42bc8c0e7ae99a52e92",
+      "source": "03_Finalisierungsphase/evidence/release-tests/python-tests.txt"
+    },
+    {
+      "bytes": 135,
+      "path": "03_Finalisierungsphase/evidence/release-tests/summary.json",
+      "sha256": "a8c2a5bc5e6d419e33da292dd68c571bf4281df132f5540b12ffda7d92656102",
+      "source": "03_Finalisierungsphase/evidence/release-tests/summary.json"
+    },
+    {
+      "bytes": 4643,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/integration-report.json",
+      "sha256": "16425b26031be859bca4564ceb7c195976bd98179564f0c2cb4f3c8a1961fa26",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/integration-report.json"
+    },
+    {
+      "bytes": 1119,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/Q01_copy_book_owner.csv",
+      "sha256": "96f0958bd7713c565babe36a97fd163d97e40c6c3e02327d12b6d5cd35f30039",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/Q01_copy_book_owner.csv"
+    },
+    {
+      "bytes": 2186,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/Q02_loan_copy_borrower.csv",
+      "sha256": "6ab70c8acde35850c8eda017f97879bb6acd9396d5fed308a79fde53713ed22a",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/Q02_loan_copy_borrower.csv"
+    },
+    {
+      "bytes": 1709,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/Q03_payment_loan_confirmer.csv",
+      "sha256": "8875005a023803de50070431e329aab24454589760dc0dc0d5b29a60dcdd0cf8",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/Q03_payment_loan_confirmer.csv"
+    },
+    {
+      "bytes": 2102,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/addresses.csv",
+      "sha256": "2f158d971d7306a9a76378d2d5ffe974f98005d24545228116c29cdfa84ca0ec",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/addresses.csv"
+    },
+    {
+      "bytes": 636,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/authors.csv",
+      "sha256": "987793e682fcb774e48cea0fb7fb9e8950972cf7fac9723b1f10dc61eb5abb7e",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/authors.csv"
+    },
+    {
+      "bytes": 260,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/book_authors.csv",
+      "sha256": "87f00e5ff06fc380497a8bfd757544338c8311453da57eaa3560d8e2db2eedc4",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/book_authors.csv"
+    },
+    {
+      "bytes": 3426,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/book_copies.csv",
+      "sha256": "b3dc443a6c7f30f50d6662e66075bae247db313238ab3d506dbd9fcd7d4c4a9e",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/book_copies.csv"
+    },
+    {
+      "bytes": 3690,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/books.csv",
+      "sha256": "5faab4c941699893b400f4efa36c81dd75920032db1fd872f0a291a03d38a563",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/books.csv"
+    },
+    {
+      "bytes": 13482,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/generated_documents.csv",
+      "sha256": "28e81b864f5fc0845b65d23c822630edb4bce76a50a214c10aec859a1d3bb995",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/generated_documents.csv"
+    },
+    {
+      "bytes": 189,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/genres.csv",
+      "sha256": "320dd8b7754341e0c872dc4053e7d9157c439ff35e1266a75403c11315c13a0c",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/genres.csv"
+    },
+    {
+      "bytes": 230,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/languages.csv",
+      "sha256": "0bba999536d7e4b73ea400fb265e6d6121841f5526de3c0f1113d58df44dc10c",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/languages.csv"
+    },
+    {
+      "bytes": 2849,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/loan_extensions.csv",
+      "sha256": "6847f20cfe1b3e86f98b55bfe4f1382276a8f7d184b4a5b2dca8a3c237d4b06b",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/loan_extensions.csv"
+    },
+    {
+      "bytes": 1919,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/loan_proposals.csv",
+      "sha256": "52df46c8096645e78b305d4c28f65ad1f90dcce6c43caf6893545817f0e302f8",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/loan_proposals.csv"
+    },
+    {
+      "bytes": 9503,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/loans.csv",
+      "sha256": "ea1275cae780350ab66dff8e5099e61af246d6917cc5a9a705517008ddfbd904",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/loans.csv"
+    },
+    {
+      "bytes": 63645,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/notifications.csv",
+      "sha256": "f31fc3cad34882a77d213c40a0780bdefc1efd6156a8c148817c7fe9292c86f1",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/notifications.csv"
+    },
+    {
+      "bytes": 2760,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/payments.csv",
+      "sha256": "59d2bc5b0e8b53fe27da19fc8505c138e598b983a6718ebed46404216c701919",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/payments.csv"
+    },
+    {
+      "bytes": 1567,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/pickup_slots.csv",
+      "sha256": "1f7ca5658267fbbacbabe59b75427b9a14a1baa0f59371717835effa45fad212",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/pickup_slots.csv"
+    },
+    {
+      "bytes": 252,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/publishers.csv",
+      "sha256": "9c748a49d2a2353cda6ae28c70acaf68f04c99338ef0043721bf0319cbb6cc81",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/publishers.csv"
+    },
+    {
+      "bytes": 5055,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/reviews.csv",
+      "sha256": "3363c83e9e082ea72a3b0fb7f8208eda1678b3653db13e20b4a429c167d89342",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/reviews.csv"
+    },
+    {
+      "bytes": 7719,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/shipments.csv",
+      "sha256": "c17827c5fe99a5cd2daacfb4cb6b39c40d5d78ef2af89d515e1ae70e4bf72c9b",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/shipments.csv"
+    },
+    {
+      "bytes": 2000,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/users.csv",
+      "sha256": "b24df225b5c1ec922ff1ba630dd77788c9f50febd93d1a0df4c24e14c5ca1adc",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/tables/users.csv"
+    },
+    {
+      "bytes": 9360,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/test-report.json",
+      "sha256": "c6f3c5ecf355b285d796953b1a7fde87e68dcc31af64291e000a3691bb9f980c",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/phase2/test-report.json"
+    },
+    {
+      "bytes": 2363,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261020/sample-loan-confirmation.pdf",
+      "sha256": "69074b9fb0762cf33ad6be4523cfc92a77736396aba1a3c8d5f35e8017d6fea0",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261020/sample-loan-confirmation.pdf"
+    },
+    {
+      "bytes": 4852,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/integration-report.json",
+      "sha256": "1631e972af6784839ed55bd041db29968ebcd07546f2f8d8a1050d79cc2c808d",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/integration-report.json"
+    },
+    {
+      "bytes": 1119,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/Q01_copy_book_owner.csv",
+      "sha256": "96f0958bd7713c565babe36a97fd163d97e40c6c3e02327d12b6d5cd35f30039",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/Q01_copy_book_owner.csv"
+    },
+    {
+      "bytes": 2186,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/Q02_loan_copy_borrower.csv",
+      "sha256": "6ab70c8acde35850c8eda017f97879bb6acd9396d5fed308a79fde53713ed22a",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/Q02_loan_copy_borrower.csv"
+    },
+    {
+      "bytes": 1709,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/Q03_payment_loan_confirmer.csv",
+      "sha256": "8875005a023803de50070431e329aab24454589760dc0dc0d5b29a60dcdd0cf8",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/Q03_payment_loan_confirmer.csv"
+    },
+    {
+      "bytes": 2102,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/addresses.csv",
+      "sha256": "2f158d971d7306a9a76378d2d5ffe974f98005d24545228116c29cdfa84ca0ec",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/addresses.csv"
+    },
+    {
+      "bytes": 636,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/authors.csv",
+      "sha256": "987793e682fcb774e48cea0fb7fb9e8950972cf7fac9723b1f10dc61eb5abb7e",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/authors.csv"
+    },
+    {
+      "bytes": 260,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/book_authors.csv",
+      "sha256": "87f00e5ff06fc380497a8bfd757544338c8311453da57eaa3560d8e2db2eedc4",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/book_authors.csv"
+    },
+    {
+      "bytes": 3426,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/book_copies.csv",
+      "sha256": "b3dc443a6c7f30f50d6662e66075bae247db313238ab3d506dbd9fcd7d4c4a9e",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/book_copies.csv"
+    },
+    {
+      "bytes": 3690,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/books.csv",
+      "sha256": "5faab4c941699893b400f4efa36c81dd75920032db1fd872f0a291a03d38a563",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/books.csv"
+    },
+    {
+      "bytes": 13482,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/generated_documents.csv",
+      "sha256": "28e81b864f5fc0845b65d23c822630edb4bce76a50a214c10aec859a1d3bb995",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/generated_documents.csv"
+    },
+    {
+      "bytes": 189,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/genres.csv",
+      "sha256": "320dd8b7754341e0c872dc4053e7d9157c439ff35e1266a75403c11315c13a0c",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/genres.csv"
+    },
+    {
+      "bytes": 230,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/languages.csv",
+      "sha256": "0bba999536d7e4b73ea400fb265e6d6121841f5526de3c0f1113d58df44dc10c",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/languages.csv"
+    },
+    {
+      "bytes": 2849,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/loan_extensions.csv",
+      "sha256": "6847f20cfe1b3e86f98b55bfe4f1382276a8f7d184b4a5b2dca8a3c237d4b06b",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/loan_extensions.csv"
+    },
+    {
+      "bytes": 1919,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/loan_proposals.csv",
+      "sha256": "52df46c8096645e78b305d4c28f65ad1f90dcce6c43caf6893545817f0e302f8",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/loan_proposals.csv"
+    },
+    {
+      "bytes": 9503,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/loans.csv",
+      "sha256": "ea1275cae780350ab66dff8e5099e61af246d6917cc5a9a705517008ddfbd904",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/loans.csv"
+    },
+    {
+      "bytes": 63645,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/notifications.csv",
+      "sha256": "f31fc3cad34882a77d213c40a0780bdefc1efd6156a8c148817c7fe9292c86f1",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/notifications.csv"
+    },
+    {
+      "bytes": 2760,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/payments.csv",
+      "sha256": "59d2bc5b0e8b53fe27da19fc8505c138e598b983a6718ebed46404216c701919",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/payments.csv"
+    },
+    {
+      "bytes": 1567,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/pickup_slots.csv",
+      "sha256": "1f7ca5658267fbbacbabe59b75427b9a14a1baa0f59371717835effa45fad212",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/pickup_slots.csv"
+    },
+    {
+      "bytes": 252,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/publishers.csv",
+      "sha256": "9c748a49d2a2353cda6ae28c70acaf68f04c99338ef0043721bf0319cbb6cc81",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/publishers.csv"
+    },
+    {
+      "bytes": 5055,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/reviews.csv",
+      "sha256": "3363c83e9e082ea72a3b0fb7f8208eda1678b3653db13e20b4a429c167d89342",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/reviews.csv"
+    },
+    {
+      "bytes": 7719,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/shipments.csv",
+      "sha256": "c17827c5fe99a5cd2daacfb4cb6b39c40d5d78ef2af89d515e1ae70e4bf72c9b",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/shipments.csv"
+    },
+    {
+      "bytes": 2000,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/users.csv",
+      "sha256": "b24df225b5c1ec922ff1ba630dd77788c9f50febd93d1a0df4c24e14c5ca1adc",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/tables/users.csv"
+    },
+    {
+      "bytes": 9362,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/test-report.json",
+      "sha256": "8e26a74091883f38b277a8ad4ec6bf282137bdd4f623f72ed3c6228b817182b5",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/phase2/test-report.json"
+    },
+    {
+      "bytes": 2364,
+      "path": "03_Finalisierungsphase/evidence/release-verification-20261021/sample-loan-confirmation.pdf",
+      "sha256": "c7ae375fa8266359596430c4bcad1f737d3e55eee6de30b29f6ad587c3ee8f81",
+      "source": "03_Finalisierungsphase/evidence/release-verification-20261021/sample-loan-confirmation.pdf"
+    },
+    {
+      "bytes": 366,
+      "path": "03_Finalisierungsphase/evidence/runtime-migration08-verification.json",
+      "sha256": "711d6aa933dcdfcb7c2bae6481a02b5603a0bdf9ed9729d3d62bf899b6802461",
+      "source": "03_Finalisierungsphase/evidence/runtime-migration08-verification.json"
+    },
+    {
+      "bytes": 490,
+      "path": "03_Finalisierungsphase/evidence/runtime-migration09-verification.json",
+      "sha256": "a9031ea5e8a701ff305b79f3098d5a45608711d34e78bffd89c27023015e012a",
+      "source": "03_Finalisierungsphase/evidence/runtime-migration09-verification.json"
+    },
+    {
+      "bytes": 2275,
+      "path": "03_Finalisierungsphase/evidence/runtime-relocation-20261021.json",
+      "sha256": "40118341c9928fc764cee076cfa9c632f68a63d887f12d66eff0db09216615fb",
+      "source": "03_Finalisierungsphase/evidence/runtime-relocation-20261021.json"
+    },
+    {
+      "bytes": 2965,
+      "path": "03_Finalisierungsphase/evidence/runtime-verification.json",
+      "sha256": "a16edb31e272f27bd6dde7443c977f2797f156de5a125718b2f9f17d9108dce4",
+      "source": "03_Finalisierungsphase/evidence/runtime-verification.json"
+    },
+    {
+      "bytes": 1231,
+      "path": "03_Finalisierungsphase/evidence/sql-master-verification-20261021.json",
+      "sha256": "f56075ba19c17eccc1496f4b8094842a48d035398bb8e738b484caa20edaec34",
+      "source": "03_Finalisierungsphase/evidence/sql-master-verification-20261021.json"
+    },
+    {
+      "bytes": 4081,
+      "path": "03_Finalisierungsphase/evidence/verified-metadata-20261021.json",
+      "sha256": "03b36b6c61f9acedbbdc6e11ff177db3e4e9698b4737de7785de2a7e700dacff",
+      "source": "03_Finalisierungsphase/evidence/verified-metadata-20261021.json"
+    },
+    {
+      "bytes": 77693,
+      "path": "03_Finalisierungsphase/frontend/app.js",
+      "sha256": "d3f3ec1218b54824ce93ff3c4471d9d47f6be5ea18869cce79d9b3b4411941bc",
+      "source": "03_Finalisierungsphase/frontend/app.js"
+    },
+    {
+      "bytes": 9866,
+      "path": "03_Finalisierungsphase/frontend/css/app.css",
+      "sha256": "e7419f5236f6d26983740c83e7ea2cc9ed89c860b11cf4da0c25ca5cc63b1c85",
+      "source": "03_Finalisierungsphase/frontend/css/app.css"
+    },
+    {
+      "bytes": 24859,
+      "path": "03_Finalisierungsphase/frontend/css/style.css",
+      "sha256": "4e361d80d04674df7cd5c18df26b3de7e2c25054d1014da69358ed5ad811b3a2",
+      "source": "03_Finalisierungsphase/frontend/css/style.css"
+    },
+    {
+      "bytes": 15226,
+      "path": "03_Finalisierungsphase/frontend/index.html",
+      "sha256": "7eeceedbd2cb21ac8a8834f5558fca20b8256b5d8aa883e09dc8cfd65b769387",
+      "source": "03_Finalisierungsphase/frontend/index.html"
+    },
+    {
+      "bytes": 1996,
+      "path": "03_Finalisierungsphase/frontend/pictures/SOURCES.md",
+      "sha256": "57603e19aaa301e035efc4d52948e6e784baedffe9614eee6843f4f125d22c88",
+      "source": "03_Finalisierungsphase/frontend/pictures/SOURCES.md"
+    },
+    {
+      "bytes": 100856,
+      "path": "03_Finalisierungsphase/frontend/pictures/books-hero.jpg",
+      "sha256": "f2dce70c3fd36d39cc240d3a83a25474f48dd77f855cfbb8f8d742fd10d9efc7",
+      "source": "03_Finalisierungsphase/frontend/pictures/books-hero.jpg"
+    },
+    {
+      "bytes": 387204,
+      "path": "03_Finalisierungsphase/frontend/pictures/der-kleine-prinz.jpg",
+      "sha256": "6403dc257c8bfda0a3396c4cb82f5053e3ce72da3f9f118219145e08193b75d5",
+      "source": "03_Finalisierungsphase/frontend/pictures/der-kleine-prinz.jpg"
+    },
+    {
+      "bytes": 157289,
+      "path": "03_Finalisierungsphase/frontend/pictures/der-vorleser.jpg",
+      "sha256": "9dfd7dba3efcf9ff52206cfdea158aaa3da4b4394a383958751ebfa2a413e81a",
+      "source": "03_Finalisierungsphase/frontend/pictures/der-vorleser.jpg"
+    },
+    {
+      "bytes": 1068133,
+      "path": "03_Finalisierungsphase/frontend/pictures/momo.png",
+      "sha256": "616bb31d275599e59e4b7b7b0b6bce77eed565cac3c4da01fc164a0c174f9510",
+      "source": "03_Finalisierungsphase/frontend/pictures/momo.png"
+    },
+    {
+      "bytes": 5147,
+      "path": "03_Finalisierungsphase/frontend/tests/test_session_recovery.cjs",
+      "sha256": "abaf5a9c9bb377f1ce6a4595089a7bd801605efa79bd577e237c306d9f05a368",
+      "source": "03_Finalisierungsphase/frontend/tests/test_session_recovery.cjs"
+    },
+    {
+      "bytes": 99,
+      "path": "03_Finalisierungsphase/requirements.txt",
+      "sha256": "4ccc2168e5c686602754b0a6bc4a321082aa90f628cd131befc47e67f730225e",
+      "source": "03_Finalisierungsphase/requirements.txt"
+    },
+    {
+      "bytes": 524,
+      "path": "03_Finalisierungsphase/run.py",
+      "sha256": "e0bf448ff7634cc3cc8cce9b7eb7b83171866bfca281a00a1a2f8b936535a3cb",
+      "source": "03_Finalisierungsphase/run.py"
+    },
+    {
+      "bytes": 9565,
+      "path": "03_Finalisierungsphase/scripts/application.py",
+      "sha256": "53237811f9b2d273dcdeb504b1919f0d72b80a10f3b299ca9dd8e121fc066777",
+      "source": "03_Finalisierungsphase/scripts/application.py"
+    },
+    {
+      "bytes": 982,
+      "path": "03_Finalisierungsphase/scripts/common.ps1",
+      "sha256": "30ee91bae1b143930ab635a6196fc29f146593f32d71c92bbe998095314d564d",
+      "source": "03_Finalisierungsphase/scripts/common.ps1"
+    },
+    {
+      "bytes": 6610,
+      "path": "03_Finalisierungsphase/scripts/install_database.py",
+      "sha256": "9ef5819ce297bb36d367a299d2df323a8d116f38f7be9f2e0a799360753bdcfa",
+      "source": "03_Finalisierungsphase/scripts/install_database.py"
+    },
+    {
+      "bytes": 1875,
+      "path": "03_Finalisierungsphase/scripts/install_dependencies.ps1",
+      "sha256": "a1ac9c31c5166ba84c18081acdd6e86c90e361af387e3d690f55649d1155112b",
+      "source": "03_Finalisierungsphase/scripts/install_dependencies.ps1"
+    },
+    {
+      "bytes": 2335,
+      "path": "03_Finalisierungsphase/scripts/promote_admin.py",
+      "sha256": "02dbdbb88b38dc245478d2687bd4653d39999d4f3533fd6ddfec3ccf4f40fe67",
+      "source": "03_Finalisierungsphase/scripts/promote_admin.py"
+    },
+    {
+      "bytes": 9783,
+      "path": "03_Finalisierungsphase/scripts/runtime.py",
+      "sha256": "5644223a402ee78bea54a75e6f744d49c33c811800a826a869638ab7bf1fc032",
+      "source": "03_Finalisierungsphase/scripts/runtime.py"
+    },
+    {
+      "bytes": 1157,
+      "path": "03_Finalisierungsphase/scripts/setup.ps1",
+      "sha256": "759474e6e58d9b7ff98543a6c41768b9ea97916d6bdea0e5858d22643ecb8ddf",
+      "source": "03_Finalisierungsphase/scripts/setup.ps1"
+    },
+    {
+      "bytes": 585,
+      "path": "03_Finalisierungsphase/scripts/start.ps1",
+      "sha256": "99f334e833015de050879b16f871a42d329c7dac88d0c7c579775569a9eb108f",
+      "source": "03_Finalisierungsphase/scripts/start.ps1"
+    },
+    {
+      "bytes": 298,
+      "path": "03_Finalisierungsphase/scripts/start_database.ps1",
+      "sha256": "c255c42e38194b79cc67b8ff717c1dbc6bc966d464ee053facb7b4916d8bf248",
+      "source": "03_Finalisierungsphase/scripts/start_database.ps1"
+    },
+    {
+      "bytes": 529,
+      "path": "03_Finalisierungsphase/scripts/stop.ps1",
+      "sha256": "1e7927c508b6e5e52ddabd8d9fd80631e4ce17983077e4fcbc88571f08ff9ca0",
+      "source": "03_Finalisierungsphase/scripts/stop.ps1"
+    },
+    {
+      "bytes": 295,
+      "path": "03_Finalisierungsphase/scripts/stop_database.ps1",
+      "sha256": "e3dcb88bb06d6b5db9e1ea8a14e77c19eb5320223c487aac7cd7a58277ae1cad",
+      "source": "03_Finalisierungsphase/scripts/stop_database.ps1"
+    },
+    {
+      "bytes": 2499,
+      "path": "03_Finalisierungsphase/tests/README.md",
+      "sha256": "d27452ff1ad2b25d226d57295e92d16f791b52663a65acca89237f9ad051a277",
+      "source": "03_Finalisierungsphase/tests/README.md"
+    },
+    {
+      "bytes": 37238,
+      "path": "03_Finalisierungsphase/tests/phase2_regression.py",
+      "sha256": "a1acc35e7a290e04e7c1c163d4e93b30f832872b50e50dd7ec47e7e95a996bc4",
+      "source": "03_Finalisierungsphase/tests/phase2_regression.py"
+    },
+    {
+      "bytes": 23326,
+      "path": "03_Finalisierungsphase/tests/run_integration.py",
+      "sha256": "284339484b6b137dbdc4a7451950285960038cca3acbe28017b5823dce2d0a2d",
+      "source": "03_Finalisierungsphase/tests/run_integration.py"
+    },
+    {
+      "bytes": 3141,
+      "path": "03_Finalisierungsphase/tests/serve_browser_qa.py",
+      "sha256": "6d465bddd3563eac2fab4fb38b589db337abecf1a42be9be1f1b381667314f10",
+      "source": "03_Finalisierungsphase/tests/serve_browser_qa.py"
+    },
+    {
+      "bytes": 11879,
+      "path": "03_Finalisierungsphase/tests/test_domain_boundary.py",
+      "sha256": "ac60850b93bf474d79c1cedfd37a19d15577e4b92f25751caf0e41bbf66c1489",
+      "source": "03_Finalisierungsphase/tests/test_domain_boundary.py"
+    },
+    {
+      "bytes": 12846,
+      "path": "03_Finalisierungsphase/tests/test_http_api.py",
+      "sha256": "1ab86e37e823932502b307c2a9f9a0b88681a46c5d86f737794fbfbd99d569b7",
+      "source": "03_Finalisierungsphase/tests/test_http_api.py"
+    },
+    {
+      "bytes": 4756,
+      "path": "03_Finalisierungsphase/tests/test_runtime.py",
+      "sha256": "0fc30d3758a44f92116d38f757fddee9b997414663d6a994948ae32d01f1cb36",
+      "source": "03_Finalisierungsphase/tests/test_runtime.py"
+    },
+    {
+      "bytes": 6729,
+      "path": "README.md",
+      "sha256": "846907a2eb41d76e382c62ad3801fdf706aa364ea9e21dda1a866552cf8d55bd",
+      "source": "README.md"
+    },
+    {
+      "bytes": 21225,
+      "path": "tools/package_delivery.py",
+      "sha256": "817d424b7221dff585be33a675be2da3f2e0593499e588aacdae693aa6c1249d",
+      "source": "tools/package_delivery.py"
+    },
+    {
+      "bytes": 7038,
+      "path": "tools/refresh_publication.py",
+      "sha256": "72a8c9455e802e12b2edeb228b34b95a7c5d312879a917df4a0b205f84591edc",
+      "source": "tools/refresh_publication.py"
+    }
+  ]
+}

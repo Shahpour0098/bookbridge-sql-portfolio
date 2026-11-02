@@ -1,0 +1,168 @@
+{
+  "project": "BookBridge",
+  "started_at_utc": "2026-10-19T06:45:23.581761+00:00",
+  "database": "bookbridge_phase2_psinstall_dc08b89b0a40",
+  "empty_template": "template0",
+  "retained_for_inspection": true,
+  "installer": "D:\\BookBridge\\docs\\phase-2\\scripts\\install.ps1",
+  "powershell": "C:\\Users\\amird\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "psycopg": "3.3.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "status": "passed",
+  "created_own_database": true,
+  "first_install_exit_code": 0,
+  "installed_snapshot": {
+    "server_version": "PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+    "base_tables": 18,
+    "base_table_columns": 142,
+    "foreign_keys": 32,
+    "seed_rows": {
+      "users": 24,
+      "addresses": 24,
+      "publishers": 12,
+      "genres": 12,
+      "languages": 12,
+      "authors": 24,
+      "books": 24,
+      "book_authors": 27,
+      "book_copies": 24,
+      "pickup_slots": 48,
+      "loans": 48,
+      "loan_proposals": 24,
+      "loan_extensions": 32,
+      "payments": 24,
+      "shipments": 34,
+      "notifications": 786,
+      "generated_documents": 204,
+      "reviews": 48
+    },
+    "entity_fingerprints": {
+      "users": "15b0cb6ce0fd469d3efee0da86cd5655",
+      "addresses": "ecb623ddf6cc9f40442bf65fe6d2822a",
+      "publishers": "6d215d5a4d0eb761fabcce35eb52da04",
+      "genres": "dae997859a572152233b7fbda9ed674e",
+      "languages": "54e9a00d7f05601e6c18a92ee2ec38ea",
+      "authors": "ba64150a4ade08c3448faa2e9d0257f6",
+      "books": "4123c15fe5505fe21e33f864bd54ab3e",
+      "book_authors": "678978ec2bf05709d8bd67f9b91a6fdc",
+      "book_copies": "bbec54bbeba2fbca6988a1ec01eda87b",
+      "pickup_slots": "47a7e8eed01e9768fa8bc3161b709979",
+      "loans": "38930273f1025be870e18d793235b64e",
+      "loan_proposals": "59d93149646452f397d56d759d076dfd",
+      "loan_extensions": "ec30d5e1033f97c6d36ab27bf8f78c35",
+      "payments": "f90b40f88d78b707c328feee53dd8e13",
+      "shipments": "0b39f9aa7accc53193ad943ea7c516fa",
+      "notifications": "c43628b2705d55ef64527f4b45c3d103",
+      "generated_documents": "631c18c1398077232acf375105a38ab7",
+      "reviews": "cda4508331b62385046468c973a7549f"
+    },
+    "sequences": [
+      [
+        "addresses_address_id_seq",
+        24
+      ],
+      [
+        "authors_author_id_seq",
+        24
+      ],
+      [
+        "book_copies_copy_id_seq",
+        24
+      ],
+      [
+        "books_book_id_seq",
+        24
+      ],
+      [
+        "generated_documents_document_id_seq",
+        204
+      ],
+      [
+        "genres_genre_id_seq",
+        12
+      ],
+      [
+        "languages_language_id_seq",
+        12
+      ],
+      [
+        "loan_extensions_extension_id_seq",
+        32
+      ],
+      [
+        "loan_proposals_proposal_id_seq",
+        24
+      ],
+      [
+        "loans_loan_id_seq",
+        48
+      ],
+      [
+        "notifications_notification_id_seq",
+        786
+      ],
+      [
+        "payments_payment_id_seq",
+        24
+      ],
+      [
+        "pickup_slots_slot_id_seq",
+        48
+      ],
+      [
+        "publishers_publisher_id_seq",
+        12
+      ],
+      [
+        "reviews_review_id_seq",
+        48
+      ],
+      [
+        "shipments_shipment_id_seq",
+        34
+      ],
+      [
+        "users_user_id_seq",
+        24
+      ]
+    ]
+  },
+  "total_seed_rows": 1431,
+  "source_hashes": [
+    {
+      "file": "01_schema.sql",
+      "sha256": "d833c139649b057b4fb47e7d63a825db627a7f5e54415301cf55d4f9b3ca5954",
+      "matches_independent_verification": true
+    },
+    {
+      "file": "02_integrity.sql",
+      "sha256": "1ed7d00fe4bb824330a37ab40746d78401324f11d7a283e5316b68558e11fa93",
+      "matches_independent_verification": true
+    },
+    {
+      "file": "03_workflows.sql",
+      "sha256": "296df42f41d854411a2d801cfc8bc474badc9641e26e70a80ad2f2bf85740607",
+      "matches_independent_verification": true
+    },
+    {
+      "file": "04_seed.sql",
+      "sha256": "e06c823d834d8877540462775faf88f5a71d5afd3529ebecea7d50d9c93e52a9",
+      "matches_independent_verification": true
+    },
+    {
+      "file": "05_queries.sql",
+      "sha256": "d0c8d55a45c0c5dd977c5961559f6f032a4852e12f07caae3ff4264cac11fb31",
+      "matches_independent_verification": true
+    },
+    {
+      "file": "06_access.sql",
+      "sha256": "7674d2933fcd7ec6a8449fbb7b56d4485164715d415b9d214f91830e33cbc8cc",
+      "matches_independent_verification": true
+    }
+  ],
+  "repeat_install_exit_code": 1,
+  "repeat_refused_existing_tables": true,
+  "repeat_preserved_all_data_and_sequences": true,
+  "finished_at_utc": "2026-10-19T06:45:30.505790+00:00"
+}

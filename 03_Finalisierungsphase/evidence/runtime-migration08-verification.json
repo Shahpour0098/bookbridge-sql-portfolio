@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-20T07:55:36.549609+00:00",
+  "status": "passed",
+  "healthy": true,
+  "own_process_verified": true,
+  "database_port": 55434,
+  "migration_count": 7,
+  "migration08_grants_verified": true,
+  "repeat_setup_new_migrations": 0,
+  "repeat_setup_unchanged_migrations": 7,
+  "prior_lifecycle_evidence": "runtime-verification.json"
+}

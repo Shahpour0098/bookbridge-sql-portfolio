@@ -1,0 +1,30 @@
+{
+  "project": "BookBridge",
+  "scope": "Guarded SQL master in new synthetic UUID reference database only.",
+  "started_at_utc": "2026-10-21T17:53:43.646966+00:00",
+  "source": "database/BookBridge_Gesamt.sql",
+  "source_sha256": "d79015e005ddf48ba620cdb973f0ff1e7d50442d32b86b982c404c92a797ca96",
+  "main_application_rows_read_or_modified": false,
+  "existing_role_definitions_modified": false,
+  "reference_database": "bookbridge_reference_78c55ec07a63",
+  "status": "passed",
+  "canonical_cluster_identity_verified": true,
+  "missing_opt_in_refused_before_schema_creation": true,
+  "initial_exit_code": 0,
+  "base_tables": {
+    "bookbridge": 18,
+    "bookbridge_app": 2
+  },
+  "migration_ledger_rows": 0,
+  "migration_ledger_intentionally_empty": true,
+  "foreign_keys": 32,
+  "synthetic_seed_rows": 1431,
+  "minimum_rows_per_business_table": 12,
+  "repeat_refused_existing_schema": true,
+  "repeat_preserved_all_synthetic_row_counts_and_fingerprints": true,
+  "eight_original_migration_files_used": true,
+  "query_only_file_05_executed": true,
+  "existing_roles_and_memberships_unchanged": true,
+  "own_reference_database_removed": true,
+  "finished_at_utc": "2026-10-21T17:53:48.250570+00:00"
+}

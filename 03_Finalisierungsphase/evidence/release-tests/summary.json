@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "python_tests": 46,
+  "javascript_recovery_tests": 4,
+  "sql_tests": 23,
+  "integration_groups": 26
+}

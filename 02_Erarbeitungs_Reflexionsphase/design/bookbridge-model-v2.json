@@ -1,0 +1,2231 @@
+{
+  "project": "BookBridge",
+  "version": "2.0",
+  "phase": "Konzeption",
+  "dbms": "PostgreSQL 17",
+  "timezone": "Europe/Berlin",
+  "scope": "Vollständiger Entwurf; kein Nachweis einer ausgeführten SQL-Implementierung.",
+  "entities": [
+    {
+      "name": "users",
+      "label": "Benutzer",
+      "purpose": "Registrierte Mitglieder und Administratoren; Gäste sind keine gespeicherten Benutzer.",
+      "fields": [
+        {
+          "name": "user_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "first_name",
+          "type": "VARCHAR(80)",
+          "description": "Vorname.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "last_name",
+          "type": "VARCHAR(80)",
+          "description": "Nachname.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(254)",
+          "description": "Kontakt- und Anmeldeadresse.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "UNIQUE über lower(email); nicht leer",
+          "default": null
+        },
+        {
+          "name": "password_hash",
+          "type": "TEXT",
+          "description": "Mit einem geeigneten Passwortverfahren erzeugter Hash; niemals Klartext.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(10)",
+          "description": "Mitglied oder Administrator.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "member | admin",
+          "default": "member"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "description": "Anmeldung und neue Aktionen zugelassen.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Zeitpunkt der Registrierung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        }
+      ],
+      "constraints": [
+        "Pflichttexte sind nach trim nicht leer; E-Mail wird für den Vergleich kleingeschrieben."
+      ]
+    },
+    {
+      "name": "addresses",
+      "label": "Anschriften",
+      "purpose": "Aktuelle private Anschriften eines Benutzers; eine Anschrift kann mehrere Exemplare verorten.",
+      "fields": [
+        {
+          "name": "address_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "user_id",
+          "type": "BIGINT",
+          "description": "Eigentümer der Anschrift.",
+          "nullable": false,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "street",
+          "type": "VARCHAR(200)",
+          "description": "Straße und Hausnummer.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "postal_code",
+          "type": "VARCHAR(20)",
+          "description": "Postleitzahl als Text.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR(100)",
+          "description": "Ort.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "country_code",
+          "type": "CHAR(2)",
+          "description": "ISO-Ländercode in Großbuchstaben.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "zwei Buchstaben",
+          "default": "DE"
+        },
+        {
+          "name": "latitude",
+          "type": "NUMERIC(9,6)",
+          "description": "WGS84-Breitengrad.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "-90 bis 90; gemeinsam mit longitude NULL oder gesetzt",
+          "default": null
+        },
+        {
+          "name": "longitude",
+          "type": "NUMERIC(9,6)",
+          "description": "WGS84-Längengrad.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "-180 bis 180; gemeinsam mit latitude NULL oder gesetzt",
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Anlagezeitpunkt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        }
+      ],
+      "constraints": [
+        "latitude und longitude sind gemeinsam NULL oder gesetzt; Wertebereiche und country_code prüfen."
+      ]
+    },
+    {
+      "name": "publishers",
+      "label": "Verlage",
+      "purpose": "Verlage bibliografischer Ausgaben.",
+      "fields": [
+        {
+          "name": "publisher_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(150)",
+          "description": "Verlagsname.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "UNIQUE; nicht leer",
+          "default": null
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "name": "genres",
+      "label": "Genres",
+      "purpose": "Kontrolliertes Genre je Ausgabe; Mehrfachgenres sind nicht Teil des Entwurfs.",
+      "fields": [
+        {
+          "name": "genre_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(80)",
+          "description": "Genrebezeichnung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "UNIQUE; nicht leer",
+          "default": null
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "name": "languages",
+      "label": "Sprachen",
+      "purpose": "Primäre Sprache einer Ausgabe.",
+      "fields": [
+        {
+          "name": "language_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "code",
+          "type": "VARCHAR(10)",
+          "description": "Sprachcode, beispielsweise de oder en.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "UNIQUE; nicht leer",
+          "default": null
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(80)",
+          "description": "Lesbare Sprachbezeichnung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "UNIQUE; nicht leer",
+          "default": null
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "name": "authors",
+      "label": "Autoren",
+      "purpose": "Personen oder benannte Autorengruppen; Namen sind nicht zwingend eindeutig.",
+      "fields": [
+        {
+          "name": "author_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "display_name",
+          "type": "VARCHAR(150)",
+          "description": "Anzuzeigender Autorenname.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "nicht leer",
+          "default": null
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "name": "books",
+      "label": "Bibliografische Ausgaben",
+      "purpose": "Titel und gemeinsame bibliografische Eigenschaften einer bestimmten Ausgabe, unabhängig vom Besitzer.",
+      "fields": [
+        {
+          "name": "book_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(200)",
+          "description": "Buchtitel.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "nicht leer",
+          "default": null
+        },
+        {
+          "name": "subtitle",
+          "type": "VARCHAR(200)",
+          "description": "Optionaler Untertitel.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "isbn",
+          "type": "VARCHAR(13)",
+          "description": "Normalisierte ISBN-10 oder ISBN-13 ohne Trennzeichen.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "UNIQUE falls gesetzt; Format und Prüfziffer validieren",
+          "default": null
+        },
+        {
+          "name": "publisher_id",
+          "type": "BIGINT",
+          "description": "Verlag der Ausgabe; unbekannter Verlag ist zulässig.",
+          "nullable": true,
+          "pk": false,
+          "ref": "publishers.publisher_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "publication_year",
+          "type": "SMALLINT",
+          "description": "Erscheinungsjahr; unbekannt zulässig.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "1450 bis 2100",
+          "default": null
+        },
+        {
+          "name": "genre_id",
+          "type": "BIGINT",
+          "description": "Ein primäres Genre.",
+          "nullable": false,
+          "pk": false,
+          "ref": "genres.genre_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "language_id",
+          "type": "BIGINT",
+          "description": "Eine primäre Sprache.",
+          "nullable": false,
+          "pk": false,
+          "ref": "languages.language_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "description": "Optionale bibliografische Beschreibung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Erfassungszeitpunkt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "name": "book_authors",
+      "label": "Autorenzuordnung",
+      "purpose": "Auflösung der N:M-Beziehung zwischen Ausgaben und Autoren.",
+      "fields": [
+        {
+          "name": "book_id",
+          "type": "BIGINT",
+          "description": "Zugeordnete Ausgabe.",
+          "nullable": false,
+          "pk": true,
+          "ref": "books.book_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "author_id",
+          "type": "BIGINT",
+          "description": "Zugeordneter Autor.",
+          "nullable": false,
+          "pk": true,
+          "ref": "authors.author_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "author_order",
+          "type": "SMALLINT",
+          "description": "Reihenfolge in der Autorennennung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "größer 0",
+          "default": null
+        }
+      ],
+      "constraints": [
+        "Zusammengesetzter PK (book_id, author_id).",
+        "UNIQUE (book_id, author_order).",
+        "Jede Katalogausgabe hat mindestens eine Autorenzuordnung; deferred Prüfung am Transaktionsende."
+      ]
+    },
+    {
+      "name": "book_copies",
+      "label": "Physische Exemplare",
+      "purpose": "Individuelles Buch eines Eigentümers mit Angebotsbedingungen; Verfügbarkeit wird abgeleitet.",
+      "fields": [
+        {
+          "name": "copy_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "book_id",
+          "type": "BIGINT",
+          "description": "Bibliografische Ausgabe.",
+          "nullable": false,
+          "pk": false,
+          "ref": "books.book_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "owner_id",
+          "type": "BIGINT",
+          "description": "Eigentümer; Eigentumsübertragungen sind nicht Projektumfang.",
+          "nullable": false,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "pickup_address_id",
+          "type": "BIGINT",
+          "description": "Standort und gegebenenfalls Abholanschrift des Eigentümers; bei Entwurf optional.",
+          "nullable": true,
+          "pk": false,
+          "ref": "addresses.address_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "condition",
+          "type": "VARCHAR(12)",
+          "description": "Zustand dieses Exemplars.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "new | very_good | good | used",
+          "default": null
+        },
+        {
+          "name": "max_loan_days",
+          "type": "SMALLINT",
+          "description": "Maximale vereinbarte Gesamtdauer einschließlich genehmigter Verlängerungen.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "1 bis 90",
+          "default": 14
+        },
+        {
+          "name": "allow_pickup",
+          "type": "BOOLEAN",
+          "description": "Persönliche Übergabe erlaubt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": true
+        },
+        {
+          "name": "allow_shipping",
+          "type": "BOOLEAN",
+          "description": "Postalische Übergabe erlaubt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "description": "Exemplar als Angebot freigeschaltet.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": false
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "description": "Optionale Hinweise zum Exemplar oder zur Übergabe.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Erfassungszeitpunkt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        }
+      ],
+      "constraints": [
+        "Mindestens eine Übergabeart ist erlaubt.",
+        "Aktivierung nur mit Standortkoordinaten und vollständigen Katalogdaten.",
+        "owner_id bleibt unverändert; Deaktivierung erhält die Ausleihhistorie."
+      ]
+    },
+    {
+      "name": "pickup_slots",
+      "label": "Abholzeitfenster",
+      "purpose": "Wiederkehrende lokale Wochenzeitfenster für ein bestimmtes Exemplar.",
+      "fields": [
+        {
+          "name": "slot_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "copy_id",
+          "type": "BIGINT",
+          "description": "Exemplar, für das das Zeitfenster gilt.",
+          "nullable": false,
+          "pk": false,
+          "ref": "book_copies.copy_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "weekday",
+          "type": "SMALLINT",
+          "description": "ISO-Wochentag in Europe/Berlin.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "1 Montag bis 7 Sonntag",
+          "default": null
+        },
+        {
+          "name": "start_time",
+          "type": "TIME",
+          "description": "Lokaler Beginn ohne Zeitzone.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "end_time",
+          "type": "TIME",
+          "description": "Lokales Ende am selben Tag.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "größer als start_time",
+          "default": null
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "description": "Für neue Abholvereinbarungen auswählbar.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": true
+        }
+      ],
+      "constraints": [
+        "UNIQUE (copy_id, weekday, start_time, end_time).",
+        "Überlappende aktive Zeitfenster desselben Exemplars am selben Wochentag werden abgewiesen."
+      ]
+    },
+    {
+      "name": "loans",
+      "label": "Ausleihvorgänge",
+      "purpose": "Anfrage, verbindliche Vereinbarung und Rückgabe eines Exemplars; Teilnehmer sind während des Vorgangs unveränderlich.",
+      "fields": [
+        {
+          "name": "loan_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "copy_id",
+          "type": "BIGINT",
+          "description": "Angefragtes Exemplar.",
+          "nullable": false,
+          "pk": false,
+          "ref": "book_copies.copy_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "borrower_id",
+          "type": "BIGINT",
+          "description": "Anfragende und ausleihende Person; darf nicht Eigentümer sein.",
+          "nullable": false,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "handover_mode",
+          "type": "VARCHAR(8)",
+          "description": "Vereinbarte Übergabeart.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "pickup | shipping",
+          "default": null
+        },
+        {
+          "name": "requested_days",
+          "type": "SMALLINT",
+          "description": "Vom Mitglied beantragte Anfangsdauer.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "1 bis 90",
+          "default": null
+        },
+        {
+          "name": "agreed_days",
+          "type": "SMALLINT",
+          "description": "Verbindlich vereinbarte Anfangsdauer.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "1 bis max_loan_days_snapshot",
+          "default": null
+        },
+        {
+          "name": "max_loan_days_snapshot",
+          "type": "SMALLINT",
+          "description": "Bei Annahme eingefrorene Höchstdauer des Angebots.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "1 bis 90",
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(12)",
+          "description": "Zustand des Vorgangs.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "requested | accepted | outbound | active | returning | completed | rejected | cancelled",
+          "default": "requested"
+        },
+        {
+          "name": "pickup_slot_id",
+          "type": "BIGINT",
+          "description": "Gewähltes Wochenzeitfenster für persönliche Abholung.",
+          "nullable": true,
+          "pk": false,
+          "ref": "pickup_slots.slot_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "pickup_start_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Vereinbarter konkreter Beginn der Abholung; als Momentaufnahme eingefroren.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "pickup_end_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Vereinbartes konkretes Ende der Abholung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "pickup_address_snapshot",
+          "type": "TEXT",
+          "description": "Eingefrorene vollständige Abholanschrift einschließlich Name.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "requested_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Zeitpunkt der Anfrage.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        },
+        {
+          "name": "accepted_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Verbindliche Einigung durch Eigentümer oder Annahme eines Gegenvorschlags durch den Ausleiher.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "received_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Vom Ausleiher bestätigter Erhalt; startet die Leihfrist.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "due_date",
+          "type": "DATE",
+          "description": "Lokaler Rückgabetag in Europe/Berlin einschließlich genehmigter Verlängerungen.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "return_started_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Vom Ausleiher gemeldete persönliche Rückgabe oder postalische Rücksendung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "completed_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Vom Eigentümer bestätigter Rückerhalt; beendet die Sperre.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "rejected_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Ablehnung durch den Eigentümer.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "cancelled_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Zulässige Stornierung vor Übergabe.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "cancelled_by_user_id",
+          "type": "BIGINT",
+          "description": "Stornierender Teilnehmer.",
+          "nullable": true,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        }
+      ],
+      "constraints": [
+        "Partieller UNIQUE-Index auf copy_id für accepted, outbound, active, returning.",
+        "Keine Eigenleihe; erlaubte Übergabeart und aktives Angebot werden bei Anfrage und Annahme geprüft.",
+        "Unveränderliche Teilnehmer: Eigentümer ergibt sich aus dem dauerhaft unveränderlichen book_copies.owner_id.",
+        "requested: agreed_days/max_loan_days_snapshot/accepted_at und sämtliche Erhalts-/Frist-/Rückgabe-/Terminalwerte NULL.",
+        "accepted/outbound: Annahme und Dauer gesetzt; received_at/due_date/return_started_at/completed_at/rejected_at/cancelled_at NULL.",
+        "active: Annahme, Erhalt und due_date gesetzt; return_started_at/completed_at/rejected_at/cancelled_at NULL.",
+        "returning: zusätzlich return_started_at gesetzt; completed_at/rejected_at/cancelled_at NULL.",
+        "completed: zusätzlich completed_at gesetzt; rejected_at/cancelled_at NULL.",
+        "rejected: nur requested_at und rejected_at als Ereignisse; keine Einigung, Frist oder Erhalt/Rückgabe.",
+        "cancelled: cancelled_at und cancelled_by_user_id gesetzt; Annahme/Dauer entweder vollständig gesetzt oder vollständig NULL; kein Erhalt/Frist/Rückgabe/rejected_at.",
+        "cancelled_by_user_id ist genau dann gesetzt, wenn cancelled_at gesetzt ist. Ereigniszeiten sind chronologisch gemäß R16.",
+        "shipping: alle pickup-Felder NULL; angenommene pickup-Ausleihe: alle pickup-Felder gesetzt und pickup_end_at > pickup_start_at."
+      ]
+    },
+    {
+      "name": "loan_proposals",
+      "label": "Gegenvorschläge",
+      "purpose": "Historie alternativer Anfangsdauern; Vorschläge stammen vom Eigentümer.",
+      "fields": [
+        {
+          "name": "proposal_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "loan_id",
+          "type": "BIGINT",
+          "description": "Noch unverbindliche Anfrage.",
+          "nullable": false,
+          "pk": false,
+          "ref": "loans.loan_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "proposed_by_user_id",
+          "type": "BIGINT",
+          "description": "Vorschlagender Eigentümer.",
+          "nullable": false,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "proposed_days",
+          "type": "SMALLINT",
+          "description": "Alternative Anfangsdauer.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "1 bis aktuelle max_loan_days",
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(10)",
+          "description": "Entscheidung zum Gegenvorschlag.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "pending | accepted | rejected | withdrawn",
+          "default": "pending"
+        },
+        {
+          "name": "proposed_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Vorschlagszeitpunkt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        },
+        {
+          "name": "decided_by_user_id",
+          "type": "BIGINT",
+          "description": "Ausleiher bei Annahme/Ablehnung; Eigentümer bei Rücknahme; beendender Teilnehmer bei automatischem Schließen.",
+          "nullable": true,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "decided_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Zeitpunkt der Entscheidung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        }
+      ],
+      "constraints": [
+        "Höchstens ein pending-Vorschlag je loan_id.",
+        "Annahme eines Vorschlags und Reservierung des Exemplars erfolgen in einer Transaktion.",
+        "pending genau dann, wenn entschiedenes Datum und Person beide NULL sind; andere Status verlangen beide Werte. decided_at >= proposed_at."
+      ]
+    },
+    {
+      "name": "loan_extensions",
+      "label": "Verlängerungen",
+      "purpose": "Beantragte zusätzliche Tage und deren Entscheidung mit nachvollziehbarer Änderung der Frist.",
+      "fields": [
+        {
+          "name": "extension_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "loan_id",
+          "type": "BIGINT",
+          "description": "Aktive Ausleihe; Antragsteller ist ihr borrower_id.",
+          "nullable": false,
+          "pk": false,
+          "ref": "loans.loan_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "extra_days",
+          "type": "SMALLINT",
+          "description": "Zusätzliche Kalendertage.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "1 bis 90",
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(10)",
+          "description": "Antragsentscheidung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "pending | approved | rejected | withdrawn",
+          "default": "pending"
+        },
+        {
+          "name": "requested_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Antragszeitpunkt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        },
+        {
+          "name": "decided_by_user_id",
+          "type": "BIGINT",
+          "description": "Eigentümer bei Genehmigung/Ablehnung, Ausleiher bei Rücknahme.",
+          "nullable": true,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "decided_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Entscheidungszeitpunkt.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "old_due_date",
+          "type": "DATE",
+          "description": "Frist unmittelbar vor einer Genehmigung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "new_due_date",
+          "type": "DATE",
+          "description": "Frist nach genau einmaliger Addition der extra_days.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        }
+      ],
+      "constraints": [
+        "Höchstens ein pending-Antrag je loan_id.",
+        "Genehmigungen insgesamt plus agreed_days überschreiten max_loan_days_snapshot nicht.",
+        "pending ohne Entscheidungspaar; andere Status mit entschiedenem Datum und Person. decided_at >= requested_at.",
+        "Nur approved setzt beide Fristwerte; new_due_date = old_due_date + extra_days. Sonst sind beide NULL."
+      ]
+    },
+    {
+      "name": "payments",
+      "label": "Portozahlungen",
+      "purpose": "Eine gemeinsame manuell bestätigte Portozahlung für Hin- und Rückweg einer postalischen Ausleihe.",
+      "fields": [
+        {
+          "name": "payment_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "loan_id",
+          "type": "BIGINT",
+          "description": "Postalischer Vorgang.",
+          "nullable": false,
+          "pk": false,
+          "ref": "loans.loan_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "outbound_fee",
+          "type": "NUMERIC(8,2)",
+          "description": "Vereinbartes Hinporto in EUR.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "größer oder gleich 0",
+          "default": null
+        },
+        {
+          "name": "return_fee",
+          "type": "NUMERIC(8,2)",
+          "description": "Vereinbartes Rückporto in EUR.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "größer oder gleich 0",
+          "default": null
+        },
+        {
+          "name": "currency",
+          "type": "CHAR(3)",
+          "description": "Währung der Portobeträge.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "EUR",
+          "default": "EUR"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(10)",
+          "description": "Zahlungsmeldung und manuelle Bestätigung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "pending | reported | confirmed | cancelled",
+          "default": "pending"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Anlage der Portovereinbarung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        },
+        {
+          "name": "reported_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Vom Ausleiher gemeldete Zahlung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "confirmed_by_user_id",
+          "type": "BIGINT",
+          "description": "Bestätigender Eigentümer.",
+          "nullable": true,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "confirmed_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Manuelle Eingangsbestätigung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        }
+      ],
+      "constraints": [
+        "UNIQUE (loan_id).",
+        "Keine Bank-/Kartendaten und kein Zahlungs-Gateway.",
+        "Bestätigte Portobeträge und Bestätigung bleiben unverändert.",
+        "pending ohne Meldung/Bestätigung; reported mit reported_at, ohne Bestätigung; confirmed mit Meldung und vollständigem Bestätigungspaar; cancelled ohne Bestätigungspaar.",
+        "Vorhandene Zeitpunkte: created_at <= reported_at <= confirmed_at."
+      ]
+    },
+    {
+      "name": "shipments",
+      "label": "Sendungen",
+      "purpose": "Je eine Hin- und Rücksendung mit unveränderlichen Adressmomentaufnahmen.",
+      "fields": [
+        {
+          "name": "shipment_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "loan_id",
+          "type": "BIGINT",
+          "description": "Postalischer Leihvorgang.",
+          "nullable": false,
+          "pk": false,
+          "ref": "loans.loan_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "direction",
+          "type": "VARCHAR(8)",
+          "description": "Richtung relativ zum Leihvorgang.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "outbound | return",
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(8)",
+          "description": "Fortschritt einer einzelnen Sendung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "prepared | sent | received",
+          "default": "prepared"
+        },
+        {
+          "name": "sender_address_id",
+          "type": "BIGINT",
+          "description": "Ausgewählte Anschrift des richtungsabhängigen Absenders.",
+          "nullable": false,
+          "pk": false,
+          "ref": "addresses.address_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "recipient_address_id",
+          "type": "BIGINT",
+          "description": "Ausgewählte Anschrift des richtungsabhängigen Empfängers.",
+          "nullable": false,
+          "pk": false,
+          "ref": "addresses.address_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "sender_address_snapshot",
+          "type": "TEXT",
+          "description": "Name, Straße/Hausnummer, PLZ, Ort und Land bei Vorbereitung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "recipient_address_snapshot",
+          "type": "TEXT",
+          "description": "Name, Straße/Hausnummer, PLZ, Ort und Land bei Vorbereitung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "carrier",
+          "type": "VARCHAR(80)",
+          "description": "Optionales Versandunternehmen.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "tracking_number",
+          "type": "VARCHAR(120)",
+          "description": "Optionale Sendungsnummer.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "prepared_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Zeitpunkt der Vorbereitung und Erstellung der Adressmomentaufnahmen.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        },
+        {
+          "name": "sent_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Bestätigter Versand durch den Absender.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "received_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Bestätigter Erhalt durch den Empfänger.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "receipt_confirmed_by",
+          "type": "BIGINT",
+          "description": "Ausleiher beim Hinweg, Eigentümer beim Rückweg.",
+          "nullable": true,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        }
+      ],
+      "constraints": [
+        "UNIQUE (loan_id, direction): höchstens zwei Sendungen je Ausleihe.",
+        "Adressmomentaufnahmen werden nach Erstellung nicht aus Profilanschriften aktualisiert.",
+        "prepared ohne Versand/Erhalt/Bestätiger; sent mit sent_at, ohne Erhalt/Bestätiger; received mit allen drei Werten.",
+        "Vorhandene Zeitpunkte: prepared_at <= sent_at <= received_at."
+      ]
+    },
+    {
+      "name": "notifications",
+      "label": "Benachrichtigungen",
+      "purpose": "Persönliche Mitteilungen als Datensätze; Test-E-Mails benötigen keinen realen Maildienst.",
+      "fields": [
+        {
+          "name": "notification_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "recipient_user_id",
+          "type": "BIGINT",
+          "description": "Empfänger der Mitteilung.",
+          "nullable": false,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "loan_id",
+          "type": "BIGINT",
+          "description": "Optionaler fachlicher Bezug zur Ausleihe.",
+          "nullable": true,
+          "pk": false,
+          "ref": "loans.loan_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "channel",
+          "type": "VARCHAR(10)",
+          "description": "Ausgabekanal im Demonstrator.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "in_app | test_email",
+          "default": "in_app"
+        },
+        {
+          "name": "message",
+          "type": "TEXT",
+          "description": "Mitteilungstext ohne Passwörter oder unnötige private Anschriften.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(10)",
+          "description": "Bearbeitungsstatus des Datensatzes.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "queued | delivered | failed",
+          "default": "queued"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Anlagezeitpunkt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        },
+        {
+          "name": "delivered_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Ausgabe oder simulierte Zustellung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "read_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Optionaler Lesebestätigungszeitpunkt.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        }
+      ],
+      "constraints": [
+        "Nur delivered hat delivered_at; queued/failed haben delivered_at/read_at NULL. read_at verlangt delivered und read_at >= delivered_at >= created_at."
+      ]
+    },
+    {
+      "name": "generated_documents",
+      "label": "Dokumentnachweise",
+      "purpose": "Geplante oder erzeugte PDF-Bestätigungen; der Status unterscheidet Metadaten von tatsächlich erzeugten Dateien.",
+      "fields": [
+        {
+          "name": "document_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "loan_id",
+          "type": "BIGINT",
+          "description": "Ausleihe, für die das Dokument vorgesehen ist.",
+          "nullable": false,
+          "pk": false,
+          "ref": "loans.loan_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "shipment_id",
+          "type": "BIGINT",
+          "description": "Optionaler Bezug auf eine Sendung desselben Vorgangs.",
+          "nullable": true,
+          "pk": false,
+          "ref": "shipments.shipment_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "recipient_user_id",
+          "type": "BIGINT",
+          "description": "Berechtigter Teilnehmer als Dokumentempfänger.",
+          "nullable": false,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "document_type",
+          "type": "VARCHAR(20)",
+          "description": "Fachlicher Dokumenttyp.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "loan_confirmation | shipment_summary | return_confirmation",
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(8)",
+          "description": "Ob die Datei nur geplant ist oder tatsächlich vorliegt.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "planned | created | failed",
+          "default": "planned"
+        },
+        {
+          "name": "storage_path",
+          "type": "TEXT",
+          "description": "Relativer geschützter Dateipfad; keine öffentlich erreichbare URL.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Anlage der Dokumentanforderung.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        },
+        {
+          "name": "generated_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Zeitpunkt erfolgreicher Dateierzeugung.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        }
+      ],
+      "constraints": [
+        "Dokument mit shipment_id gehört zum selben loan_id wie die Sendung.",
+        "status=created erfordert storage_path und generated_at; planned/failed behaupten keine vorhandene Datei.",
+        "created genau dann, wenn storage_path und generated_at beide gesetzt sind; planned/failed ohne beide Werte. generated_at >= created_at."
+      ]
+    },
+    {
+      "name": "reviews",
+      "label": "Bewertungen",
+      "purpose": "Je Teilnehmer eine Bewertung eines abgeschlossenen Leihvorgangs.",
+      "fields": [
+        {
+          "name": "review_id",
+          "type": "BIGINT",
+          "description": "Technischer Primärschlüssel; als Identity erzeugt.",
+          "nullable": false,
+          "pk": true,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "loan_id",
+          "type": "BIGINT",
+          "description": "Abgeschlossene Ausleihe.",
+          "nullable": false,
+          "pk": false,
+          "ref": "loans.loan_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "reviewer_id",
+          "type": "BIGINT",
+          "description": "Bewertender Eigentümer oder Ausleiher.",
+          "nullable": false,
+          "pk": false,
+          "ref": "users.user_id",
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "rating",
+          "type": "SMALLINT",
+          "description": "Bewertungsskala.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "1 bis 5",
+          "default": null
+        },
+        {
+          "name": "comment",
+          "type": "TEXT",
+          "description": "Optionaler Kommentar.",
+          "nullable": true,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": null
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ",
+          "description": "Bewertungszeitpunkt nach Abschluss.",
+          "nullable": false,
+          "pk": false,
+          "ref": null,
+          "rule": "",
+          "default": "CURRENT_TIMESTAMP"
+        }
+      ],
+      "constraints": [
+        "UNIQUE (loan_id, reviewer_id).",
+        "Nur die beiden Teilnehmer einer completed-Ausleihe dürfen bewerten; daraus folgen höchstens zwei Bewertungen."
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "R01",
+      "title": "Rollen und Teilnehmer",
+      "text": "Gast ist anonym. users.role speichert member oder admin; Eigentümer und Ausleiher sind kontextabhängige Rollen. Ein Administrator moderiert Konten und Angebote, bestätigt jedoch keine fremden Übergaben, Zahlungen oder Rückgaben. Kontodeaktivierung deaktiviert eigene Angebote atomar und verhindert neue Anfragen/Annahmen; bestehende Vorgänge dürfen abgeschlossen werden. Erneute Kontoaktivierung aktiviert Angebote nicht automatisch.",
+      "enforcement": "Anwendungsberechtigung und Datenbankfunktionen"
+    },
+    {
+      "id": "R02",
+      "title": "Standort und Sichtbarkeit",
+      "text": "Für jede aktive book_copy muss pickup_address_id auf eine Anschrift des Eigentümers mit gesetztem Koordinatenpaar zeigen. Die Anschrift dient auch bei rein postalischen Angeboten als Standort. Gäste sehen nur Ort/PLZ, keine vollständige Anschrift oder präzisen Koordinaten. Testdaten enthalten WGS84-Koordinaten; keine externe Geocoding-Abhängigkeit.",
+      "enforcement": "CHECK für Wertebereiche; Transaktion/Trigger für Aktivierung und Adressänderung"
+    },
+    {
+      "id": "R03",
+      "title": "Katalog und Aktivierung",
+      "text": "Jede Katalogausgabe besitzt mindestens einen Autor; die Mindestbeteiligung wird am Transaktionsende geprüft. Aktive Angebote erfordern einen aktiven Eigentümer und mindestens eine erlaubte Übergabeart. ISBN ist optional und normalisiert; vorhandene ISBN sind eindeutig. Unbekannter Verlag und Erscheinungsjahr sind zulässig.",
+      "enforcement": "FK/UNIQUE/CHECK plus deferred Mindestautor- und Aktivierungsprüfung"
+    },
+    {
+      "id": "R04",
+      "title": "Eigentum und Löschungen",
+      "text": "book_copies.owner_id und addresses.user_id bleiben unverändert; Eigentumsübertragungen sind kein Projektprozess. Historisch referenzierte Benutzer, Exemplare, Anschriften und Zeitfenster werden nicht gelöscht, sondern soweit vorgesehen deaktiviert. Fremdschlüssel verwenden standardmäßig NO ACTION; Änderungen von Schlüsseln sind nicht vorgesehen.",
+      "enforcement": "Datenbankberechtigungen, FK und Trigger"
+    },
+    {
+      "id": "R05",
+      "title": "Verfügbarkeit und Annahme",
+      "text": "Verfügbar bedeutet: Angebot aktiv, Eigentümer aktiv und keine Ausleihe desselben Exemplars mit accepted/outbound/active/returning. requested-Anfragen reservieren nicht. requested_days wird bei Anfrage, proposed_days bei Vorschlag und agreed_days bei Annahme gegen die jeweils aktuelle max_loan_days geprüft. Annahme sperrt die Exemplarzeile, prüft Teilnehmer/aktive Bedingungen und setzt accepted atomar. Ein partieller UNIQUE-Index sichert parallele Annahmen zusätzlich ab. Spätere Angebotsänderungen verändern die angenommene Höchstdauer nicht.",
+      "enforcement": "Partieller UNIQUE-Index und Transaktion mit Zeilensperre"
+    },
+    {
+      "id": "R06",
+      "title": "Dauer und Frist",
+      "text": "Bei Annahme wird max_loan_days als max_loan_days_snapshot eingefroren. agreed_days plus alle genehmigten extra_days sind höchstens diese Grenze. Nach Erhalt gilt due_date = Datum von received_at in Europe/Berlin + agreed_days + genehmigte Zusatztage. Rückgabe ist bis Ende dieses lokalen Kalendertags fällig. Überfällig ist ein abgeleitetes Merkmal aktiver/zurückkehrender Ausleihen; kein zusätzlicher Status.",
+      "enforcement": "CHECK für positive Bereiche; Transaktion für Summen und Frist"
+    },
+    {
+      "id": "R07",
+      "title": "Abholtermin",
+      "text": "Bei pickup enthält eine angenommene Ausleihe pickup_slot_id, konkreten Beginn/Ende und eine vollständige Adressmomentaufnahme. Das aktive Zeitfenster gehört zur selben copy_id; das lokale Datum und die Uhrzeiten passen zum Wochentag und Wochenzeitfenster. Zeitpunkt der Vereinbarung liegt vor Beginn des Termins. Aktive Abholangebote haben mindestens ein aktives Zeitfenster.",
+      "enforcement": "FK plus Transaktion/Trigger einschließlich Aktivierungsprüfung"
+    },
+    {
+      "id": "R08",
+      "title": "Historische Abholung",
+      "text": "Abholtermin und Anschrift werden bei Annahme eingefroren und nicht durch spätere Änderungen an Wochenzeitfenstern oder Profilanschriften umgeschrieben. Anpassungen des Wochenplans gelten nur für neue Vereinbarungen. Bei shipping bleiben sämtliche pickup-Felder NULL.",
+      "enforcement": "CHECK für Übergabeart und Pflichtfelder; Schreibschutz/Trigger"
+    },
+    {
+      "id": "R09",
+      "title": "Gegenvorschläge",
+      "text": "Nur der Eigentümer schlägt bei requested eine alternative Dauer vor; höchstens ein Vorschlag ist pending. Nur der Ausleiher nimmt ihn an oder lehnt ihn ab, der Eigentümer darf ihn zurücknehmen. Ablehnung/Rücknahme lässt requested bestehen. Annahme setzt agreed_days und reserviert atomar; direkte Eigentümerannahme ist nur ohne pending-Vorschlag möglich. Bei Ende einer offenen Anfrage werden ausstehende Vorschläge withdrawn und erhalten den beendenden Teilnehmer mit Ereigniszeit als Entscheidung.",
+      "enforcement": "Partieller UNIQUE-Index und Transaktion/Teilnehmerprüfung"
+    },
+    {
+      "id": "R10",
+      "title": "Verlängerungen",
+      "text": "Nur der Ausleiher beantragt während active zusätzliche Tage; höchstens ein Antrag ist pending. Der Eigentümer genehmigt oder lehnt ab, der Ausleiher darf zurücknehmen. Genehmigung speichert old_due_date/new_due_date und erhöht due_date genau einmal in derselben Transaktion unter Sperre der Ausleihe. Die eingefrorene Gesamthöchstdauer bleibt verbindlich. Mit Beginn der Rückgabe werden offene Anträge withdrawn.",
+      "enforcement": "Partieller UNIQUE-Index und Transaktion mit Zeilensperre"
+    },
+    {
+      "id": "R11",
+      "title": "Porto",
+      "text": "Nur postalische, angenommene Ausleihen erhalten maximal einen payments-Datensatz. Dieser umfasst Hin- und Rückporto in EUR. pending→reported erfolgt durch den Ausleiher, reported→confirmed nur durch den Eigentümer; pending/reported→cancelled nur bei zulässiger Stornierung. Vor Hinversand ist confirmed erforderlich. Eine reale Zahlungsabwicklung findet nicht statt. Bestätigte Beträge und Nachweise bleiben unverändert.",
+      "enforcement": "UNIQUE/FK/CHECK plus Status- und Teilnehmerprüfung"
+    },
+    {
+      "id": "R12",
+      "title": "Zahlung bei Stornierung",
+      "text": "Bei einer zulässigen Stornierung wird eine noch pending/reported-Portozahlung cancelled. Ein bereits bestätigter Eingang bleibt confirmed als historischer Nachweis erhalten; Rückerstattungen werden außerhalb des Demonstrators vereinbart. Eine Stornierung ist nach Beginn einer physischen Übergabe oder einem Versand nicht mehr zulässig.",
+      "enforcement": "Transaktion; bestätigte Zahlung unveränderlich"
+    },
+    {
+      "id": "R13",
+      "title": "Sendungen und Anschriften",
+      "text": "Sendungen gehören nur zu shipping-Ausleihen; UNIQUE (loan_id,direction) begrenzt auf Hin- und Rückweg. Beim Hinweg ist der Eigentümer Absender und der Ausleiher Empfänger, beim Rückweg umgekehrt. Ausgewählte Anschriften gehören diesen Personen. Name, Straße/Hausnummer, PLZ, Ort und Land werden als unveränderlicher formatierter TEXT kopiert.",
+      "enforcement": "UNIQUE/FK plus Teilnehmer- und Snapshot-Prüfung"
+    },
+    {
+      "id": "R14",
+      "title": "Versand und Rückerhalt",
+      "text": "Hin-Sendungen werden nur bei accepted, Rücksendungen nur bei active vorbereitet; terminale Ausleihen erhalten keine neuen Sendungen. prepared→sent bestätigt der Absender, sent→received der Empfänger. Hinversand verlangt accepted und Porto confirmed und setzt outbound. Hinerhalt setzt active und Frist. Rückversand setzt returning, Rückerhalt completed. Gemeinsame Ereignisse verwenden identische Zeitpunkte: Hinerhalt=loans.received_at, Rückversand=return_started_at, Rückerhalt=completed_at. Alle Änderungen erfolgen atomar.",
+      "enforcement": "Transaktion und Zeilen-/Statussperren"
+    },
+    {
+      "id": "R15",
+      "title": "Persönliche Übergabe",
+      "text": "Bei pickup bestätigt der Ausleiher den Erhalt accepted→active. Eine vorzeitige Rückgabe ist erlaubt; er meldet active→returning. Erst der Eigentümer bestätigt returning→completed. Bestätigungen und Ereigniszeiten dürfen nicht rückwärts datiert werden. Ein Rückgabetermin ist keine zweite verbindliche Reservierung.",
+      "enforcement": "Teilnehmerprüfung und Transaktion"
+    },
+    {
+      "id": "R16",
+      "title": "Zeitpunkte und Zustände",
+      "text": "Zeitpunkte sind TIMESTAMPTZ, Wochenzeitfenster TIME und due_date DATE. Annahme liegt nicht vor Anfrage; Erhalt nicht vor Annahme; Rückgabebeginn nicht vor Erhalt; Abschluss nicht vor Rückgabebeginn. Je Status gelten die in der Zustandsmatrix genannten Pflichtwerte. Terminale Vorgänge werden nicht wieder geöffnet.",
+      "enforcement": "CHECK für gleiche Zeile; Transaktion für Kindereignisse"
+    },
+    {
+      "id": "R17",
+      "title": "Bewertungen",
+      "text": "Nur completed-Ausleihen und ihre beiden Teilnehmer sind bewertbar. rating liegt zwischen 1 und 5. UNIQUE (loan_id,reviewer_id) verhindert mehrfache Bewertungen; der bewertete Teilnehmer ergibt sich als Gegenüber.",
+      "enforcement": "CHECK/UNIQUE und Teilnehmer-/Statusprüfung"
+    },
+    {
+      "id": "R18",
+      "title": "Kommunikation und Dokumente",
+      "text": "Benachrichtigungen mit loan_id und Dokumente gehen nur an Teilnehmer. Eine referenzierte Sendung gehört zur selben Ausleihe. loan_confirmation setzt Annahme voraus, shipment_summary eine Sendung, return_confirmation den Abschluss. planned-Dokumente und test_email-Datensätze behaupten keine reale Datei oder produktive Zustellung. Private Dokumentdateien liegen außerhalb des öffentlich lesbaren Webverzeichnisses.",
+      "enforcement": "FK und zusammengesetzter FK oder Trigger; Berechtigung"
+    },
+    {
+      "id": "R19",
+      "title": "Lokale und tabellenübergreifende Regeln",
+      "text": "NOT NULL, CHECK und UNIQUE sichern Werte derselben Zeile beziehungsweise Schlüsselmengen. CHECK wird nicht als Prüfung fremder Tabellen verwendet. Eigentum, Rollen, Mindestautorenzahl, Zeitfenster, Fristsummen und Statusfolgen erfordern kontrollierte SQL-Funktionen/Trigger und Transaktionen; direkte unkontrollierte Schreibzugriffe des Webkontos sind gesperrt.",
+      "enforcement": "Dokumentierte Durchsetzung in Phase 2"
+    },
+    {
+      "id": "R20",
+      "title": "Wiederholung und Erhalt der Historie",
+      "text": "book_copies.book_id bleibt ab Erfassung unverändert. loans.copy_id, borrower_id, handover_mode und requested_days sind ab Anfrage fest; agreed_days und max_loan_days_snapshot ab Annahme. Bestätigte Ereignisse, genehmigte Friständerungen und Adressmomentaufnahmen werden nicht überschrieben. Verlängerungen ändern nur due_date über genehmigte Anträge. Wiederholte Bestätigungen erzeugen keine erneute Friständerung oder zweite Sendung. Kinddatensätze werden unter Sperre der Ausleihe bearbeitet.",
+      "enforcement": "Idempotente Datenbankfunktionen, Zeilensperren und UNIQUE"
+    }
+  ],
+  "loan_states": [
+    [
+      "requested",
+      "nein",
+      "Anfrage; keine vereinbarte Dauer und keine Annahme/Erhalts-/Rückgabezeitpunkte."
+    ],
+    [
+      "accepted",
+      "ja",
+      "accepted_at, agreed_days und max_loan_days_snapshot gesetzt; Erhalt und due_date noch NULL."
+    ],
+    [
+      "outbound",
+      "ja",
+      "Nur shipping; angenommene Ausleihe mit versandter Hin-Sendung, noch kein Erhalt."
+    ],
+    [
+      "active",
+      "ja",
+      "Annahme und Erhalt gesetzt; due_date gesetzt; Rückgabebeginn/Abschluss noch NULL."
+    ],
+    [
+      "returning",
+      "ja",
+      "Zusätzlich return_started_at; noch kein completed_at."
+    ],
+    [
+      "completed",
+      "nein",
+      "Annahme, Erhalt, Frist, Rückgabebeginn und completed_at vollständig; kein Rejected/Cancelled."
+    ],
+    [
+      "rejected",
+      "nein",
+      "rejected_at gesetzt; keine Annahme, Erhalt oder Rückgabe."
+    ],
+    [
+      "cancelled",
+      "nein",
+      "cancelled_at und cancelled_by_user_id gesetzt; Annahme optional, kein Erhalt/Rückgabebeginn."
+    ]
+  ],
+  "loan_transitions": [
+    [
+      "requested",
+      "accepted",
+      "Eigentümer nimmt Originalanfrage an oder Ausleiher akzeptiert Gegenvorschlag",
+      "accepted_at, agreed_days, max_loan_days_snapshot; bei pickup Termin und Anschrift",
+      "R05–R09"
+    ],
+    [
+      "requested",
+      "rejected",
+      "Eigentümer lehnt ab",
+      "rejected_at; offene Vorschläge schließen",
+      "R09"
+    ],
+    [
+      "requested",
+      "cancelled",
+      "Ausleiher zieht offene Anfrage zurück",
+      "cancelled_at und cancelled_by_user_id",
+      "R09"
+    ],
+    [
+      "accepted",
+      "cancelled",
+      "Einer der Teilnehmer storniert vor jeder physischen Übergabe",
+      "cancelled_at/actor; Sperre frei; Porto gemäß R12",
+      "R12"
+    ],
+    [
+      "accepted",
+      "outbound",
+      "Eigentümer bestätigt Hinversand",
+      "shipping; Hin-Sendung sent; Porto confirmed",
+      "R11/R14"
+    ],
+    [
+      "accepted",
+      "active",
+      "Ausleiher bestätigt persönliche Abholung",
+      "pickup; received_at und due_date",
+      "R06/R15"
+    ],
+    [
+      "outbound",
+      "active",
+      "Ausleiher bestätigt Postempfang",
+      "Hin-Sendung received; received_at und due_date",
+      "R06/R14"
+    ],
+    [
+      "active",
+      "returning",
+      "Ausleiher meldet persönliche Rückgabe oder Rückversand",
+      "return_started_at; bei shipping Rücksendung sent",
+      "R10/R14/R15"
+    ],
+    [
+      "returning",
+      "completed",
+      "Eigentümer bestätigt Rückerhalt",
+      "completed_at; bei shipping Rücksendung received; Sperre frei",
+      "R14/R15"
+    ]
+  ],
+  "joins": [
+    {
+      "title": "Exemplar mit Ausgabe und Eigentümer",
+      "tables": [
+        "books",
+        "book_copies",
+        "users"
+      ],
+      "sql": "SELECT c.copy_id, b.title, u.first_name, u.last_name\nFROM book_copies AS c\nJOIN books AS b ON b.book_id = c.book_id\nJOIN users AS u ON u.user_id = c.owner_id;"
+    },
+    {
+      "title": "Ausleihe mit Exemplar und ausleihender Person",
+      "tables": [
+        "loans",
+        "book_copies",
+        "users"
+      ],
+      "sql": "SELECT l.loan_id, c.copy_id, u.first_name, l.status\nFROM loans AS l\nJOIN book_copies AS c ON c.copy_id = l.copy_id\nJOIN users AS u ON u.user_id = l.borrower_id;"
+    },
+    {
+      "title": "Portozahlung mit Ausleihe und bestätigender Person",
+      "tables": [
+        "payments",
+        "loans",
+        "users"
+      ],
+      "sql": "SELECT p.payment_id, l.loan_id, u.first_name, p.confirmed_at\nFROM payments AS p\nJOIN loans AS l ON l.loan_id = p.loan_id\nLEFT JOIN users AS u ON u.user_id = p.confirmed_by_user_id;"
+    }
+  ],
+  "diagram_groups": [
+    {
+      "file": "01_Katalog_Benutzer",
+      "title": "Katalog und Benutzer",
+      "entities": [
+        "users",
+        "addresses",
+        "publishers",
+        "genres",
+        "languages",
+        "authors",
+        "books",
+        "book_authors",
+        "book_copies",
+        "pickup_slots"
+      ]
+    },
+    {
+      "file": "02_Ausleihe",
+      "title": "Ausleihe und Fristen",
+      "entities": [
+        "users",
+        "book_copies",
+        "pickup_slots",
+        "loans",
+        "loan_proposals",
+        "loan_extensions"
+      ]
+    },
+    {
+      "file": "03_Versand_Zahlung",
+      "title": "Versand und Porto",
+      "entities": [
+        "users",
+        "addresses",
+        "loans",
+        "payments",
+        "shipments",
+        "generated_documents"
+      ]
+    },
+    {
+      "file": "04_Bewertung_Uebersicht",
+      "title": "Bewertungen und Kommunikation",
+      "entities": [
+        "users",
+        "loans",
+        "shipments",
+        "reviews",
+        "notifications",
+        "generated_documents"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "addresses",
+      "fk": "user_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "publishers",
+      "parent_key": "publisher_id",
+      "child": "books",
+      "fk": "publisher_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "genres",
+      "parent_key": "genre_id",
+      "child": "books",
+      "fk": "genre_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "languages",
+      "parent_key": "language_id",
+      "child": "books",
+      "fk": "language_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "books",
+      "parent_key": "book_id",
+      "child": "book_authors",
+      "fk": "book_id",
+      "parent_per_child": "1",
+      "children_per_parent": "1..N"
+    },
+    {
+      "parent": "authors",
+      "parent_key": "author_id",
+      "child": "book_authors",
+      "fk": "author_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "books",
+      "parent_key": "book_id",
+      "child": "book_copies",
+      "fk": "book_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "book_copies",
+      "fk": "owner_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "addresses",
+      "parent_key": "address_id",
+      "child": "book_copies",
+      "fk": "pickup_address_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "book_copies",
+      "parent_key": "copy_id",
+      "child": "pickup_slots",
+      "fk": "copy_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "book_copies",
+      "parent_key": "copy_id",
+      "child": "loans",
+      "fk": "copy_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "loans",
+      "fk": "borrower_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "pickup_slots",
+      "parent_key": "slot_id",
+      "child": "loans",
+      "fk": "pickup_slot_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "loans",
+      "fk": "cancelled_by_user_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "loans",
+      "parent_key": "loan_id",
+      "child": "loan_proposals",
+      "fk": "loan_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "loan_proposals",
+      "fk": "proposed_by_user_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "loan_proposals",
+      "fk": "decided_by_user_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "loans",
+      "parent_key": "loan_id",
+      "child": "loan_extensions",
+      "fk": "loan_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "loan_extensions",
+      "fk": "decided_by_user_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "loans",
+      "parent_key": "loan_id",
+      "child": "payments",
+      "fk": "loan_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..1"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "payments",
+      "fk": "confirmed_by_user_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "loans",
+      "parent_key": "loan_id",
+      "child": "shipments",
+      "fk": "loan_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..2"
+    },
+    {
+      "parent": "addresses",
+      "parent_key": "address_id",
+      "child": "shipments",
+      "fk": "sender_address_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "addresses",
+      "parent_key": "address_id",
+      "child": "shipments",
+      "fk": "recipient_address_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "shipments",
+      "fk": "receipt_confirmed_by",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "notifications",
+      "fk": "recipient_user_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "loans",
+      "parent_key": "loan_id",
+      "child": "notifications",
+      "fk": "loan_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "loans",
+      "parent_key": "loan_id",
+      "child": "generated_documents",
+      "fk": "loan_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "shipments",
+      "parent_key": "shipment_id",
+      "child": "generated_documents",
+      "fk": "shipment_id",
+      "parent_per_child": "0..1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "generated_documents",
+      "fk": "recipient_user_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    },
+    {
+      "parent": "loans",
+      "parent_key": "loan_id",
+      "child": "reviews",
+      "fk": "loan_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..2"
+    },
+    {
+      "parent": "users",
+      "parent_key": "user_id",
+      "child": "reviews",
+      "fk": "reviewer_id",
+      "parent_per_child": "1",
+      "children_per_parent": "0..N"
+    }
+  ],
+  "index_plan": [
+    "Alle Primärschlüssel und UNIQUE-Bedingungen erhalten passende eindeutige Indizes.",
+    "Nicht bereits als linker Präfix indizierte FK-Spalten erhalten Indizes für JOINs und Prüfungen.",
+    "loans(copy_id) UNIQUE WHERE status IN (accepted,outbound,active,returning).",
+    "loan_proposals(loan_id) UNIQUE WHERE status=pending; loan_extensions entsprechend.",
+    "loans(borrower_id,status) und loans(due_date) WHERE status IN (active,returning).",
+    "book_copies(book_id), book_copies(owner_id) und book_copies(pickup_address_id).",
+    "addresses(country_code,city,postal_code), optional latitude/longitude zur Vorauswahl eines Suchrechtecks.",
+    "books(lower(title)) und authors(lower(display_name)) für normalisierte Gleichheit/Präfixsuche; Teilstrings können im Demonstrator zunächst scannen.",
+    "notifications(recipient_user_id,created_at) und generated_documents(recipient_user_id,created_at)."
+  ],
+  "normalization": [
+    "1NF: Attribute enthalten einzelne fachlich definierte Werte; Autoren werden nicht als Liste gespeichert.",
+    "2NF: book_authors hat den zusammengesetzten Schlüssel (book_id,author_id); author_order bezieht sich auf diese Zuordnung.",
+    "3NF: Ausgabedaten, Exemplardaten, Anschriften, Autoren und kontrollierte Stammdaten sind getrennt; Verfügbarkeit und Überfälligkeit werden abgeleitet.",
+    "Historische Adress-TEXTe und max_loan_days_snapshot sind bewusste unveränderliche Momentaufnahmen, keine Kopien zur Pflege aktueller Stammdaten.",
+    "due_date ist eine kontrolliert materialisierte Frist; genehmigte Verlängerungen speichern davor/danach zur Nachvollziehbarkeit. Regel R10 verhindert Abweichungen."
+  ],
+  "test_plan": [
+    "Je Tabelle mindestens zehn sinnvolle Testdatensätze; bei 18 Tabellen mindestens 180 Datensätze insgesamt, Verteilungen mit allen relevanten Zuständen.",
+    "Zwei parallele Annahmen desselben Exemplars: genau eine wird verbindlich; offene Anfragen bleiben zulässig.",
+    "Eigenleihe, fremde Abholanschrift, fremdes Zeitfenster und fehlende Standortkoordinaten bei Aktivierung werden abgewiesen.",
+    "Erhalt startet die Frist nach lokalem Kalenderdatum; Test über Sommer-/Winterzeitwechsel.",
+    "Genehmigte Verlängerung ändert due_date genau einmal; Gesamtgrenze und doppelte Genehmigung werden geprüft.",
+    "Hinversand ohne Porto-Bestätigung sowie Rückerhalt durch den falschen Teilnehmer werden abgewiesen.",
+    "Anschriftänderung verändert alte Momentaufnahmen nicht; Dokument mit Sendung einer anderen Ausleihe wird abgewiesen.",
+    "Vorzeitige Rückgabe, Abschluss, verbleibend deaktiviertes Angebot und zulässige Stornierung geben nur korrekte Angebote frei.",
+    "Bewertung vor Abschluss, durch Dritte oder doppelt wird abgewiesen; zwei Teilnehmerbewertungen sind zulässig.",
+    "Die drei JOIN-Beispiele mit real ausgeführten Ergebnissen und DBMS-Screenshots dokumentieren."
+  ]
+}

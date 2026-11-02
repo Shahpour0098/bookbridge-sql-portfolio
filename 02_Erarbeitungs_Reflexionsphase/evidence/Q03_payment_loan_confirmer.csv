@@ -1,0 +1,25 @@
+﻿payment_id,loan_id,loan_status,payment_status,total_eur,confirmed_by,confirmed_at
+1,2,completed,confirmed,5.80,Ben Berg,2026-09-02 13:00:00+02:00
+2,4,completed,confirmed,5.80,David Dorn,2026-09-02 13:00:00+02:00
+3,6,completed,confirmed,5.80,Felix Falk,2026-09-02 13:00:00+02:00
+4,8,completed,confirmed,5.80,Hannes Heller,2026-09-02 13:00:00+02:00
+5,10,completed,confirmed,5.80,Jonas Jansen,2026-09-02 13:00:00+02:00
+6,12,completed,confirmed,5.80,Leon Linde,2026-09-02 13:00:00+02:00
+7,14,completed,confirmed,5.80,Noah Neumann,2026-09-02 13:00:00+02:00
+8,16,completed,confirmed,5.80,Paul Pfeiffer,2026-09-02 13:00:00+02:00
+9,18,completed,confirmed,5.80,Simon Sommer,2026-09-02 13:00:00+02:00
+10,20,completed,confirmed,5.80,Vincent Vogel,2026-09-02 13:00:00+02:00
+11,22,completed,confirmed,5.80,Lukas Winter,2026-09-02 13:00:00+02:00
+12,24,completed,confirmed,5.80,Emil Zimmer,2026-09-02 13:00:00+02:00
+13,29,active,confirmed,6.10,Emilia Engel,2026-09-20 13:00:00+02:00
+14,30,active,confirmed,6.10,Felix Falk,2026-09-20 13:00:00+02:00
+15,31,active,confirmed,6.10,Greta Graf,2026-09-20 13:00:00+02:00
+16,32,active,confirmed,6.10,Hannes Heller,2026-09-20 13:00:00+02:00
+17,35,accepted,confirmed,6.10,Klara Keller,2026-09-20 13:00:00+02:00
+18,36,accepted,confirmed,6.10,Leon Linde,2026-09-20 13:00:00+02:00
+19,37,outbound,confirmed,6.10,Mila Mertens,2026-09-20 13:00:00+02:00
+20,38,outbound,confirmed,6.10,Noah Neumann,2026-09-20 13:00:00+02:00
+21,39,returning,confirmed,6.10,Olivia Ott,2026-09-20 13:00:00+02:00
+22,40,returning,confirmed,6.10,Paul Pfeiffer,2026-09-20 13:00:00+02:00
+23,47,cancelled,cancelled,6.10,,
+24,48,cancelled,confirmed,6.10,Emil Zimmer,2026-09-20 13:00:00+02:00

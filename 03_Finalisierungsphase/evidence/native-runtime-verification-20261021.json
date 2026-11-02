@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-21T17:50:50.907670+00:00",
+  "python_executable": "C:\\Python313\\python.exe",
+  "python_version": "3.13.12",
+  "pillow_binary": "_imaging.cp313-win_amd64.pyd",
+  "native_pdf_generation_with_image": true,
+  "pdf_bytes": 1701
+}

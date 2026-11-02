@@ -1,0 +1,1180 @@
+/* ========================================================================== 
+   BookBridge — application styles
+   01 Tokens · 02 Base · 03 Layout · 04 Navigation · 05 Controls
+   06 Hero · 07 Search · 08 Books · 09 Forms · 10 States · 11 Footer
+   12 Responsive · 13 Accessibility · 14 Print
+   No external fonts, frameworks or image requests are required.
+   ========================================================================== */
+
+/* 01. Design tokens -------------------------------------------------------- */
+:root {
+    color-scheme: light;
+    --color-brand: #183f35;
+    --color-brand-hover: #102e26;
+    --color-brand-soft: #edf3ef;
+    --color-ink: #233a32;
+    --color-text: #34473f;
+    --color-muted: #626f66;
+    --color-surface: #ffffff;
+    --color-background: #fafbf8;
+    --color-cream: #f2efe5;
+    --color-border: #d6ded5;
+    --color-control-border: #829385;
+    --color-success: #236344;
+    --color-success-soft: #edf6ef;
+    --color-warning: #825517;
+    --color-warning-soft: #fbf1de;
+    --color-danger: #a32f37;
+    --color-focus: #246dbe;
+    --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-display: Georgia, "Times New Roman", serif;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+    --space-9: 5.5rem;
+    --radius-small: 0.5rem;
+    --radius-medium: 0.875rem;
+    --radius-large: 1.5rem;
+    --shadow-small: 0 2px 6px rgb(24 63 53 / 4%);
+    --shadow-card: 0 12px 32px rgb(24 63 53 / 7%);
+    --shadow-raised: 0 20px 44px rgb(24 63 53 / 12%);
+    --container-width: 74rem;
+    --page-gutter: clamp(1rem, 4vw, 3rem);
+    --transition-fast: 180ms ease;
+}
+
+/* 02. Reset and typography ------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-ink);
+    line-height: 1.15;
+}
+
+h1,
+h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: clamp(2.75rem, 4.6vw, 4.5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 650;
+    letter-spacing: -0.025em;
+}
+
+a {
+    color: var(--color-brand);
+    text-underline-offset: 0.2em;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+select,
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+svg,
+img {
+    display: block;
+    max-width: 100%;
+}
+
+::selection {
+    background: #cee1d1;
+    color: var(--color-brand-hover);
+}
+
+/* Keep app-managed hidden regions out of layout and the accessibility tree. */
+[hidden] {
+    display: none !important;
+}
+
+/* 03. Shared layout ------------------------------------------------------- */
+.container {
+    width: min(var(--container-width), calc(100% - var(--page-gutter) * 2));
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: var(--space-9);
+    scroll-margin-top: var(--space-4);
+}
+
+.section-alternate {
+    background: var(--color-brand-soft);
+    border-block: 1px solid var(--color-border);
+}
+
+.section-heading {
+    margin-bottom: var(--space-6);
+}
+
+.section-heading h2 + p {
+    margin-top: var(--space-3);
+    color: var(--color-muted);
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+    color: var(--color-brand);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    content: "";
+    flex: 0 0 1.5rem;
+    height: 1px;
+    background: currentColor;
+}
+
+/* 04. Header, navigation and skip link ------------------------------------ */
+.skip-link {
+    position: fixed;
+    z-index: 100;
+    top: var(--space-3);
+    left: var(--page-gutter);
+    padding: var(--space-3) var(--space-5);
+    transform: translateY(calc(-100% - 1rem));
+    border-radius: var(--radius-small);
+    background: var(--color-brand);
+    color: white;
+    font-weight: 650;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.site-header {
+    position: sticky;
+    z-index: 20;
+    top: 0;
+    border-bottom: 1px solid var(--color-border);
+    background: rgb(250 251 248 / 97%);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    min-height: 5.25rem;
+}
+
+.logo {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--color-brand);
+    font-size: 1.3rem;
+    font-weight: 750;
+    letter-spacing: -0.055em;
+    text-decoration: none;
+}
+
+.logo-mark {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border-radius: 0.75rem;
+    background: var(--color-brand);
+    color: #f8f3df;
+}
+
+.logo-mark svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(0.25rem, 1.3vw, 1.25rem);
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-inline: var(--space-2);
+    border-radius: var(--radius-small);
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    font-weight: 550;
+    text-decoration: none;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.main-nav a:focus-visible {
+    background: var(--color-brand-soft);
+    color: var(--color-brand);
+}
+
+/* 05. Buttons and form controls ------------------------------------------- */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    min-height: 2.875rem;
+    padding: 0.7rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-small);
+    font-size: 0.875rem;
+    font-weight: 650;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    transition: background var(--transition-fast), border-color var(--transition-fast),
+                box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.button-primary {
+    background: var(--color-brand);
+    color: white;
+    box-shadow: var(--shadow-small);
+}
+
+.button-secondary,
+.button-outline {
+    border-color: var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-brand);
+}
+
+.button-outline {
+    background: transparent;
+}
+
+.button:active:not(:disabled):not([aria-disabled="true"]) {
+    transform: translateY(1px);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+    border-color: var(--color-border);
+    background: #eef0eb;
+    color: #626e64;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    min-width: 0;
+}
+
+.form-group label {
+    color: var(--color-ink);
+    font-size: 0.8125rem;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.form-group :is(input:not([type="checkbox"]), select, textarea) {
+    width: 100%;
+    min-width: 0;
+    min-height: 3rem;
+    padding: 0.75rem 0.875rem;
+    border: 1px solid var(--color-control-border);
+    border-radius: var(--radius-small);
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group select {
+    padding-right: 2.5rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='m4 6 4 4 4-4' stroke='%23183f35' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: right 0.875rem center;
+    background-repeat: no-repeat;
+}
+
+.form-group textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #6d786e;
+    opacity: 1;
+}
+
+.form-group :is(input, select, textarea):focus {
+    border-color: var(--color-brand);
+    box-shadow: 0 0 0 3px rgb(24 63 53 / 9%);
+}
+
+.form-group :is(input, select, textarea)[aria-invalid="true"],
+.form-group :is(input, select, textarea):user-invalid {
+    border-color: var(--color-danger);
+}
+
+.form-group :is(input, select, textarea):disabled {
+    background-color: #eef0eb;
+    color: var(--color-muted);
+    cursor: not-allowed;
+}
+
+.form-checkbox {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.form-checkbox input {
+    flex: 0 0 auto;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: 0.8rem 0 0;
+    accent-color: var(--color-brand);
+}
+
+.form-checkbox label {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+/* 06. Hero and book photograph -------------------------------------------- */
+.hero {
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-cream);
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    align-items: center;
+    gap: var(--space-7);
+    padding-block: 4.5rem;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 span {
+    color: var(--color-brand);
+}
+
+.hero-description {
+    max-width: 31rem;
+    margin-top: var(--space-5);
+    color: #5b675c;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+}
+
+.hero-actions .button {
+    min-height: 3.125rem;
+    padding-inline: var(--space-5);
+}
+
+.hero-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-5);
+    margin-top: var(--space-6);
+    padding: 0;
+    color: #5b675c;
+    font-size: 0.75rem;
+    list-style: none;
+}
+
+.hero-benefits li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.hero-benefits li::before {
+    content: "✓";
+    color: var(--color-brand);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.hero-photo {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+.hero-photo > img {
+    width: 100%;
+    height: 25rem;
+    border-radius: var(--radius-small);
+    object-fit: cover;
+}
+
+.hero-photo figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-4);
+    margin-top: var(--space-3);
+    color: var(--color-muted);
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.photo-credit {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-style: normal;
+}
+
+.photo-credit a {
+    color: inherit;
+}
+
+/* 07. Catalog search ------------------------------------------------------ */
+.search-form {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr 0.75fr;
+    gap: var(--space-5) var(--space-4);
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-small);
+}
+
+.search-form .form-checkbox {
+    grid-column: 1 / 4;
+    align-self: center;
+}
+
+.search-form .form-actions {
+    grid-column: 4 / -1;
+    justify-content: flex-end;
+}
+
+.demo-note {
+    margin-block: var(--space-5);
+    color: var(--color-muted);
+    font-size: 0.8125rem;
+}
+
+.demo-note strong {
+    color: var(--color-brand);
+    font-weight: 650;
+}
+
+/* 08. Book cards and original publisher covers ---------------------------- */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: var(--space-5);
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-small);
+    transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.book-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 19rem;
+    padding: var(--space-5);
+    border-bottom: 1px solid var(--color-border);
+    background: #f0f0eb;
+}
+
+.book-cover img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 5px 12px rgb(24 35 29 / 14%);
+}
+
+.book-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-5);
+}
+
+.book-card h3 {
+    margin-top: var(--space-4);
+    line-height: 1.35;
+}
+
+.book-author {
+    margin-top: var(--space-1);
+    color: var(--color-muted);
+    font-size: 0.875rem;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 100px;
+    font-size: 0.6875rem;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.status::before {
+    flex: 0 0 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: currentColor;
+    content: "";
+}
+
+.status-available {
+    background: var(--color-success-soft);
+    color: var(--color-success);
+}
+
+.status-borrowed {
+    background: var(--color-warning-soft);
+    color: var(--color-warning);
+}
+
+.book-details {
+    display: grid;
+    gap: var(--space-2);
+    width: 100%;
+    margin-block: var(--space-5);
+    padding-top: var(--space-4);
+    border-top: 1px solid #e8ece5;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+.book-details > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    gap: var(--space-3);
+}
+
+.book-details dt {
+    color: var(--color-muted);
+}
+
+.book-details dd {
+    margin: 0;
+    color: var(--color-ink);
+    font-weight: 550;
+    text-align: right;
+}
+
+.book-card-content > .button {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* 09. Offer form ---------------------------------------------------------- */
+.add-book-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.25fr);
+    align-items: start;
+    gap: var(--space-8);
+}
+
+.add-book-layout .section-heading {
+    padding-top: var(--space-4);
+}
+
+.section-hint {
+    max-width: 18rem;
+    margin-top: var(--space-6);
+    padding-top: var(--space-5);
+    border-top: 1px solid #cbd8cc;
+    color: var(--color-muted);
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+    font-style: italic;
+}
+
+.book-form {
+    min-width: 0;
+    padding: clamp(1.25rem, 3vw, 2.25rem);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-small);
+}
+
+.book-form fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.book-form fieldset + fieldset {
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+}
+
+.book-form legend {
+    width: 100%;
+    padding: 0 0 var(--space-5);
+    color: var(--color-brand);
+    font-size: 1.0625rem;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5) var(--space-4);
+}
+
+.book-form fieldset > .form-group {
+    margin-top: var(--space-5);
+}
+
+.required-note {
+    margin-top: var(--space-5);
+    color: var(--color-muted);
+    font-size: 0.75rem;
+}
+
+.book-form > .form-actions {
+    margin-top: var(--space-5);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+}
+
+/* 10. Empty, account and feedback states ---------------------------------- */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    min-height: 11rem;
+    padding: var(--space-6);
+    border: 1px dashed #bdcbbd;
+    border-radius: var(--radius-medium);
+    background: rgb(255 255 255 / 65%);
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+    text-align: center;
+}
+
+.empty-state::before {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: var(--radius-medium);
+    background: var(--color-brand-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23657269' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5.5C9 3.5 5.5 3.5 3 4.5v14c2.5-1 6-1 9 1 3-2 6.5-2 9-1v-14c-2.5-1-6-1-9 1ZM12 5.5v14'/%3E%3C/svg%3E") center / 1.5rem no-repeat;
+    content: "";
+}
+
+#empty-search-message {
+    margin-top: var(--space-5);
+}
+
+.account-panel {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: var(--space-7);
+    padding: var(--space-7);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    background: var(--color-cream);
+}
+
+.account-panel .section-heading {
+    margin-bottom: 0;
+}
+
+.account-note {
+    padding-left: var(--space-5);
+    border-left: 2px solid #bec8b2;
+    color: #5b675c;
+    font-size: 0.9375rem;
+}
+
+.app-message {
+    margin-top: var(--space-5);
+    padding: var(--space-4) var(--space-5);
+    border: 1px solid #b8d4c0;
+    border-left: 4px solid var(--color-success);
+    border-radius: var(--radius-small);
+    background: var(--color-success-soft);
+    color: var(--color-success);
+}
+
+.app-message.is-error,
+.app-message[data-type="error"] {
+    border-color: #e5bac0;
+    border-left-color: var(--color-danger);
+    background: #fcf0f1;
+    color: var(--color-danger);
+}
+
+/* 11. Footer -------------------------------------------------------------- */
+.site-footer {
+    padding-block: var(--space-7);
+    background: var(--color-brand);
+    color: #d6e2d8;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-3) var(--space-5);
+    font-size: 0.75rem;
+}
+
+.footer-content p:first-child {
+    grid-column: 1 / -1;
+    color: #f7f2df;
+    font-size: 0.9375rem;
+}
+
+.footer-content strong {
+    margin-right: var(--space-2);
+    font-size: 1.125rem;
+    letter-spacing: -0.04em;
+}
+
+/* Hover effects are limited to devices with a precise pointer. */
+@media (hover: hover) and (pointer: fine) {
+    .main-nav a:hover {
+        background: var(--color-brand-soft);
+        color: var(--color-brand);
+    }
+
+    .button-primary:hover:not(:disabled):not([aria-disabled="true"]) {
+        background: var(--color-brand-hover);
+        box-shadow: var(--shadow-card);
+    }
+
+    .button-secondary:hover,
+    .button-outline:hover {
+        border-color: #a9bba9;
+        background: var(--color-brand-soft);
+    }
+
+    .book-card:hover {
+        border-color: #b3c3b4;
+        box-shadow: var(--shadow-card);
+    }
+}
+
+/* 12. Responsive layouts -------------------------------------------------- */
+@media (max-width: 68rem) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: var(--space-2) var(--space-5);
+        padding-block: var(--space-3);
+    }
+
+    .main-nav {
+        flex: 1 0 100%;
+        order: 3;
+        border-top: 1px solid #e4e9e1;
+        padding-top: var(--space-2);
+    }
+
+    .main-nav ul {
+        justify-content: space-between;
+    }
+
+    html {
+        scroll-padding-top: 10rem;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1.2fr 1fr;
+        gap: var(--space-5);
+        padding-block: var(--space-8);
+    }
+
+    .hero-photo > img {
+        height: 23rem;
+    }
+
+    .search-form {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .search-form .form-checkbox {
+        grid-column: auto;
+        align-self: end;
+    }
+
+    .search-form .form-actions {
+        grid-column: 1 / -1;
+    }
+
+    .add-book-layout {
+        grid-template-columns: 1fr 2.2fr;
+        gap: var(--space-6);
+    }
+}
+
+@media (max-width: 52rem) {
+    :root {
+        --space-9: 4rem;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-7);
+    }
+
+    .hero-copy {
+        max-width: 38rem;
+    }
+
+    .hero-photo {
+        max-width: 38rem;
+        margin-inline: 0;
+    }
+
+    .hero-photo > img {
+        height: 20rem;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .add-book-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .add-book-layout .section-heading {
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+
+    .section-hint {
+        max-width: none;
+        margin-top: var(--space-4);
+        padding-top: var(--space-4);
+    }
+
+    .account-panel {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+        padding: var(--space-6);
+    }
+}
+
+@media (max-width: 38rem) {
+    :root {
+        --space-9: 3rem;
+    }
+
+    /* A non-sticky header leaves room for content and focused controls. */
+    .site-header {
+        position: relative;
+    }
+
+    html {
+        scroll-padding-top: var(--space-4);
+    }
+
+    .header-content {
+        gap: var(--space-3) var(--space-2);
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .header-content > .button {
+        padding-inline: 0.875rem;
+        font-size: 0.8125rem;
+    }
+
+    .main-nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-1) var(--space-2);
+    }
+
+    .main-nav a {
+        width: 100%;
+        padding-inline: var(--space-1);
+        font-size: 0.8125rem;
+    }
+
+    .hero-layout {
+        padding-block: var(--space-7);
+    }
+
+    h1 {
+        font-size: clamp(2.4rem, 9vw, 3.5rem);
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-actions .button {
+        flex: 1 1 10rem;
+    }
+
+    .hero-benefits {
+        gap: var(--space-2) var(--space-4);
+    }
+
+    .search-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-4);
+        padding: var(--space-4);
+    }
+
+    .search-form > .form-group:first-child,
+    .search-form .form-checkbox {
+        grid-column: 1 / -1;
+    }
+
+    /* 16px prevents automatic input zoom in mobile browsers. */
+    .form-group :is(input:not([type="checkbox"]), select, textarea) {
+        font-size: 1rem;
+    }
+
+    .search-form .form-actions > .button {
+        flex: 1 1 8rem;
+    }
+
+    .book-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-form > .form-actions .button {
+        flex: 1 1 10rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content p:first-child {
+        grid-column: auto;
+    }
+}
+
+/* 13. Keyboard, reduced motion and system high contrast ------------------- */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+#main-content:focus-visible {
+    outline-offset: -3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+@media (forced-colors: active) {
+    .button,
+    .logo-mark,
+    .status,
+    .empty-state,
+    .account-panel {
+        border: 1px solid CanvasText;
+    }
+
+    .form-group select {
+        appearance: auto;
+        background-image: none;
+    }
+
+    .empty-state::before {
+        display: none;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 14. Printable catalog --------------------------------------------------- */
+@media print {
+    :root {
+        --page-gutter: 0rem;
+    }
+
+    body {
+        background: white;
+        color: black;
+        font-size: 10pt;
+    }
+
+    .site-header,
+    .skip-link,
+    .hero-photo,
+    .hero-actions,
+    .search-form,
+    .app-message,
+    #add-book,
+    #account,
+    .book-card .button {
+        display: none !important;
+    }
+
+    .hero,
+    .section-alternate,
+    .site-footer {
+        background: white;
+        color: black;
+    }
+
+    .hero-layout,
+    .section,
+    .site-footer {
+        display: block;
+        padding-block: 1.5rem;
+    }
+
+    h1 {
+        font-size: 28pt;
+    }
+
+    h2 {
+        font-size: 20pt;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .book-card,
+    .empty-state {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+
+    .book-cover {
+        height: 12rem;
+    }
+
+    .footer-content p,
+    .footer-content p:first-child {
+        color: black;
+    }
+}

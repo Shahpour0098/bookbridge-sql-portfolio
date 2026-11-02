@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "date": "2026-10-20",
+  "main_url": "http://127.0.0.1:8767",
+  "qa_port": 8768,
+  "main_user_records_untouched": true,
+  "qa_database_removed": true,
+  "checks": [
+    "Registration and separate owner/borrower accounts",
+    "Address save and edit persist; incomplete coordinates rejected",
+    "Offer creation, modes, duration and weekly-plan editing",
+    "Loan request, acceptance and concrete Berlin pickup window",
+    "Receipt starts due date; extension request and owner approval",
+    "Return started, owner receipt completes loan and restores availability",
+    "Review submitted after completion; protected confirmation links displayed",
+    "Notification target restores filtered loan and receives focus",
+    "Administrator deactivates and reactivates a synthetic account",
+    "Final main service home and catalogue load after restart"
+  ],
+  "screenshots": [
+    "01-home.png",
+    "02-edit-offer.png",
+    "03-completed-loan.png",
+    "04-admin-reactivation.png"
+  ],
+  "responsive_visual_check": "Desktop captured; narrow layouts source-inspected only"
+}

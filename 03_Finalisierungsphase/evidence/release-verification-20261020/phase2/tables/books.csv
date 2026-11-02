@@ -1,0 +1,25 @@
+﻿book_id,title,subtitle,isbn,publisher_id,publication_year,genre_id,language_id,description,created_at
+1,Der kleine Prinz,,9783792000571,1,,1,1,Reale Referenzausgabe des dokumentierten Frontend-Covers.,2026-08-03 10:00:00+02:00
+2,Momo,,9783522202756,2,,2,1,Reale Referenzausgabe des dokumentierten Frontend-Covers.,2026-08-03 10:00:00+02:00
+3,Der Vorleser,,9783257229530,3,,3,1,Reale Referenzausgabe des dokumentierten Frontend-Covers.,2026-08-03 10:00:00+02:00
+4,Abend am Fluss,,,4,2022,4,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+5,Die stille Bibliothek,,,5,2023,5,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+6,Ein Garten im Regen,,,6,2024,6,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+7,Lichter über dem Rhein,,,7,2025,7,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+8,Das letzte Lesezeichen,,,8,2018,8,2,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+9,Briefe aus dem Norden,,,9,2019,9,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+10,Unterwegs nach Morgen,,,10,2020,10,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+11,Sterne hinter Glas,,,11,2021,11,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+12,Die Karte der Wege,,,12,2022,12,2,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+13,Kleine Schritte,,,4,2023,1,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+14,Geschichten am Fenster,,,5,2024,2,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+15,Im Schatten der Brücke,,,6,2025,3,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+16,Ein Jahr im Grünen,,,7,2018,4,2,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+17,Der Klang der Seiten,,,8,2019,5,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+18,Nachrichten aus der Zukunft,,,9,2020,6,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+19,Die verlorene Stunde,,,10,2021,7,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+20,Ein Haus voller Bücher,,,11,2022,8,2,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+21,Zwischen zwei Städten,,,12,2023,9,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+22,Wege durch den Herbst,,,4,2024,10,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+23,Die offene Tür,,,5,2025,11,1,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00
+24,Der nächste Sommer,,,6,2018,12,2,Fiktiver bibliografischer Testdatensatz; keine reale Ausgabe und keine zugewiesene ISBN.,2026-08-03 10:00:00+02:00

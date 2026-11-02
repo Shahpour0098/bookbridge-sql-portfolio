@@ -1,0 +1,24 @@
+T01: passed - Alle 18 Tabellen real abgefragt und mit mindestens zehn Zeilen belegt
+T02: passed - Drei echte JOIN-Abfragen mit je drei Tabellen und Ergebnisexport
+T03: passed - Katalog, ISBN, E-Mail und aufgeschobene Autorenteilnahme
+T04: passed - Koordinaten, Eigentümeranschrift und aktive Wochenfenster
+T05: passed - Eigentum und referenzierte Historie
+T06: passed - Teilnehmer, Eigenleihe, Anfragen und genau eine Reservierung
+T07: passed - Konkreter Abholtermin und unveränderliche Momentaufnahme
+T08: passed - Gegenvorschläge, Rollen und ausstehende Entscheidungen
+T09: passed - Verlängerung genau einmal und eingefrorene Gesamthöchstdauer
+T10: passed - Vorzeitige Rückgabe, ausstehende Verlängerung und Freigabe
+T11: passed - Verspätete Rückgabe bleibt abschließbar
+T12: passed - Kalenderfrist über beide Zeitumstellungen in Europe/Berlin
+T13: passed - Portobestätigung, Versandvoraussetzung und atomarer Erhalt
+T14: passed - Stornierung mit offenem und bestätigtem Porto
+T15: passed - Hin-/Rückversand, Anschriften und korrekte Empfangsperson
+T16: passed - Ereignisreihenfolge und Rückdatierungsverbot
+T17: passed - Zwei Teilnehmerbewertungen erst nach Abschluss
+T18: passed - Private Kommunikation, Dokumente und gleiche Ausleihe
+T19: passed - Unveränderliche Ausleihhistorie und erklärbare Frist
+T20: passed - Kontodeaktivierung und Fortsetzung bestehender Vorgänge
+T23: passed - Öffentliche Lesesicht, Backend-API und gesperrte private Tabellen/Helfer
+T21: passed - Alle normalen Testfixtures zurückgerollt; Seed-Zeilen unverändert
+T22: passed - Zwei parallele Verbindungen: genau eine Annahme desselben Exemplars
+{"executed": 23, "passed": 23, "failed": 0, "rules_exercised_by_passing_tests": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10", "R11", "R12", "R13", "R14", "R15", "R16", "R17", "R18", "R19", "R20"]}

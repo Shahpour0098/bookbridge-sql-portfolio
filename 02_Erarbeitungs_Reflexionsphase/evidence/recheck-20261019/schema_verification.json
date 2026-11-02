@@ -1,0 +1,199 @@
+{
+  "project": "BookBridge",
+  "started_at_utc": "2026-10-19T06:44:41.818327+00:00",
+  "empty_template": "template0",
+  "database": "bookbridge_phase2_verify_e7959758ae5f",
+  "retained_for_inspection": true,
+  "source_directory": "D:\\BookBridge\\docs\\phase-2",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "psycopg": "3.3.3"
+  },
+  "scripts": [
+    {
+      "file": "01_schema.sql",
+      "sha256": "d833c139649b057b4fb47e7d63a825db627a7f5e54415301cf55d4f9b3ca5954",
+      "bytes": 44143,
+      "status": "executed",
+      "duration_ms": 153.37,
+      "statements": 223
+    },
+    {
+      "file": "02_integrity.sql",
+      "sha256": "1ed7d00fe4bb824330a37ab40746d78401324f11d7a283e5316b68558e11fa93",
+      "bytes": 30234,
+      "status": "executed",
+      "duration_ms": 54.63,
+      "statements": 48
+    },
+    {
+      "file": "03_workflows.sql",
+      "sha256": "296df42f41d854411a2d801cfc8bc474badc9641e26e70a80ad2f2bf85740607",
+      "bytes": 35596,
+      "status": "executed",
+      "duration_ms": 9.51,
+      "statements": 31
+    },
+    {
+      "file": "04_seed.sql",
+      "sha256": "e06c823d834d8877540462775faf88f5a71d5afd3529ebecea7d50d9c93e52a9",
+      "bytes": 12232,
+      "status": "executed",
+      "duration_ms": 496.83,
+      "statements": 31
+    },
+    {
+      "file": "06_access.sql",
+      "sha256": "7674d2933fcd7ec6a8449fbb7b56d4485164715d415b9d214f91830e33cbc8cc",
+      "bytes": 2797,
+      "status": "executed",
+      "duration_ms": 440.93,
+      "statements": 14
+    },
+    {
+      "file": "05_queries.sql",
+      "sha256": "d0c8d55a45c0c5dd977c5961559f6f032a4852e12f07caae3ff4264cac11fb31",
+      "bytes": 3869,
+      "status": "executed",
+      "resultsets": [
+        {
+          "columns": [
+            "copy_id",
+            "title",
+            "owner",
+            "condition",
+            "max_loan_days"
+          ],
+          "rows": 24
+        },
+        {
+          "columns": [
+            "loan_id",
+            "copy_id",
+            "borrower",
+            "handover_mode",
+            "status",
+            "due_date"
+          ],
+          "rows": 48
+        },
+        {
+          "columns": [
+            "payment_id",
+            "loan_id",
+            "loan_status",
+            "payment_status",
+            "total_eur",
+            "confirmed_by",
+            "confirmed_at"
+          ],
+          "rows": 24
+        },
+        {
+          "columns": [
+            "book_id",
+            "title",
+            "requests",
+            "completed_loans"
+          ],
+          "rows": 24
+        },
+        {
+          "columns": [
+            "copy_id",
+            "title",
+            "city",
+            "postal_code"
+          ],
+          "rows": 6
+        },
+        {
+          "columns": [
+            "loan_id",
+            "title",
+            "handover_mode",
+            "status",
+            "due_date",
+            "days_overdue"
+          ],
+          "rows": 12
+        },
+        {
+          "columns": [
+            "loan_id",
+            "due_date",
+            "recomputed_due_date"
+          ],
+          "rows": 36
+        },
+        {
+          "columns": [
+            "entity",
+            "rows"
+          ],
+          "rows": 18
+        }
+      ]
+    }
+  ],
+  "server_version": "PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+  "database_user": "bookbridge_admin",
+  "timezone": "Europe/Berlin",
+  "base_tables": 18,
+  "base_table_columns": 142,
+  "foreign_keys": 32,
+  "indexes": 62,
+  "triggers": 88,
+  "seed_rows": {
+    "users": 24,
+    "addresses": 24,
+    "publishers": 12,
+    "genres": 12,
+    "languages": 12,
+    "authors": 24,
+    "books": 24,
+    "book_authors": 27,
+    "book_copies": 24,
+    "pickup_slots": 48,
+    "loans": 48,
+    "loan_proposals": 24,
+    "loan_extensions": 32,
+    "payments": 24,
+    "shipments": 34,
+    "notifications": 786,
+    "generated_documents": 204,
+    "reviews": 48
+  },
+  "total_seed_rows": 1431,
+  "integration_exit_code": 0,
+  "integration_summary": {
+    "executed": 23,
+    "passed": 23,
+    "failed": 0,
+    "rules_exercised_by_passing_tests": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R19",
+      "R20"
+    ]
+  },
+  "status": "passed",
+  "finished_at_utc": "2026-10-19T06:44:52.887894+00:00"
+}

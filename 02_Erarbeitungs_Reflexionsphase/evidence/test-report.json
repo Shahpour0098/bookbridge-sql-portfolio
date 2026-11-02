@@ -1,0 +1,348 @@
+{
+  "project": "BookBridge",
+  "executed_at_utc": "2026-10-18T12:59:11.132167+00:00",
+  "driver": "psycopg 3.3.3",
+  "tests": [
+    {
+      "id": "T01",
+      "name": "Alle 18 Tabellen real abgefragt und mit mindestens zehn Zeilen belegt",
+      "rules": [],
+      "status": "passed",
+      "duration_ms": 0.02
+    },
+    {
+      "id": "T02",
+      "name": "Drei echte JOIN-Abfragen mit je drei Tabellen und Ergebnisexport",
+      "rules": [],
+      "status": "passed",
+      "duration_ms": 0.02
+    },
+    {
+      "id": "T03",
+      "name": "Katalog, ISBN, E-Mail und aufgeschobene Autorenteilnahme",
+      "rules": [
+        "R03",
+        "R19"
+      ],
+      "status": "passed",
+      "duration_ms": 8.5
+    },
+    {
+      "id": "T04",
+      "name": "Koordinaten, Eigentümeranschrift und aktive Wochenfenster",
+      "rules": [
+        "R02",
+        "R03",
+        "R07"
+      ],
+      "status": "passed",
+      "duration_ms": 16.81
+    },
+    {
+      "id": "T05",
+      "name": "Eigentum und referenzierte Historie",
+      "rules": [
+        "R04",
+        "R20"
+      ],
+      "status": "passed",
+      "duration_ms": 6.94
+    },
+    {
+      "id": "T06",
+      "name": "Teilnehmer, Eigenleihe, Anfragen und genau eine Reservierung",
+      "rules": [
+        "R01",
+        "R05"
+      ],
+      "status": "passed",
+      "duration_ms": 17.47
+    },
+    {
+      "id": "T07",
+      "name": "Konkreter Abholtermin und unveränderliche Momentaufnahme",
+      "rules": [
+        "R06",
+        "R07",
+        "R08",
+        "R20"
+      ],
+      "status": "passed",
+      "duration_ms": 16.47
+    },
+    {
+      "id": "T08",
+      "name": "Gegenvorschläge, Rollen und ausstehende Entscheidungen",
+      "rules": [
+        "R09"
+      ],
+      "status": "passed",
+      "duration_ms": 18.6
+    },
+    {
+      "id": "T09",
+      "name": "Verlängerung genau einmal und eingefrorene Gesamthöchstdauer",
+      "rules": [
+        "R06",
+        "R10",
+        "R20"
+      ],
+      "status": "passed",
+      "duration_ms": 20.78
+    },
+    {
+      "id": "T10",
+      "name": "Vorzeitige Rückgabe, ausstehende Verlängerung und Freigabe",
+      "rules": [
+        "R10",
+        "R15"
+      ],
+      "status": "passed",
+      "duration_ms": 13.05
+    },
+    {
+      "id": "T11",
+      "name": "Verspätete Rückgabe bleibt abschließbar",
+      "rules": [
+        "R06",
+        "R15"
+      ],
+      "status": "passed",
+      "duration_ms": 9.54
+    },
+    {
+      "id": "T12",
+      "name": "Kalenderfrist über beide Zeitumstellungen in Europe/Berlin",
+      "rules": [
+        "R06",
+        "R16"
+      ],
+      "status": "passed",
+      "duration_ms": 14.06
+    },
+    {
+      "id": "T13",
+      "name": "Portobestätigung, Versandvoraussetzung und atomarer Erhalt",
+      "rules": [
+        "R11",
+        "R14",
+        "R20"
+      ],
+      "status": "passed",
+      "duration_ms": 34.65
+    },
+    {
+      "id": "T14",
+      "name": "Stornierung mit offenem und bestätigtem Porto",
+      "rules": [
+        "R09",
+        "R12"
+      ],
+      "status": "passed",
+      "duration_ms": 44.43
+    },
+    {
+      "id": "T15",
+      "name": "Hin-/Rückversand, Anschriften und korrekte Empfangsperson",
+      "rules": [
+        "R13",
+        "R14"
+      ],
+      "status": "passed",
+      "duration_ms": 31.28
+    },
+    {
+      "id": "T16",
+      "name": "Ereignisreihenfolge und Rückdatierungsverbot",
+      "rules": [
+        "R16"
+      ],
+      "status": "passed",
+      "duration_ms": 14.2
+    },
+    {
+      "id": "T17",
+      "name": "Zwei Teilnehmerbewertungen erst nach Abschluss",
+      "rules": [
+        "R17"
+      ],
+      "status": "passed",
+      "duration_ms": 17.62
+    },
+    {
+      "id": "T18",
+      "name": "Private Kommunikation, Dokumente und gleiche Ausleihe",
+      "rules": [
+        "R18"
+      ],
+      "status": "passed",
+      "duration_ms": 32.51
+    },
+    {
+      "id": "T19",
+      "name": "Unveränderliche Ausleihhistorie und erklärbare Frist",
+      "rules": [
+        "R19",
+        "R20"
+      ],
+      "status": "passed",
+      "duration_ms": 17.33
+    },
+    {
+      "id": "T20",
+      "name": "Kontodeaktivierung und Fortsetzung bestehender Vorgänge",
+      "rules": [
+        "R01",
+        "R05",
+        "R15"
+      ],
+      "status": "passed",
+      "duration_ms": 27.61
+    },
+    {
+      "id": "T23",
+      "name": "Öffentliche Lesesicht, Backend-API und gesperrte private Tabellen/Helfer",
+      "rules": [
+        "R02",
+        "R18",
+        "R19"
+      ],
+      "status": "passed",
+      "duration_ms": 29.59
+    },
+    {
+      "id": "T21",
+      "name": "Alle normalen Testfixtures zurückgerollt; Seed-Zeilen unverändert",
+      "rules": [
+        "R20"
+      ],
+      "status": "passed",
+      "evidence": {
+        "entity_fingerprints": {
+          "users": "15b0cb6ce0fd469d3efee0da86cd5655",
+          "addresses": "ecb623ddf6cc9f40442bf65fe6d2822a",
+          "publishers": "6d215d5a4d0eb761fabcce35eb52da04",
+          "genres": "dae997859a572152233b7fbda9ed674e",
+          "languages": "54e9a00d7f05601e6c18a92ee2ec38ea",
+          "authors": "ba64150a4ade08c3448faa2e9d0257f6",
+          "books": "4123c15fe5505fe21e33f864bd54ab3e",
+          "book_authors": "678978ec2bf05709d8bd67f9b91a6fdc",
+          "book_copies": "bbec54bbeba2fbca6988a1ec01eda87b",
+          "pickup_slots": "47a7e8eed01e9768fa8bc3161b709979",
+          "loans": "38930273f1025be870e18d793235b64e",
+          "loan_proposals": "59d93149646452f397d56d759d076dfd",
+          "loan_extensions": "ec30d5e1033f97c6d36ab27bf8f78c35",
+          "payments": "f90b40f88d78b707c328feee53dd8e13",
+          "shipments": "0b39f9aa7accc53193ad943ea7c516fa",
+          "notifications": "c43628b2705d55ef64527f4b45c3d103",
+          "generated_documents": "631c18c1398077232acf375105a38ab7",
+          "reviews": "cda4508331b62385046468c973a7549f"
+        },
+        "identity_sequences": "Sequence increments are not transactional in PostgreSQL; gaps are expected and harmless."
+      },
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T22",
+      "name": "Zwei parallele Verbindungen: genau eine Annahme desselben Exemplars",
+      "rules": [
+        "R05",
+        "R19",
+        "R20"
+      ],
+      "status": "passed",
+      "evidence": {
+        "disposable_database": "bookbridge_phase2_test_f18dba388ccf497e",
+        "separate_connections": 2,
+        "results": [
+          {
+            "loan_id": 79,
+            "result": "rejected",
+            "sqlstate": "55000",
+            "message": "Copy 51 is unavailable"
+          },
+          {
+            "loan_id": 80,
+            "result": "committed"
+          }
+        ],
+        "final_states": [
+          [
+            79,
+            "requested"
+          ],
+          [
+            80,
+            "accepted"
+          ]
+        ],
+        "clone_dropped_after_test": true
+      },
+      "duration_ms": 6264.8
+    }
+  ],
+  "database": "bookbridge_phase2_verify_885490fd6cef",
+  "server_version": "PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+  "timezone": "Europe/Berlin",
+  "entity_counts": {
+    "users": 24,
+    "addresses": 24,
+    "publishers": 12,
+    "genres": 12,
+    "languages": 12,
+    "authors": 24,
+    "books": 24,
+    "book_authors": 27,
+    "book_copies": 24,
+    "pickup_slots": 48,
+    "loans": 48,
+    "loan_proposals": 24,
+    "loan_extensions": 32,
+    "payments": 24,
+    "shipments": 34,
+    "notifications": 786,
+    "generated_documents": 204,
+    "reviews": 48
+  },
+  "join_queries": {
+    "Q01_copy_book_owner": {
+      "sql": "SELECT c.copy_id,b.title,u.first_name||' '||u.last_name AS owner,c.condition,c.max_loan_days FROM bookbridge.book_copies c JOIN bookbridge.books b ON b.book_id=c.book_id JOIN bookbridge.users u ON u.user_id=c.owner_id ORDER BY c.copy_id",
+      "rows": 24
+    },
+    "Q02_loan_copy_borrower": {
+      "sql": "SELECT l.loan_id,c.copy_id,u.first_name||' '||u.last_name AS borrower,l.handover_mode,l.status,l.due_date FROM bookbridge.loans l JOIN bookbridge.book_copies c ON c.copy_id=l.copy_id JOIN bookbridge.users u ON u.user_id=l.borrower_id ORDER BY l.loan_id",
+      "rows": 48
+    },
+    "Q03_payment_loan_confirmer": {
+      "sql": "SELECT p.payment_id,l.loan_id,l.status AS loan_status,p.status AS payment_status,p.outbound_fee+p.return_fee AS total_eur,u.first_name||' '||u.last_name AS confirmed_by,p.confirmed_at FROM bookbridge.payments p JOIN bookbridge.loans l ON l.loan_id=p.loan_id LEFT JOIN bookbridge.users u ON u.user_id=p.confirmed_by_user_id ORDER BY p.payment_id",
+      "rows": 24
+    }
+  },
+  "summary": {
+    "executed": 23,
+    "passed": 23,
+    "failed": 0,
+    "rules_exercised_by_passing_tests": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R19",
+      "R20"
+    ]
+  }
+}

@@ -1,0 +1,951 @@
+{
+  "project": "BookBridge Phase 2",
+  "verified_at_utc": "2026-10-19T06:46:37.598308+00:00",
+  "status": "passed",
+  "phase1_model_preserved": true,
+  "phase1_model_identity": {
+    "file": "bookbridge-model-v2.json",
+    "bytes": 76857,
+    "sha256": "682fad4afa6050a88cd5b1621f735ea0dabd5fa47501bd761aba8c6edc9a8ff6"
+  },
+  "phase2_model_identity": {
+    "file": "design/bookbridge-model-v2.json",
+    "bytes": 76857,
+    "sha256": "682fad4afa6050a88cd5b1621f735ea0dabd5fa47501bd761aba8c6edc9a8ff6"
+  },
+  "structure": {
+    "tables": 18,
+    "columns": 142,
+    "foreign_keys": 32,
+    "seed_rows": 1431,
+    "minimum_rows_per_table": 12
+  },
+  "integration_tests": {
+    "executed": 23,
+    "passed": 23,
+    "failed": 0,
+    "rules_exercised_by_passing_tests": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R19",
+      "R20"
+    ]
+  },
+  "independent_clean_installation": "bookbridge_phase2_verify_885490fd6cef",
+  "final_powershell_wrapper_clean_installation": "bookbridge_phase2_verify_bf1fce6b1d87",
+  "source_evidence": {
+    "primary_clean_installation": {
+      "file": "evidence/schema_verification.json",
+      "bytes": 4813,
+      "sha256": "b6ef580b46c0dc816cc19759ee808a051733ad0ae6d16ed406a0c0c57bdb20bf"
+    },
+    "wrapper_clean_installation": {
+      "file": "evidence/wrapper-verification-utf8/schema_verification.json",
+      "bytes": 4795,
+      "sha256": "cb1e4896bc00b459b2cd964c2c2a27fd651f34eaf7841c9e8cc6726b5b62871b"
+    },
+    "primary_integration_tests": {
+      "file": "evidence/test-report.json",
+      "bytes": 9337,
+      "sha256": "51094f59ab42e7462a875b03cc4794648ec3cba6c4327397fabbe00c778195d3"
+    },
+    "wrapper_integration_tests": {
+      "file": "evidence/wrapper-verification-utf8/test-report.json",
+      "bytes": 9341,
+      "sha256": "300de1256c42bda5cbc5a2ea294b71f17cfb4f83575768e4a4ea0e2966be9ee3"
+    },
+    "powershell_installer": {
+      "file": "evidence/installer_verification.json",
+      "bytes": 4919,
+      "sha256": "c84735ee9c0f1364f74152940010516e053fd2037b8c6091c4e19800e983d845"
+    },
+    "backup_restore": {
+      "file": "evidence/backup_verification.json",
+      "bytes": 4692,
+      "sha256": "1d5caef7322d8b3ac79316bb0da88b8299755a60d4d4521593b5218ad83c833c"
+    },
+    "current_clean_installation": {
+      "file": "evidence/recheck-20261019/schema_verification.json",
+      "bytes": 4756,
+      "sha256": "b09a05e913f0f97546622de78b9f90d9e4afb017d75dc33b477e94ec5ec6b14a"
+    },
+    "current_integration_tests": {
+      "file": "evidence/recheck-20261019/test-report.json",
+      "bytes": 9344,
+      "sha256": "6abf91ac1aa8435dd1c3d272559a01910c0dc63b6e9b35f854eec979fec9f8e0"
+    }
+  },
+  "presentation_slides": 32,
+  "actual_pgadmin_screenshots": 21,
+  "screenshot_manifest_identity": {
+    "file": "screenshots/manifest.json",
+    "bytes": 7195,
+    "sha256": "fa8a0d2b622612e4641daf247a36712c1fe54c26a787f62cb6094b743add4b11"
+  },
+  "editable_report": {
+    "file": "docs/BookBridge_Phase2_Umsetzung.docx",
+    "bytes": 30856,
+    "sha256": "25019357e5d865ac6063bfc93545b64fe3a8fa59c572fe326de3f9c7f4e1a170"
+  },
+  "backup_archive": {
+    "file": "database/bookbridge_phase2.dump",
+    "bytes": 247707,
+    "sha256": "d14ade47b41699440d0b97973eb96f39a7b4c57560fd667da55f37e90e1e3df2"
+  },
+  "scope": "Database implementation and Phase 2 documentation. No external mail, payment, or shipping calls.",
+  "verified_files": [
+    {
+      "file": "README.md",
+      "bytes": 8992,
+      "sha256": "fde65fa9f40009ea3632f916eb88f43f1a811fbdd9700477b1b5a964b86103f8"
+    },
+    {
+      "file": "database/README.md",
+      "bytes": 2042,
+      "sha256": "83f1640b3bb6b6948effd0f917d8fdb21960b5c18d25bf26ed9bf69027618119"
+    },
+    {
+      "file": "database/bookbridge_phase2.dump",
+      "bytes": 247707,
+      "sha256": "d14ade47b41699440d0b97973eb96f39a7b4c57560fd667da55f37e90e1e3df2"
+    },
+    {
+      "file": "design/bookbridge-model-v2.json",
+      "bytes": 76857,
+      "sha256": "682fad4afa6050a88cd5b1621f735ea0dabd5fa47501bd761aba8c6edc9a8ff6"
+    },
+    {
+      "file": "docs/BookBridge_Phase2_Praesentation.pdf",
+      "bytes": 2468289,
+      "sha256": "f2d24ad07eea4ebc24e664b70c0ba2016bff620bb837aca303a596f41c75dd99"
+    },
+    {
+      "file": "docs/BookBridge_Phase2_Praesentation.pptx",
+      "bytes": 1443910,
+      "sha256": "ab94be4198dee646226b6062c209c8b2e4c3ba7a627ffc715c39c292d68afafa"
+    },
+    {
+      "file": "docs/BookBridge_Phase2_Umsetzung.docx",
+      "bytes": 30856,
+      "sha256": "25019357e5d865ac6063bfc93545b64fe3a8fa59c572fe326de3f9c7f4e1a170"
+    },
+    {
+      "file": "evidence/Q01_copy_book_owner.csv",
+      "bytes": 1119,
+      "sha256": "96f0958bd7713c565babe36a97fd163d97e40c6c3e02327d12b6d5cd35f30039"
+    },
+    {
+      "file": "evidence/Q02_loan_copy_borrower.csv",
+      "bytes": 2186,
+      "sha256": "6ab70c8acde35850c8eda017f97879bb6acd9396d5fed308a79fde53713ed22a"
+    },
+    {
+      "file": "evidence/Q03_payment_loan_confirmer.csv",
+      "bytes": 1709,
+      "sha256": "8875005a023803de50070431e329aab24454589760dc0dc0d5b29a60dcdd0cf8"
+    },
+    {
+      "file": "evidence/artifact_review.json",
+      "bytes": 1448,
+      "sha256": "2e32aa3c1cb8648747b8837d42a1673f786bed3db5e388577486c765e79795a5"
+    },
+    {
+      "file": "evidence/backup_verification.json",
+      "bytes": 4692,
+      "sha256": "1d5caef7322d8b3ac79316bb0da88b8299755a60d4d4521593b5218ad83c833c"
+    },
+    {
+      "file": "evidence/clean-install-console.txt",
+      "bytes": 565,
+      "sha256": "22bcee5ba4e787758b1d9050db23950aaf1ae9c9dca39d6788fd934e1c066fba"
+    },
+    {
+      "file": "evidence/initial-main-test-report.json",
+      "bytes": 9063,
+      "sha256": "8f96cd296a61281020a8a78e34518eac9d592bc296a9159e95c2df47f5ebe065"
+    },
+    {
+      "file": "evidence/installer-console.txt",
+      "bytes": 5690,
+      "sha256": "3c3033d434404448fb78539f5bbea08fadc5464ba0b5eedc6e4f9896a9b6a129"
+    },
+    {
+      "file": "evidence/installer_verification.json",
+      "bytes": 4919,
+      "sha256": "c84735ee9c0f1364f74152940010516e053fd2037b8c6091c4e19800e983d845"
+    },
+    {
+      "file": "evidence/integration-test-console.txt",
+      "bytes": 1892,
+      "sha256": "e47df9321d678119490f5fc330be466a6019a34bd95afa4f4d7c950bf58c1d14"
+    },
+    {
+      "file": "evidence/recheck-20261019/Q01_copy_book_owner.csv",
+      "bytes": 1119,
+      "sha256": "96f0958bd7713c565babe36a97fd163d97e40c6c3e02327d12b6d5cd35f30039"
+    },
+    {
+      "file": "evidence/recheck-20261019/Q02_loan_copy_borrower.csv",
+      "bytes": 2186,
+      "sha256": "6ab70c8acde35850c8eda017f97879bb6acd9396d5fed308a79fde53713ed22a"
+    },
+    {
+      "file": "evidence/recheck-20261019/Q03_payment_loan_confirmer.csv",
+      "bytes": 1709,
+      "sha256": "8875005a023803de50070431e329aab24454589760dc0dc0d5b29a60dcdd0cf8"
+    },
+    {
+      "file": "evidence/recheck-20261019/clean-install-console.txt",
+      "bytes": 565,
+      "sha256": "22bcee5ba4e787758b1d9050db23950aaf1ae9c9dca39d6788fd934e1c066fba"
+    },
+    {
+      "file": "evidence/recheck-20261019/integration-test-console.txt",
+      "bytes": 1892,
+      "sha256": "e47df9321d678119490f5fc330be466a6019a34bd95afa4f4d7c950bf58c1d14"
+    },
+    {
+      "file": "evidence/recheck-20261019/schema_verification.json",
+      "bytes": 4756,
+      "sha256": "b09a05e913f0f97546622de78b9f90d9e4afb017d75dc33b477e94ec5ec6b14a"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/addresses.csv",
+      "bytes": 2102,
+      "sha256": "2f158d971d7306a9a76378d2d5ffe974f98005d24545228116c29cdfa84ca0ec"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/authors.csv",
+      "bytes": 636,
+      "sha256": "987793e682fcb774e48cea0fb7fb9e8950972cf7fac9723b1f10dc61eb5abb7e"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/book_authors.csv",
+      "bytes": 260,
+      "sha256": "87f00e5ff06fc380497a8bfd757544338c8311453da57eaa3560d8e2db2eedc4"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/book_copies.csv",
+      "bytes": 3426,
+      "sha256": "b3dc443a6c7f30f50d6662e66075bae247db313238ab3d506dbd9fcd7d4c4a9e"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/books.csv",
+      "bytes": 3690,
+      "sha256": "5faab4c941699893b400f4efa36c81dd75920032db1fd872f0a291a03d38a563"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/generated_documents.csv",
+      "bytes": 13482,
+      "sha256": "28e81b864f5fc0845b65d23c822630edb4bce76a50a214c10aec859a1d3bb995"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/genres.csv",
+      "bytes": 189,
+      "sha256": "320dd8b7754341e0c872dc4053e7d9157c439ff35e1266a75403c11315c13a0c"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/languages.csv",
+      "bytes": 230,
+      "sha256": "0bba999536d7e4b73ea400fb265e6d6121841f5526de3c0f1113d58df44dc10c"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/loan_extensions.csv",
+      "bytes": 2849,
+      "sha256": "6847f20cfe1b3e86f98b55bfe4f1382276a8f7d184b4a5b2dca8a3c237d4b06b"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/loan_proposals.csv",
+      "bytes": 1919,
+      "sha256": "52df46c8096645e78b305d4c28f65ad1f90dcce6c43caf6893545817f0e302f8"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/loans.csv",
+      "bytes": 9503,
+      "sha256": "ea1275cae780350ab66dff8e5099e61af246d6917cc5a9a705517008ddfbd904"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/notifications.csv",
+      "bytes": 63645,
+      "sha256": "f31fc3cad34882a77d213c40a0780bdefc1efd6156a8c148817c7fe9292c86f1"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/payments.csv",
+      "bytes": 2760,
+      "sha256": "59d2bc5b0e8b53fe27da19fc8505c138e598b983a6718ebed46404216c701919"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/pickup_slots.csv",
+      "bytes": 1567,
+      "sha256": "1f7ca5658267fbbacbabe59b75427b9a14a1baa0f59371717835effa45fad212"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/publishers.csv",
+      "bytes": 252,
+      "sha256": "9c748a49d2a2353cda6ae28c70acaf68f04c99338ef0043721bf0319cbb6cc81"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/reviews.csv",
+      "bytes": 5055,
+      "sha256": "3363c83e9e082ea72a3b0fb7f8208eda1678b3653db13e20b4a429c167d89342"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/shipments.csv",
+      "bytes": 7719,
+      "sha256": "c17827c5fe99a5cd2daacfb4cb6b39c40d5d78ef2af89d515e1ae70e4bf72c9b"
+    },
+    {
+      "file": "evidence/recheck-20261019/tables/users.csv",
+      "bytes": 2000,
+      "sha256": "b24df225b5c1ec922ff1ba630dd77788c9f50febd93d1a0df4c24e14c5ca1adc"
+    },
+    {
+      "file": "evidence/recheck-20261019/test-report.json",
+      "bytes": 9344,
+      "sha256": "6abf91ac1aa8435dd1c3d272559a01910c0dc63b6e9b35f854eec979fec9f8e0"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/Q01_copy_book_owner.csv",
+      "bytes": 1119,
+      "sha256": "96f0958bd7713c565babe36a97fd163d97e40c6c3e02327d12b6d5cd35f30039"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/Q02_loan_copy_borrower.csv",
+      "bytes": 2186,
+      "sha256": "6ab70c8acde35850c8eda017f97879bb6acd9396d5fed308a79fde53713ed22a"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/Q03_payment_loan_confirmer.csv",
+      "bytes": 1709,
+      "sha256": "8875005a023803de50070431e329aab24454589760dc0dc0d5b29a60dcdd0cf8"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/clean-install-console.txt",
+      "bytes": 565,
+      "sha256": "22bcee5ba4e787758b1d9050db23950aaf1ae9c9dca39d6788fd934e1c066fba"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/integration-test-console.txt",
+      "bytes": 1892,
+      "sha256": "e47df9321d678119490f5fc330be466a6019a34bd95afa4f4d7c950bf58c1d14"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/schema_verification.json",
+      "bytes": 4815,
+      "sha256": "cd8099db8106ece3c255641d49d4c79fb2b0f4d5711869bfc9e44f2bd9ef46b9"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/addresses.csv",
+      "bytes": 2102,
+      "sha256": "2f158d971d7306a9a76378d2d5ffe974f98005d24545228116c29cdfa84ca0ec"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/authors.csv",
+      "bytes": 636,
+      "sha256": "987793e682fcb774e48cea0fb7fb9e8950972cf7fac9723b1f10dc61eb5abb7e"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/book_authors.csv",
+      "bytes": 260,
+      "sha256": "87f00e5ff06fc380497a8bfd757544338c8311453da57eaa3560d8e2db2eedc4"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/book_copies.csv",
+      "bytes": 3426,
+      "sha256": "b3dc443a6c7f30f50d6662e66075bae247db313238ab3d506dbd9fcd7d4c4a9e"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/books.csv",
+      "bytes": 3690,
+      "sha256": "5faab4c941699893b400f4efa36c81dd75920032db1fd872f0a291a03d38a563"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/generated_documents.csv",
+      "bytes": 13482,
+      "sha256": "28e81b864f5fc0845b65d23c822630edb4bce76a50a214c10aec859a1d3bb995"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/genres.csv",
+      "bytes": 189,
+      "sha256": "320dd8b7754341e0c872dc4053e7d9157c439ff35e1266a75403c11315c13a0c"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/languages.csv",
+      "bytes": 230,
+      "sha256": "0bba999536d7e4b73ea400fb265e6d6121841f5526de3c0f1113d58df44dc10c"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/loan_extensions.csv",
+      "bytes": 2849,
+      "sha256": "6847f20cfe1b3e86f98b55bfe4f1382276a8f7d184b4a5b2dca8a3c237d4b06b"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/loan_proposals.csv",
+      "bytes": 1919,
+      "sha256": "52df46c8096645e78b305d4c28f65ad1f90dcce6c43caf6893545817f0e302f8"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/loans.csv",
+      "bytes": 9503,
+      "sha256": "ea1275cae780350ab66dff8e5099e61af246d6917cc5a9a705517008ddfbd904"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/notifications.csv",
+      "bytes": 63645,
+      "sha256": "f31fc3cad34882a77d213c40a0780bdefc1efd6156a8c148817c7fe9292c86f1"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/payments.csv",
+      "bytes": 2760,
+      "sha256": "59d2bc5b0e8b53fe27da19fc8505c138e598b983a6718ebed46404216c701919"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/pickup_slots.csv",
+      "bytes": 1567,
+      "sha256": "1f7ca5658267fbbacbabe59b75427b9a14a1baa0f59371717835effa45fad212"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/publishers.csv",
+      "bytes": 252,
+      "sha256": "9c748a49d2a2353cda6ae28c70acaf68f04c99338ef0043721bf0319cbb6cc81"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/reviews.csv",
+      "bytes": 5055,
+      "sha256": "3363c83e9e082ea72a3b0fb7f8208eda1678b3653db13e20b4a429c167d89342"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/shipments.csv",
+      "bytes": 7719,
+      "sha256": "c17827c5fe99a5cd2daacfb4cb6b39c40d5d78ef2af89d515e1ae70e4bf72c9b"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/tables/users.csv",
+      "bytes": 2000,
+      "sha256": "b24df225b5c1ec922ff1ba630dd77788c9f50febd93d1a0df4c24e14c5ca1adc"
+    },
+    {
+      "file": "evidence/runs/20261018-161652-dee3923a/test-report.json",
+      "bytes": 9341,
+      "sha256": "e8ca393295b63aed497c1b731b2ed8d3f450b926f76118a3947534e049829bad"
+    },
+    {
+      "file": "evidence/schema_verification.json",
+      "bytes": 4813,
+      "sha256": "b6ef580b46c0dc816cc19759ee808a051733ad0ae6d16ed406a0c0c57bdb20bf"
+    },
+    {
+      "file": "evidence/tables/addresses.csv",
+      "bytes": 2102,
+      "sha256": "2f158d971d7306a9a76378d2d5ffe974f98005d24545228116c29cdfa84ca0ec"
+    },
+    {
+      "file": "evidence/tables/authors.csv",
+      "bytes": 636,
+      "sha256": "987793e682fcb774e48cea0fb7fb9e8950972cf7fac9723b1f10dc61eb5abb7e"
+    },
+    {
+      "file": "evidence/tables/book_authors.csv",
+      "bytes": 260,
+      "sha256": "87f00e5ff06fc380497a8bfd757544338c8311453da57eaa3560d8e2db2eedc4"
+    },
+    {
+      "file": "evidence/tables/book_copies.csv",
+      "bytes": 3426,
+      "sha256": "b3dc443a6c7f30f50d6662e66075bae247db313238ab3d506dbd9fcd7d4c4a9e"
+    },
+    {
+      "file": "evidence/tables/books.csv",
+      "bytes": 3690,
+      "sha256": "5faab4c941699893b400f4efa36c81dd75920032db1fd872f0a291a03d38a563"
+    },
+    {
+      "file": "evidence/tables/generated_documents.csv",
+      "bytes": 13482,
+      "sha256": "28e81b864f5fc0845b65d23c822630edb4bce76a50a214c10aec859a1d3bb995"
+    },
+    {
+      "file": "evidence/tables/genres.csv",
+      "bytes": 189,
+      "sha256": "320dd8b7754341e0c872dc4053e7d9157c439ff35e1266a75403c11315c13a0c"
+    },
+    {
+      "file": "evidence/tables/languages.csv",
+      "bytes": 230,
+      "sha256": "0bba999536d7e4b73ea400fb265e6d6121841f5526de3c0f1113d58df44dc10c"
+    },
+    {
+      "file": "evidence/tables/loan_extensions.csv",
+      "bytes": 2849,
+      "sha256": "6847f20cfe1b3e86f98b55bfe4f1382276a8f7d184b4a5b2dca8a3c237d4b06b"
+    },
+    {
+      "file": "evidence/tables/loan_proposals.csv",
+      "bytes": 1919,
+      "sha256": "52df46c8096645e78b305d4c28f65ad1f90dcce6c43caf6893545817f0e302f8"
+    },
+    {
+      "file": "evidence/tables/loans.csv",
+      "bytes": 9503,
+      "sha256": "ea1275cae780350ab66dff8e5099e61af246d6917cc5a9a705517008ddfbd904"
+    },
+    {
+      "file": "evidence/tables/notifications.csv",
+      "bytes": 63645,
+      "sha256": "f31fc3cad34882a77d213c40a0780bdefc1efd6156a8c148817c7fe9292c86f1"
+    },
+    {
+      "file": "evidence/tables/payments.csv",
+      "bytes": 2760,
+      "sha256": "59d2bc5b0e8b53fe27da19fc8505c138e598b983a6718ebed46404216c701919"
+    },
+    {
+      "file": "evidence/tables/pickup_slots.csv",
+      "bytes": 1567,
+      "sha256": "1f7ca5658267fbbacbabe59b75427b9a14a1baa0f59371717835effa45fad212"
+    },
+    {
+      "file": "evidence/tables/publishers.csv",
+      "bytes": 252,
+      "sha256": "9c748a49d2a2353cda6ae28c70acaf68f04c99338ef0043721bf0319cbb6cc81"
+    },
+    {
+      "file": "evidence/tables/reviews.csv",
+      "bytes": 5055,
+      "sha256": "3363c83e9e082ea72a3b0fb7f8208eda1678b3653db13e20b4a429c167d89342"
+    },
+    {
+      "file": "evidence/tables/shipments.csv",
+      "bytes": 7719,
+      "sha256": "c17827c5fe99a5cd2daacfb4cb6b39c40d5d78ef2af89d515e1ae70e4bf72c9b"
+    },
+    {
+      "file": "evidence/tables/users.csv",
+      "bytes": 2000,
+      "sha256": "b24df225b5c1ec922ff1ba630dd77788c9f50febd93d1a0df4c24e14c5ca1adc"
+    },
+    {
+      "file": "evidence/test-report.json",
+      "bytes": 9337,
+      "sha256": "51094f59ab42e7462a875b03cc4794648ec3cba6c4327397fabbe00c778195d3"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/Q01_copy_book_owner.csv",
+      "bytes": 1119,
+      "sha256": "96f0958bd7713c565babe36a97fd163d97e40c6c3e02327d12b6d5cd35f30039"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/Q02_loan_copy_borrower.csv",
+      "bytes": 2186,
+      "sha256": "6ab70c8acde35850c8eda017f97879bb6acd9396d5fed308a79fde53713ed22a"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/Q03_payment_loan_confirmer.csv",
+      "bytes": 1709,
+      "sha256": "8875005a023803de50070431e329aab24454589760dc0dc0d5b29a60dcdd0cf8"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/clean-install-console.txt",
+      "bytes": 565,
+      "sha256": "22bcee5ba4e787758b1d9050db23950aaf1ae9c9dca39d6788fd934e1c066fba"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/integration-test-console.txt",
+      "bytes": 1892,
+      "sha256": "e47df9321d678119490f5fc330be466a6019a34bd95afa4f4d7c950bf58c1d14"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/schema_verification.json",
+      "bytes": 4795,
+      "sha256": "cb1e4896bc00b459b2cd964c2c2a27fd651f34eaf7841c9e8cc6726b5b62871b"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/addresses.csv",
+      "bytes": 2102,
+      "sha256": "2f158d971d7306a9a76378d2d5ffe974f98005d24545228116c29cdfa84ca0ec"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/authors.csv",
+      "bytes": 636,
+      "sha256": "987793e682fcb774e48cea0fb7fb9e8950972cf7fac9723b1f10dc61eb5abb7e"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/book_authors.csv",
+      "bytes": 260,
+      "sha256": "87f00e5ff06fc380497a8bfd757544338c8311453da57eaa3560d8e2db2eedc4"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/book_copies.csv",
+      "bytes": 3426,
+      "sha256": "b3dc443a6c7f30f50d6662e66075bae247db313238ab3d506dbd9fcd7d4c4a9e"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/books.csv",
+      "bytes": 3690,
+      "sha256": "5faab4c941699893b400f4efa36c81dd75920032db1fd872f0a291a03d38a563"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/generated_documents.csv",
+      "bytes": 13482,
+      "sha256": "28e81b864f5fc0845b65d23c822630edb4bce76a50a214c10aec859a1d3bb995"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/genres.csv",
+      "bytes": 189,
+      "sha256": "320dd8b7754341e0c872dc4053e7d9157c439ff35e1266a75403c11315c13a0c"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/languages.csv",
+      "bytes": 230,
+      "sha256": "0bba999536d7e4b73ea400fb265e6d6121841f5526de3c0f1113d58df44dc10c"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/loan_extensions.csv",
+      "bytes": 2849,
+      "sha256": "6847f20cfe1b3e86f98b55bfe4f1382276a8f7d184b4a5b2dca8a3c237d4b06b"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/loan_proposals.csv",
+      "bytes": 1919,
+      "sha256": "52df46c8096645e78b305d4c28f65ad1f90dcce6c43caf6893545817f0e302f8"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/loans.csv",
+      "bytes": 9503,
+      "sha256": "ea1275cae780350ab66dff8e5099e61af246d6917cc5a9a705517008ddfbd904"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/notifications.csv",
+      "bytes": 63645,
+      "sha256": "f31fc3cad34882a77d213c40a0780bdefc1efd6156a8c148817c7fe9292c86f1"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/payments.csv",
+      "bytes": 2760,
+      "sha256": "59d2bc5b0e8b53fe27da19fc8505c138e598b983a6718ebed46404216c701919"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/pickup_slots.csv",
+      "bytes": 1567,
+      "sha256": "1f7ca5658267fbbacbabe59b75427b9a14a1baa0f59371717835effa45fad212"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/publishers.csv",
+      "bytes": 252,
+      "sha256": "9c748a49d2a2353cda6ae28c70acaf68f04c99338ef0043721bf0319cbb6cc81"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/reviews.csv",
+      "bytes": 5055,
+      "sha256": "3363c83e9e082ea72a3b0fb7f8208eda1678b3653db13e20b4a429c167d89342"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/shipments.csv",
+      "bytes": 7719,
+      "sha256": "c17827c5fe99a5cd2daacfb4cb6b39c40d5d78ef2af89d515e1ae70e4bf72c9b"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/tables/users.csv",
+      "bytes": 2000,
+      "sha256": "b24df225b5c1ec922ff1ba630dd77788c9f50febd93d1a0df4c24e14c5ca1adc"
+    },
+    {
+      "file": "evidence/wrapper-verification-utf8/test-report.json",
+      "bytes": 9341,
+      "sha256": "300de1256c42bda5cbc5a2ea294b71f17cfb4f83575768e4a4ea0e2966be9ee3"
+    },
+    {
+      "file": "pictures/README.md",
+      "bytes": 1681,
+      "sha256": "d666df25f9f13d95b93be707a623e2c36451ba3627f5ee9560886ac614b739f0"
+    },
+    {
+      "file": "pictures/der-kleine-prinz.jpg",
+      "bytes": 387204,
+      "sha256": "6403dc257c8bfda0a3396c4cb82f5053e3ce72da3f9f118219145e08193b75d5"
+    },
+    {
+      "file": "pictures/der-vorleser.jpg",
+      "bytes": 157289,
+      "sha256": "9dfd7dba3efcf9ff52206cfdea158aaa3da4b4394a383958751ebfa2a413e81a"
+    },
+    {
+      "file": "pictures/momo.png",
+      "bytes": 1068133,
+      "sha256": "616bb31d275599e59e4b7b7b0b6bce77eed565cac3c4da01fc164a0c174f9510"
+    },
+    {
+      "file": "screenshots/Q01_copy_book_owner.png",
+      "bytes": 74672,
+      "sha256": "c41f4bbe8090aac174e9cdf7f22a2cd24f34ceb6573204cca607a36a37dc8ab8"
+    },
+    {
+      "file": "screenshots/Q02_loan_copy_borrower.png",
+      "bytes": 74862,
+      "sha256": "d8ab008a93adfe3f0b2a0d0065d2d57a3794b81c17d1c55c3ef3ae75cc720f99"
+    },
+    {
+      "file": "screenshots/Q03_payment_loan_confirmer.png",
+      "bytes": 76873,
+      "sha256": "d110df3c92e829d4bb53b627730a8e0209ee2a9b1c76344d0c46dc3892543684"
+    },
+    {
+      "file": "screenshots/T01_users.png",
+      "bytes": 75845,
+      "sha256": "8ca506cb2b5719a610255b00a4bd44a8a153346d301a4bb78d08b46fa981bcb6"
+    },
+    {
+      "file": "screenshots/T02_addresses.png",
+      "bytes": 75433,
+      "sha256": "b5c5f6efda0972dfe1aacda694d7b905f2d5f3b8024f63018e63e2aa9dfb94a5"
+    },
+    {
+      "file": "screenshots/T03_publishers.png",
+      "bytes": 65505,
+      "sha256": "4c247d67366c02e4c68c82395a85d23e67508af8335d0f521eae439e71e2ee76"
+    },
+    {
+      "file": "screenshots/T04_genres.png",
+      "bytes": 62119,
+      "sha256": "9085694f39b1931782f5c9231336012380207ca77a9235c224a9fc5d20f17bf4"
+    },
+    {
+      "file": "screenshots/T05_languages.png",
+      "bytes": 67056,
+      "sha256": "05ed955395567ac1df89ae7acea581f102e64f634d93390cbb24ad776c4a5715"
+    },
+    {
+      "file": "screenshots/T06_authors.png",
+      "bytes": 67207,
+      "sha256": "8b57558cfd59726501bdaa121c7576f25244f11b33ccd63486d6a86a6718fc8a"
+    },
+    {
+      "file": "screenshots/T07_books.png",
+      "bytes": 76344,
+      "sha256": "4da22e2deeac6db58991ed151dda98cdf3e8bfd3805326b4316b8d6e500f2373"
+    },
+    {
+      "file": "screenshots/T08_book_authors.png",
+      "bytes": 62956,
+      "sha256": "240ed12a0e17eeca27212b234028a9b583e273d5dda450adf8405d10b94a7c9d"
+    },
+    {
+      "file": "screenshots/T09_book_copies.png",
+      "bytes": 71017,
+      "sha256": "772a424877db43e6f7b2b0918e291e70f2cede1629319122444757f62a2c3c3a"
+    },
+    {
+      "file": "screenshots/T10_pickup_slots.png",
+      "bytes": 75070,
+      "sha256": "6702624a0af1b2b61a005c576d159e57e779399a28acbcf466e499d6c6ea637e"
+    },
+    {
+      "file": "screenshots/T11_loans.png",
+      "bytes": 74451,
+      "sha256": "d2b5384f0fc1279fd48157124400b080c552a75bc603768a2496c4ca48cc4468"
+    },
+    {
+      "file": "screenshots/T12_loan_proposals.png",
+      "bytes": 70838,
+      "sha256": "7ca566a6f0393388f36c189a2fbebbe55decdedeb087c6e845faff55b4de0910"
+    },
+    {
+      "file": "screenshots/T13_loan_extensions.png",
+      "bytes": 77135,
+      "sha256": "c80dc360a1e0ae0eb2c0fe55987537b17cb940cfea1fbe12b730e175d31e2406"
+    },
+    {
+      "file": "screenshots/T14_payments.png",
+      "bytes": 74638,
+      "sha256": "f6d13e35116b8feb0f2b4277b2cf72e12ab77c97a22e411624197fb68a5e026d"
+    },
+    {
+      "file": "screenshots/T15_shipments.png",
+      "bytes": 71663,
+      "sha256": "02aeaa10f7e41846a4a89b23cbd3e2f4b49f69681d96b0515ea86709197230fa"
+    },
+    {
+      "file": "screenshots/T16_notifications.png",
+      "bytes": 75869,
+      "sha256": "970b3cbe72bc8c03c8eaba39b69f4e762c3cbbb9d734104314b5559a35bf7fcf"
+    },
+    {
+      "file": "screenshots/T17_generated_documents.png",
+      "bytes": 77752,
+      "sha256": "e9e551d0399e878de57541f9db0307a3e125a3bbb48fe961bc91504910c492a9"
+    },
+    {
+      "file": "screenshots/T18_reviews.png",
+      "bytes": 64247,
+      "sha256": "0c2b85756cc15bf216ae713ac2eae74413dc315ecd769bd95dbf5a16192b611e"
+    },
+    {
+      "file": "screenshots/manifest.json",
+      "bytes": 7195,
+      "sha256": "fa8a0d2b622612e4641daf247a36712c1fe54c26a787f62cb6094b743add4b11"
+    },
+    {
+      "file": "scripts/install.ps1",
+      "bytes": 1373,
+      "sha256": "da07a06580310ec8edc3cb5d374f578cbd147d614ed185840a3e6c7c2afb1a9a"
+    },
+    {
+      "file": "scripts/install_dependencies.ps1",
+      "bytes": 1479,
+      "sha256": "8ac482fcf329e2e9173c13d38f5da407fb2c75d784d374d748d1bf828c91b4f3"
+    },
+    {
+      "file": "scripts/requirements.txt",
+      "bytes": 23,
+      "sha256": "ea9a02d18ce562d9ffe1a43c654cabae98e8759147ff98e92558598dc49247f5"
+    },
+    {
+      "file": "scripts/run_tests.ps1",
+      "bytes": 3272,
+      "sha256": "bd4cef1cf77602138a52066e94ec638cdc9b3e689abf52d7c990829e0fc2d14c"
+    },
+    {
+      "file": "scripts/start_database.ps1",
+      "bytes": 1581,
+      "sha256": "f26a60cc544d2c862eec0d3e10fd890c5e83ac78bf5bf305f1358fce71184d10"
+    },
+    {
+      "file": "scripts/start_pgadmin.py",
+      "bytes": 894,
+      "sha256": "c49686130d7d1c73141bd63b71c493f2e4ea67f503ff4db2af41798411a790bf"
+    },
+    {
+      "file": "scripts/stop_database.ps1",
+      "bytes": 311,
+      "sha256": "de20875bb107b85b2fe9f2cff709b413b0fb509a153cfdf03d8045673940ca38"
+    },
+    {
+      "file": "sql/01_schema.sql",
+      "bytes": 44143,
+      "sha256": "d833c139649b057b4fb47e7d63a825db627a7f5e54415301cf55d4f9b3ca5954"
+    },
+    {
+      "file": "sql/02_integrity.sql",
+      "bytes": 30234,
+      "sha256": "1ed7d00fe4bb824330a37ab40746d78401324f11d7a283e5316b68558e11fa93"
+    },
+    {
+      "file": "sql/03_workflows.sql",
+      "bytes": 35596,
+      "sha256": "296df42f41d854411a2d801cfc8bc474badc9641e26e70a80ad2f2bf85740607"
+    },
+    {
+      "file": "sql/04_seed.sql",
+      "bytes": 12232,
+      "sha256": "e06c823d834d8877540462775faf88f5a71d5afd3529ebecea7d50d9c93e52a9"
+    },
+    {
+      "file": "sql/05_queries.sql",
+      "bytes": 3869,
+      "sha256": "d0c8d55a45c0c5dd977c5961559f6f032a4852e12f07caae3ff4264cac11fb31"
+    },
+    {
+      "file": "sql/06_access.sql",
+      "bytes": 2797,
+      "sha256": "7674d2933fcd7ec6a8449fbb7b56d4485164715d415b9d214f91830e33cbc8cc"
+    },
+    {
+      "file": "tests/README.md",
+      "bytes": 5030,
+      "sha256": "b189e1e79aa44bcdc1457b1f8e63b1387e9118b7a2a46734486c458ed1ace872"
+    },
+    {
+      "file": "tests/requirements.txt",
+      "bytes": 23,
+      "sha256": "ea9a02d18ce562d9ffe1a43c654cabae98e8759147ff98e92558598dc49247f5"
+    },
+    {
+      "file": "tests/run_tests.py",
+      "bytes": 37238,
+      "sha256": "a1acc35e7a290e04e7c1c163d4e93b30f832872b50e50dd7ec47e7e95a996bc4"
+    },
+    {
+      "file": "tests/verify_backup.py",
+      "bytes": 6667,
+      "sha256": "fd7d0401918c05043c3b111e8ddf52dde2efc017b460ea97031995acc3354b7d"
+    },
+    {
+      "file": "tests/verify_install.py",
+      "bytes": 6791,
+      "sha256": "f3275c49de12a41576616b88b2c0f638764402bc40185099edec296fc1224542"
+    },
+    {
+      "file": "tests/verify_powershell_installer.py",
+      "bytes": 6517,
+      "sha256": "59dff071f4b64f34e865637ddaf269c1162aca4bbc4c311df3160dc1cab80b7b"
+    }
+  ],
+  "verified_files_exclusions": [
+    "evidence/delivery_verification.json (this record)",
+    "SHA256SUMS.txt (generated manifest)",
+    "delivery ZIP and its checksum"
+  ],
+  "archive_exclusions": {
+    "directories": [
+      ".cache",
+      ".git",
+      ".mypy_cache",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".runtime",
+      ".venv",
+      "__pycache__",
+      "docx-qa",
+      "node_modules",
+      "output",
+      "preview",
+      "previews",
+      "qa",
+      "rendered",
+      "renders",
+      "scratch",
+      "temp",
+      "tmp"
+    ],
+    "suffixes": [
+      ".7z",
+      ".bak",
+      ".bz2",
+      ".gz",
+      ".log",
+      ".md5",
+      ".pyc",
+      ".pyo",
+      ".rar",
+      ".sha256",
+      ".sha512",
+      ".tar",
+      ".temp",
+      ".tmp",
+      ".wbk",
+      ".xz",
+      ".zip"
+    ],
+    "other": [
+      "unlisted top-level files/directories",
+      "hidden files",
+      "Office lock files"
+    ]
+  }
+}

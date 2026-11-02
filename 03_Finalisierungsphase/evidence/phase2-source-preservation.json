@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-20T21:14:37.582320+00:00",
+  "comparison": "phase3/database/phase2 vs docs/phase-2/sql",
+  "file_count": 6,
+  "files": [
+    {
+      "file": "01_schema.sql",
+      "sha256": "d833c139649b057b4fb47e7d63a825db627a7f5e54415301cf55d4f9b3ca5954",
+      "identical_to_phase2_delivery": true
+    },
+    {
+      "file": "02_integrity.sql",
+      "sha256": "1ed7d00fe4bb824330a37ab40746d78401324f11d7a283e5316b68558e11fa93",
+      "identical_to_phase2_delivery": true
+    },
+    {
+      "file": "03_workflows.sql",
+      "sha256": "296df42f41d854411a2d801cfc8bc474badc9641e26e70a80ad2f2bf85740607",
+      "identical_to_phase2_delivery": true
+    },
+    {
+      "file": "04_seed.sql",
+      "sha256": "e06c823d834d8877540462775faf88f5a71d5afd3529ebecea7d50d9c93e52a9",
+      "identical_to_phase2_delivery": true
+    },
+    {
+      "file": "05_queries.sql",
+      "sha256": "d0c8d55a45c0c5dd977c5961559f6f032a4852e12f07caae3ff4264cac11fb31",
+      "identical_to_phase2_delivery": true
+    },
+    {
+      "file": "06_access.sql",
+      "sha256": "7674d2933fcd7ec6a8449fbb7b56d4485164715d415b9d214f91830e33cbc8cc",
+      "identical_to_phase2_delivery": true
+    }
+  ]
+}

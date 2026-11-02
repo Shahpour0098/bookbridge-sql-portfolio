@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "python_tests": 48,
+  "javascript_recovery_tests": 4,
+  "native_image_and_pdf": "passed",
+  "integration_groups": 26,
+  "sql_tests": 23
+}

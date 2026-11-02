@@ -1,0 +1,35 @@
+{
+  "reviewed_at_utc": "2026-10-19T06:46:27.798376+00:00",
+  "status": "passed",
+  "presentation": {
+    "pages": 32,
+    "editable_slides": 32,
+    "actual_screenshot_files_embedded_unchanged": 21,
+    "complete_entity_ddl_in_speaker_notes": 18,
+    "visual_review": "All pages reviewed in contact sheets; dense entity pages and summary pages additionally inspected at full size. No clipping, overlaps or broken glyphs observed."
+  },
+  "report": {
+    "pages": 3,
+    "rendering": "Microsoft Word native PDF export for internal QA",
+    "visual_review": "All three rendered pages inspected. No clipping, overlaps or pagination defects observed.",
+    "formatting_preserved": true,
+    "wording_correction": "Clarifies that each approved extension changes the deadline exactly once; successive approved extensions remain possible within the total limit."
+  },
+  "artifacts": [
+    {
+      "file": "docs/BookBridge_Phase2_Praesentation.pdf",
+      "bytes": 2468289,
+      "sha256": "f2d24ad07eea4ebc24e664b70c0ba2016bff620bb837aca303a596f41c75dd99"
+    },
+    {
+      "file": "docs/BookBridge_Phase2_Praesentation.pptx",
+      "bytes": 1443910,
+      "sha256": "ab94be4198dee646226b6062c209c8b2e4c3ba7a627ffc715c39c292d68afafa"
+    },
+    {
+      "file": "docs/BookBridge_Phase2_Umsetzung.docx",
+      "bytes": 30856,
+      "sha256": "25019357e5d865ac6063bfc93545b64fe3a8fa59c572fe326de3f9c7f4e1a170"
+    }
+  ]
+}
